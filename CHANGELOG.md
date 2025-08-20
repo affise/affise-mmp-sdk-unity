@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.44] - 2025-08-20
+
+### Added
+
+- New module `TikTok`.
+- Api `Affise.Module.TikTok.SendEvent`.
+
+### Changed
+
+- Update native iOS to [`1.6.54`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.54/CHANGELOG.md)
+- Update native Android to [`1.6.62`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.62/CHANGELOG.md)
+
 ## [1.6.43] - 2025-07-31
 
 ### Fixed
@@ -8,7 +20,7 @@
 
 ### Changed
 
-- Update native Android to [`1.6.61`](https://github.com/affise/sdk-android/blob/v1.6.61/CHANGELOG.md)
+- Update native Android to [`1.6.61`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.61/CHANGELOG.md)
 
 ## [1.6.42] - 2025-07-25
 
@@ -19,7 +31,7 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.53`](https://github.com/affise/sdk-ios/blob/1.6.53/CHANGELOG.md)
+- Update native iOS to [`1.6.53`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.53/CHANGELOG.md)
 
 ## [1.6.41] - 2025-07-21
 
@@ -29,8 +41,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.52`](https://github.com/affise/sdk-ios/blob/1.6.52/CHANGELOG.md)
-- Update native Android to [`1.6.60`](https://github.com/affise/sdk-android/blob/v1.6.60/CHANGELOG.md)
+- Update native iOS to [`1.6.52`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.52/CHANGELOG.md)
+- Update native Android to [`1.6.60`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.60/CHANGELOG.md)
 
 ## [1.6.40] - 2025-06-27
 
@@ -42,8 +54,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.51`](https://github.com/affise/sdk-ios/blob/1.6.51/CHANGELOG.md)
-- Update native Android to [`1.6.59`](https://github.com/affise/sdk-android/blob/v1.6.59/CHANGELOG.md)
+- Update native iOS to [`1.6.51`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.51/CHANGELOG.md)
+- Update native Android to [`1.6.59`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.59/CHANGELOG.md)
 
 ## [1.6.39] - 2025-05-30
 
@@ -57,8 +69,8 @@
 - Api `Affise.Module.LinkResolve` moved to `Affise.Module.Link.Resolve`
 - Api `Affise.Module.FetchProducts` moved to `Affise.Module.Subscription.FetchProducts`
 - Api `Affise.Module.Purchase` moved to `Affise.Module.Subscription.Purchase`
-- Update native iOS to [`1.6.50`](https://github.com/affise/sdk-ios/blob/1.6.50/CHANGELOG.md)
-- Update native Android to [`1.6.58`](https://github.com/affise/sdk-android/blob/v1.6.58/CHANGELOG.md)
+- Update native iOS to [`1.6.50`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.50/CHANGELOG.md)
+- Update native Android to [`1.6.58`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.58/CHANGELOG.md)
 - 
 ## [1.6.38] - 2025-05-07
 
@@ -69,7 +81,7 @@
 
 ### Changed
 
-- Update native Android to [`1.6.57`](https://github.com/affise/sdk-android/blob/v1.6.57/CHANGELOG.md)
+- Update native Android to [`1.6.57`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.57/CHANGELOG.md)
 
 ## [1.6.37] - 2025-04-25
 
@@ -90,8 +102,8 @@
 - Update `android` provider `OAID_MD5` moved to module `huawei`
 - Update `android` provider `OAID` to use `com.huawei.hms:ads-identifier`
 - Update `iOS` EventsManager scheduler
-- Update native iOS to [`1.6.49`](https://github.com/affise/sdk-ios/blob/1.6.49/CHANGELOG.md)
-- Update native Android to [`1.6.56`](https://github.com/affise/sdk-android/blob/v1.6.56/CHANGELOG.md)
+- Update native iOS to [`1.6.49`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.49/CHANGELOG.md)
+- Update native Android to [`1.6.56`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.56/CHANGELOG.md)
 
 ## [1.6.35] - 2025-03-31
 
@@ -104,8 +116,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.48`](https://github.com/affise/sdk-ios/blob/1.6.48/CHANGELOG.md)
-- Update native Android to [`1.6.55`](https://github.com/affise/sdk-android/blob/v1.6.55/CHANGELOG.md)
+- Update native iOS to [`1.6.48`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.48/CHANGELOG.md)
+- Update native Android to [`1.6.55`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.55/CHANGELOG.md)
   
 ## [1.6.34] - 2025-03-18
 
@@ -120,8 +132,8 @@
 
 - Api `Affise.GetReferrerOnServer` moved to `Affise.GetDeferredDeeplink`
 - Api `Affise.GetReferrerOnServerValue` moved to `Affise.GetDeferredDeeplinkValue`
-- Update native iOS to [`1.6.47`](https://github.com/affise/sdk-ios/blob/1.6.47/CHANGELOG.md)
-- Update native Android to [`1.6.54`](https://github.com/affise/sdk-android/blob/v1.6.54/CHANGELOG.md)
+- Update native iOS to [`1.6.47`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.47/CHANGELOG.md)
+- Update native Android to [`1.6.54`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.54/CHANGELOG.md)
 
 ## [1.6.32] - 2025-03-07
 
@@ -132,8 +144,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.45`](https://github.com/affise/sdk-ios/blob/1.6.45/CHANGELOG.md)
-- Update native Android to [`1.6.53`](https://github.com/affise/sdk-android/blob/v1.6.53/CHANGELOG.md)
+- Update native iOS to [`1.6.45`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.45/CHANGELOG.md)
+- Update native Android to [`1.6.53`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.53/CHANGELOG.md)
 
 ## [1.6.31] - 2025-02-14
 
@@ -148,8 +160,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.43`](https://github.com/affise/sdk-ios/blob/1.6.43/CHANGELOG.md)
-- Update native Android to [`1.6.52`](https://github.com/affise/sdk-android/blob/v1.6.52/CHANGELOG.md)
+- Update native iOS to [`1.6.43`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.43/CHANGELOG.md)
+- Update native Android to [`1.6.52`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.52/CHANGELOG.md)
 
 ## [1.6.30] - 2025-01-29
 
@@ -160,7 +172,7 @@
 
 ### Changed
 
-- Update native Android to [`1.6.51`](https://github.com/affise/sdk-android/blob/v1.6.51/CHANGELOG.md)
+- Update native Android to [`1.6.51`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.51/CHANGELOG.md)
 
 ## [1.6.29] - 2024-12-20
 
@@ -176,7 +188,7 @@
 
 ### Changed
 
-- Update native Android to [`1.6.50`](https://github.com/affise/sdk-android/blob/v1.6.50/CHANGELOG.md)
+- Update native Android to [`1.6.50`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.50/CHANGELOG.md)
 
 ## [1.6.27] - 2024-11-26
 
@@ -190,13 +202,13 @@
 
 ### Changed
 
-- Update native Android to [`1.6.49`](https://github.com/affise/sdk-android/blob/v1.6.49/CHANGELOG.md)
+- Update native Android to [`1.6.49`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.49/CHANGELOG.md)
 
 ## [1.6.26] - 2024-10-22
 
 ### Changed
 
-- Update native Android to [`1.6.47`](https://github.com/affise/sdk-android/blob/v1.6.47/CHANGELOG.md)
+- Update native Android to [`1.6.47`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.47/CHANGELOG.md)
 
 ### Removed
 
@@ -217,8 +229,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.42`](https://github.com/affise/sdk-ios/blob/1.6.42/CHANGELOG.md)
-- Update native Android to [`1.6.45`](https://github.com/affise/sdk-android/blob/v1.6.45/CHANGELOG.md)
+- Update native iOS to [`1.6.42`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.42/CHANGELOG.md)
+- Update native Android to [`1.6.45`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.45/CHANGELOG.md)
   
 ## [1.6.23] - 2024-10-02
 
@@ -228,7 +240,7 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.41`](https://github.com/affise/sdk-ios/blob/1.6.41/CHANGELOG.md)
+- Update native iOS to [`1.6.41`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.41/CHANGELOG.md)
 
 ## [1.6.22] - 2024-09-19
 
@@ -242,8 +254,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.40`](https://github.com/affise/sdk-ios/blob/1.6.40/CHANGELOG.md)
-- Update native Android to [`1.6.44`](https://github.com/affise/sdk-android/blob/v1.6.44/CHANGELOG.md)
+- Update native iOS to [`1.6.40`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.40/CHANGELOG.md)
+- Update native Android to [`1.6.44`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.44/CHANGELOG.md)
 
 ## [1.6.21] - 2024-08-21
 
@@ -256,8 +268,8 @@
 
 - Api `Affise.GetReferrer` to `Affise.GetReferrerUrl`
 - Api `Affise.GetReferrerValue` to `Affise.GetReferrerUrlValue`
-- Update native iOS to [`1.6.39`](https://github.com/affise/sdk-ios/blob/1.6.39/CHANGELOG.md)
-- Update native Android to [`1.6.42`](https://github.com/affise/sdk-android/blob/v1.6.42/CHANGELOG.md)
+- Update native iOS to [`1.6.39`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.39/CHANGELOG.md)
+- Update native Android to [`1.6.42`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.42/CHANGELOG.md)
 
 ## [1.6.20] - 2024-07-31
 
@@ -271,8 +283,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.36`](https://github.com/affise/sdk-ios/blob/1.6.36/CHANGELOG.md)
-- Update native Android to [`1.6.40`](https://github.com/affise/sdk-android/blob/v1.6.40/CHANGELOG.md)
+- Update native iOS to [`1.6.36`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.36/CHANGELOG.md)
+- Update native Android to [`1.6.40`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.40/CHANGELOG.md)
 
 ## [1.6.19] - 2024-07-17
 
@@ -283,8 +295,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.33`](https://github.com/affise/sdk-ios/blob/1.6.33/CHANGELOG.md)
-- Update native Android to [`1.6.38`](https://github.com/affise/sdk-android/blob/v1.6.38/CHANGELOG.md)
+- Update native iOS to [`1.6.33`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.33/CHANGELOG.md)
+- Update native Android to [`1.6.38`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.38/CHANGELOG.md)
 - Update `RegisterDeeplinkCallback` change uri to convenient values
 - Api `Affise.GetStatus` moved to `Affise.Module.GetStatus`
 - Api `Affise.ModuleStart` moved to `Affise.Module.ModuleStart`
@@ -303,8 +315,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.6.32`](https://github.com/affise/sdk-ios/blob/1.6.32/CHANGELOG.md)
-- Update native Android to [`1.6.34`](https://github.com/affise/sdk-android/blob/v1.6.34/CHANGELOG.md)
+- Update native iOS to [`1.6.32`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.32/CHANGELOG.md)
+- Update native Android to [`1.6.34`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.34/CHANGELOG.md)
 
 ## [1.6.17] - 2024-03-14
 
@@ -351,33 +363,34 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
-[1.6.43]: https://github.com/affise/sdk-unity/compare/1.6.42...1.6.43
-[1.6.42]: https://github.com/affise/sdk-unity/compare/1.6.41...1.6.42
-[1.6.41]: https://github.com/affise/sdk-unity/compare/1.6.40...1.6.41
-[1.6.40]: https://github.com/affise/sdk-unity/compare/1.6.39...1.6.40
-[1.6.39]: https://github.com/affise/sdk-unity/compare/1.6.38...1.6.39
-[1.6.38]: https://github.com/affise/sdk-unity/compare/1.6.37...1.6.38
-[1.6.37]: https://github.com/affise/sdk-unity/compare/1.6.36...1.6.37
-[1.6.36]: https://github.com/affise/sdk-unity/compare/1.6.35...1.6.36
-[1.6.35]: https://github.com/affise/sdk-unity/compare/1.6.34...1.6.35
-[1.6.34]: https://github.com/affise/sdk-unity/compare/1.6.33...1.6.34
-[1.6.33]: https://github.com/affise/sdk-unity/compare/1.6.32...1.6.33
-[1.6.32]: https://github.com/affise/sdk-unity/compare/1.6.31...1.6.32
-[1.6.31]: https://github.com/affise/sdk-unity/compare/1.6.30...1.6.31
-[1.6.30]: https://github.com/affise/sdk-unity/compare/1.6.29...1.6.30
-[1.6.29]: https://github.com/affise/sdk-unity/compare/1.6.28...1.6.29
-[1.6.28]: https://github.com/affise/sdk-unity/compare/1.6.27...1.6.28
-[1.6.27]: https://github.com/affise/sdk-unity/compare/1.6.26...1.6.27
-[1.6.26]: https://github.com/affise/sdk-unity/compare/1.6.25...1.6.26
-[1.6.25]: https://github.com/affise/sdk-unity/compare/1.6.24...1.6.25
-[1.6.24]: https://github.com/affise/sdk-unity/compare/1.6.23...1.6.24
-[1.6.23]: https://github.com/affise/sdk-unity/compare/1.6.22...1.6.23
-[1.6.22]: https://github.com/affise/sdk-unity/compare/1.6.21...1.6.22
-[1.6.21]: https://github.com/affise/sdk-unity/compare/1.6.20...1.6.21
-[1.6.20]: https://github.com/affise/sdk-unity/compare/1.6.19...1.6.20
-[1.6.19]: https://github.com/affise/sdk-unity/compare/1.6.18...1.6.19
-[1.6.18]: https://github.com/affise/sdk-unity/compare/1.6.17...1.6.18
-[1.6.17]: https://github.com/affise/sdk-unity/compare/1.6.16...1.6.17
-[1.6.16]: https://github.com/affise/sdk-unity/compare/1.6.15...1.6.16
-[1.6.15]: https://github.com/affise/sdk-unity/compare/1.6.14...1.6.15
-[1.6.14]: https://github.com/affise/sdk-unity/compare/1.6.13...1.6.14
+[1.6.44]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.43...1.6.44
+[1.6.43]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.42...1.6.43
+[1.6.42]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.41...1.6.42
+[1.6.41]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.40...1.6.41
+[1.6.40]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.39...1.6.40
+[1.6.39]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.38...1.6.39
+[1.6.38]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.37...1.6.38
+[1.6.37]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.36...1.6.37
+[1.6.36]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.35...1.6.36
+[1.6.35]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.34...1.6.35
+[1.6.34]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.33...1.6.34
+[1.6.33]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.32...1.6.33
+[1.6.32]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.31...1.6.32
+[1.6.31]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.30...1.6.31
+[1.6.30]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.29...1.6.30
+[1.6.29]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.28...1.6.29
+[1.6.28]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.27...1.6.28
+[1.6.27]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.26...1.6.27
+[1.6.26]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.25...1.6.26
+[1.6.25]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.24...1.6.25
+[1.6.24]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.23...1.6.24
+[1.6.23]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.22...1.6.23
+[1.6.22]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.21...1.6.22
+[1.6.21]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.20...1.6.21
+[1.6.20]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.19...1.6.20
+[1.6.19]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.18...1.6.19
+[1.6.18]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.17...1.6.18
+[1.6.17]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.16...1.6.17
+[1.6.16]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.15...1.6.16
+[1.6.15]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.14...1.6.15
+[1.6.14]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.13...1.6.14

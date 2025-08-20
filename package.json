@@ -1,13 +1,13 @@
 {
   "name": "com.affise.attribution",
-  "version": "1.6.43",
+  "version": "1.6.44",
   "displayName": "Affise Attribution",
   "description": "A platform for data-loving marketers that want to grow their revenue by up to 250%",
   "unity": "2020.3",
-  "documentationUrl": "https://github.com/affise/sdk-unity#affise-unity-package",
+  "documentationUrl": "https://github.com/affise/affise-mmp-sdk-unity#affise-unity-package",
   "license": "MIT",
-  "licensesUrl": "https://github.com/affise/sdk-unity/blob/master/LICENSE.md",
-  "changelogUrl": "https://github.com/affise/sdk-android/tags",
+  "licensesUrl": "https://github.com/affise/affise-mmp-sdk-unity/blob/master/LICENSE.md",
+  "changelogUrl": "https://github.com/affise/affise-mmp-sdk-unity/blob/master/CHANGELOG.md",
   "dependencies": {},
   "keywords": [
     "affise", "saas", "marketing"
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/affise/sdk-unity"
+    "url": "https://github.com/affise/affise-mmp-sdk-unity"
   },
   "samples": [
     {

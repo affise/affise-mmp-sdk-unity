@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using AffiseAttributionLib.Module.AppsFlyer;
 using AffiseAttributionLib.Module.Link;
 using AffiseAttributionLib.Module.Subscription;
+using AffiseAttributionLib.Module.TikTok;
 using AffiseAttributionLib.Modules;
 
 namespace AffiseAttributionLib.Module.Attribution
@@ -15,6 +16,7 @@ namespace AffiseAttributionLib.Module.Attribution
         public IAffiseModuleLinkApi Link { get; }
         public IAffiseModuleAppsFlyerApi AppsFlyer { get; }
         public IAffiseModuleSubscriptionApi Subscription { get; }
+        public IAffiseModuleTikTokApi TikTok { get; }
 
         /**
          * Get module status

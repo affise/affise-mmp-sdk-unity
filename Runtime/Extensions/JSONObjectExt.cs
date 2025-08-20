@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using SimpleJSON;
-using UnityEngine;
 
 namespace AffiseAttributionLib.Extensions
 {
@@ -31,6 +30,7 @@ namespace AffiseAttributionLib.Extensions
                 List<float> listValue => listValue.ToJsonArray(),
                 List<double> listValue => listValue.ToJsonArray(),
                 List<bool> listValue => listValue.ToJsonArray(),
+                List<object> listValue => listValue.ToJsonArray(),
                 _ => JSONNull.CreateOrGet()
             };
             return json;
@@ -109,5 +109,63 @@ namespace AffiseAttributionLib.Extensions
 
             return result;
         }
+
+        public static List<object> ToList(this JSONNode json)
+        {
+            var result = new List<object>();
+            if (!json.IsArray) return result;
+            foreach (var (key, value) in json)
+            {
+                if (value.IsObject)
+                {
+                    result.Add(value.ToDictionary());
+                }
+                else if (value.IsArray)
+                {
+                    result.Add(value.ToList());
+                } 
+                else if (value.IsNull)
+                {
+                    continue;
+                }
+                else
+                {
+                    result.Add(value.Value);
+                }
+            }
+
+            return result;
+        }
+
+        public static Dictionary<string, object?> ToDictionary(this JSONNode json)
+        {
+            var result = new Dictionary<string, object?>();
+            
+            if (!json.IsObject) return result;
+
+            foreach (var (key, value) in json)
+            {
+                if (key is null) continue;
+
+                if (value.IsObject)
+                {
+                    result.Add(key, value.ToDictionary());
+                }
+                else if (value.IsArray)
+                {
+                    result.Add(key, value.ToList());
+                }
+                else if (value.IsNull) 
+                {
+                    result.Add(key, null);
+                } 
+                else 
+                {
+                    result.Add(key, value.Value);
+                }
+            }
+            
+            return result;
+        } 
     }
 }

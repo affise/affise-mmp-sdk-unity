@@ -102,7 +102,10 @@ namespace AffiseAttributionLib.Native
         );
         
         // AppsFlyer
-        void LogEvent<T>(string eventName, Dictionary<string, T> eventValues);
+        void AppsFlyerLogEvent<T>(string eventName, Dictionary<string, T> eventValues);
+        
+        // TikTok
+        void TikTokSendEvent<T>(string? eventName, Dictionary<string, T>? properties, string? eventId);
         ////////////////////////////////////////
         // modules
         ////////////////////////////////////////

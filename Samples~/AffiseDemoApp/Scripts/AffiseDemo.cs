@@ -28,7 +28,7 @@ namespace AffiseDemo
 
         private void AffiseInit()
         {
-            // Initialize https://github.com/affise/sdk-unity#manual
+            // Initialize https://github.com/affise/affise-mmp-sdk-unity#manual
             // For manual init delete "Affise Settings.asset" or disable [isActive] flag  
             // Affise
             //     .Settings(
@@ -46,7 +46,7 @@ namespace AffiseDemo
                 Debug.Log($"Affise: {response}");
             });
 
-            // Deeplinks https://github.com/affise/sdk-unity#deeplinks
+            // Deeplinks https://github.com/affise/affise-mmp-sdk-unity#deeplinks
             Affise.RegisterDeeplinkCallback(value =>
             {
                 var list = value.Parameters.Select(h => $"{h.Key}=[{string.Join(", ", h.Value)}]").ToList();
@@ -89,7 +89,7 @@ namespace AffiseDemo
                     : null;
 
                 AddButton(view, ToCamelCase(affiseEvent.GetName()), styleClass, () => { 
-                    // Events tracking https://github.com/affise/sdk-unity#events-tracking
+                    // Events tracking https://github.com/affise/affise-mmp-sdk-unity#events-tracking
                     // Send event
                     affiseEvent.Send();
                     // or

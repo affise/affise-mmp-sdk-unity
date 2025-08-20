@@ -12,7 +12,7 @@
                 <ui:Button display-tooltip-when-elided="true" tooltip="https://affise.com/" name="site" text="affise.com" class="link" />
                 <ui:Label text="&#10;" display-tooltip-when-elided="true" class="interpunct" />
                 <ui:VisualElement name="link" class="img-gh" />
-                <ui:Button text="github" display-tooltip-when-elided="true" tooltip="https://github.com/affise/sdk-unity" class="link" />
+                <ui:Button text="github" display-tooltip-when-elided="true" tooltip="https://github.com/affise/affise-mmp-sdk-unity" class="link" />
                 <ui:Label text="&#10;" display-tooltip-when-elided="true" class="interpunct" />
                 <ui:VisualElement name="mail" class="img-mail" />
                 <ui:Button text="support@affise.com" display-tooltip-when-elided="true" tooltip="mailto:support@affise.com" name="email" class="link" />

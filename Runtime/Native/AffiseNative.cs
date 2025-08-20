@@ -300,13 +300,26 @@ namespace AffiseAttributionLib.Native
         }
 
         // AppsFlyer
-        public void LogEvent<T>(string eventName, Dictionary<string, T> eventValues) {
+        public void AppsFlyerLogEvent<T>(string eventName, Dictionary<string, T> eventValues) {
             var data = new Dictionary<string, object>
             {
                 { DataName.EVENT_NAME, eventName },
                 { DataName.EVENT_VALUES, eventValues.ToJsonObject() },
             };
             Native(AffiseApiMethod.MODULE_APPSFLYER_LOG_EVENT, data);
+        }
+        
+                
+        // TikTok
+        public void TikTokSendEvent<T>(string? eventName, Dictionary<string, T>? properties, string? eventId)
+        {
+            var data = new Dictionary<string, object?>
+            {
+                { DataName.EVENT_NAME, eventName },
+                { DataName.EVENT_VALUES, properties?.ToJsonObject() },
+                { DataName.EVENT_ID, eventId },
+            };
+            Native(AffiseApiMethod.MODULE_TIKTOK_EVENT, data);
         }
         ////////////////////////////////////////
         // modules

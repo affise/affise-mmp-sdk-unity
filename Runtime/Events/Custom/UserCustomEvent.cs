@@ -38,7 +38,7 @@ namespace AffiseAttributionLib.Events.Custom
             return _category ?? base.GetCategory();
         }
 
-        public AffiseEvent InternalAddRawParameters<T>(Dictionary<string, T> parameters)
+        public AffiseEvent InternalAddRawParameters<T>(Dictionary<string, T>? parameters)
         {
             AddRawParameters(parameters);
             return this;

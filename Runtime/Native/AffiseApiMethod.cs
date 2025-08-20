@@ -56,6 +56,8 @@ namespace AffiseAttributionLib.Native
         // Module Subscription
         MODULE_SUBS_FETCH_PRODUCTS_CALLBACK,
         MODULE_SUBS_PURCHASE_CALLBACK,
+        // TikTok Module
+        MODULE_TIKTOK_EVENT,
         ////////////////////////////////////////
         // modules
         ////////////////////////////////////////
@@ -128,6 +130,8 @@ namespace AffiseAttributionLib.Native
                 // Module Subscription
                 AffiseApiMethod.MODULE_SUBS_FETCH_PRODUCTS_CALLBACK => "module_subs_fetch_products_callback",
                 AffiseApiMethod.MODULE_SUBS_PURCHASE_CALLBACK => "module_subs_purchase_callback",
+                // TikTok Module
+                AffiseApiMethod.MODULE_TIKTOK_EVENT => "module_tiktok_event",
                 ////////////////////////////////////////
                 // modules
                 ////////////////////////////////////////

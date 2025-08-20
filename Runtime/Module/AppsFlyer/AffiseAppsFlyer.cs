@@ -10,7 +10,7 @@ namespace AffiseAttributionLib.Module.AppsFlyer
         public void LogEvent<T>(string eventName, Dictionary<string, T> eventValues)
         {
 #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-            _native?.LogEvent(eventName, eventValues);
+            _native?.AppsFlyerLogEvent(eventName, eventValues);
 #else
             ModuleApi?.LogEvent(eventName, eventValues);
 #endif

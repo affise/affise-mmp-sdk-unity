@@ -9,6 +9,7 @@ using AffiseAttributionLib.Module.Link;
 using AffiseAttributionLib.Module.Network;
 using AffiseAttributionLib.Module.Phone;
 using AffiseAttributionLib.Module.Status;
+using AffiseAttributionLib.Module.TikTok;
 
 namespace AffiseAttributionLib.Modules
 {
@@ -98,6 +99,7 @@ namespace AffiseAttributionLib.Modules
                 { AffiseModules.Network, new NetworkModule() },
                 { AffiseModules.Phone, new PhoneModule() },
                 { AffiseModules.Status, new StatusModule() },
+                { AffiseModules.TikTok, new TikTokModule() },
             };
 
             foreach (var (name, module) in affiseModules)

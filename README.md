@@ -4,7 +4,7 @@
 
 | Artifact      | Version               |
 |---------------|-----------------------|
-| `attribution` | [`1.6.43`](/releases/tag/1.6.43) |
+| `attribution` | [`1.6.44`](/releases/tag/1.6.44) |
 
 - [Affise Unity package](#affise-unity-package)
 - [Description](#description)
@@ -33,6 +33,7 @@
       - [Module Meta](#module-meta)
       - [Module Status](#module-status)
       - [Module Subscription](#module-subscription)
+      - [Module TikTok](#module-tiktok)
   - [Build](#build)
     - [iOS](#ios-3)
 - [Features](#features)
@@ -111,16 +112,16 @@ referrer.
 
 Open Package Manager(`Window / Package Manager`)
 
-Add package from git url `https://github.com/affise/sdk-unity.git`
+Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 <div align=center>
-    <img src="https://github.com/affise/sdk-unity/blob/assets/package_git.png?raw=true" alt="package_manager">
+    <img src="https://github.com/affise/affise-mmp-sdk-unity/blob/assets/package_git.png?raw=true" alt="package_manager">
 </div>
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.6.43.unitypackage`](https://github.com/affise/sdk-unity/releases/download/1.6.43/attribution-1.6.43.unitypackage)
-from [releases page](https://github.com/affise/sdk-unity/releases) and drop this file to unity editor
+Download latest Affise SDK [`attribution-1.6.44.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.44/attribution-1.6.44.unitypackage)
+from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
 
@@ -132,11 +133,11 @@ Open Project Settings(`Edit / Project Settings`)
 
 On Affise tab click `Create` button.
 
-![affise_settings_new](https://github.com/affise/sdk-unity/blob/assets/affise_settings_new.png?raw=true)
+![affise_settings_new](https://github.com/affise/affise-mmp-sdk-unity/blob/assets/affise_settings_new.png?raw=true)
 
 This will create `Affise Settings.asset` in `Assets / Affise / Resources` directory.
 
-> **Note**
+> [!NOTE] 
 >
 > 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
 >
@@ -150,7 +151,7 @@ This will create `Affise Settings.asset` in `Assets / Affise / Resources` direct
 >
 > 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧
 >
@@ -162,7 +163,7 @@ This will create `Affise Settings.asset` in `Assets / Affise / Resources` direct
 
 Fill all required fields
 
-![affise_settings](https://github.com/affise/sdk-unity/blob/assets/affise_settings.png?raw=true)
+![affise_settings](https://github.com/affise/affise-mmp-sdk-unity/blob/assets/affise_settings.png?raw=true)
 
 ##### Domain
 
@@ -201,7 +202,7 @@ Affise
 
 #### Before application is published
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -230,7 +231,7 @@ Open `Edit / Project Settings / Affise`
 
 On `Modules` tab select all required
 
-![affise_modules](https://github.com/affise/sdk-unity/blob/assets/affise_modules.png?raw=true)
+![affise_modules](https://github.com/affise/affise-mmp-sdk-unity/blob/assets/affise_modules.png?raw=true)
 
 If module start `type` is `manual`, then call is code:
 
@@ -248,28 +249,29 @@ Affise.Module.GetModulesInstalled()
 
 All affise modules is updated automatically on build
 
-> **Warning**
+> [!CAUTION]
 >
-> **No manual editing is reqired**
+> **No manual editing is required**
 
-| Module        | Version                                                                                                                                                                      | Start  |
-|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
-| `Advertising` | [![module-advertising](https://img.shields.io/maven-central/v/com.affise/module-advertising?label=latest)](https://mvnrepository.com/artifact/com.affise/module-advertising) | `Auto` |
-| `AndroidId`   | [![module-androidid](https://img.shields.io/maven-central/v/com.affise/module-androidid?label=latest)](https://mvnrepository.com/artifact/com.affise/module-androidid)       | `Auto` |
-| `AppsFlyer`   | [![module-androidid](https://img.shields.io/maven-central/v/com.affise/module-appsflyer?label=latest)](https://mvnrepository.com/artifact/com.affise/module-appsflyer)       | `Auto` |
-| `Link`        | [![module-link](https://img.shields.io/maven-central/v/com.affise/module-link?label=latest)](https://mvnrepository.com/artifact/com.affise/module-link)                      | `Auto` |
-| `Network`     | [![module-network](https://img.shields.io/maven-central/v/com.affise/module-network?label=latest)](https://mvnrepository.com/artifact/com.affise/module-network)             | `Auto` |
-| `Phone`       | [![module-phone](https://img.shields.io/maven-central/v/com.affise/module-phone?label=latest)](https://mvnrepository.com/artifact/com.affise/module-phone)                   | `Auto` |
-| `Status`      | [![module-status](https://img.shields.io/maven-central/v/com.affise/module-status?label=latest)](https://mvnrepository.com/artifact/com.affise/module-status)                | `Auto` |
-| `Subscription`      | [![module-status](https://img.shields.io/maven-central/v/com.affise/module-subscription?label=latest)](https://mvnrepository.com/artifact/com.affise/module-subscription)                | `Auto` |
-| `RuStore`      | [![module-rustore](https://img.shields.io/maven-central/v/com.affise/module-rustore?label=latest)](https://mvnrepository.com/artifact/com.affise/module-rustore)                | `Auto` |
-| `Huawei`      | [![module-rustore](https://img.shields.io/maven-central/v/com.affise/module-huawei?label=latest)](https://mvnrepository.com/artifact/com.affise/module-huawei)                | `Auto` |
-| `META`         | [![module-meta](https://img.shields.io/maven-central/v/com.affise/module-meta?label=latest)](https://mvnrepository.com/artifact/com.affise/module-meta)             | `Auto` |
+| Module         | Version                                                                                                                                                                      | Start  |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| `Advertising`  | [![module-advertising](https://img.shields.io/maven-central/v/com.affise/module-advertising?label=latest)](https://mvnrepository.com/artifact/com.affise/module-advertising) | `Auto` |
+| `AndroidId`    | [![module-androidid](https://img.shields.io/maven-central/v/com.affise/module-androidid?label=latest)](https://mvnrepository.com/artifact/com.affise/module-androidid)       | `Auto` |
+| `AppsFlyer`    | [![module-appsflyer](https://img.shields.io/maven-central/v/com.affise/module-appsflyer?label=latest)](https://mvnrepository.com/artifact/com.affise/module-appsflyer)       | `Auto` |
+| `Link`         | [![module-link](https://img.shields.io/maven-central/v/com.affise/module-link?label=latest)](https://mvnrepository.com/artifact/com.affise/module-link)                      | `Auto` |
+| `Network`      | [![module-network](https://img.shields.io/maven-central/v/com.affise/module-network?label=latest)](https://mvnrepository.com/artifact/com.affise/module-network)             | `Auto` |
+| `Phone`        | [![module-phone](https://img.shields.io/maven-central/v/com.affise/module-phone?label=latest)](https://mvnrepository.com/artifact/com.affise/module-phone)                   | `Auto` |
+| `Status`       | [![module-status](https://img.shields.io/maven-central/v/com.affise/module-status?label=latest)](https://mvnrepository.com/artifact/com.affise/module-status)                | `Auto` |
+| `Subscription` | [![module-status](https://img.shields.io/maven-central/v/com.affise/module-subscription?label=latest)](https://mvnrepository.com/artifact/com.affise/module-subscription)    | `Auto` |
+| `RuStore`      | [![module-rustore](https://img.shields.io/maven-central/v/com.affise/module-rustore?label=latest)](https://mvnrepository.com/artifact/com.affise/module-rustore)             | `Auto` |
+| `Huawei`       | [![module-huawei](https://img.shields.io/maven-central/v/com.affise/module-huawei?label=latest)](https://mvnrepository.com/artifact/com.affise/module-huawei)                | `Auto` |
+| `Meta`         | [![module-meta](https://img.shields.io/maven-central/v/com.affise/module-meta?label=latest)](https://mvnrepository.com/artifact/com.affise/module-meta)                      | `Auto` |
+| `TikTok`       | [![module-tiktok](https://img.shields.io/maven-central/v/com.affise/module-tiktok?label=latest)](https://mvnrepository.com/artifact/com.affise/module-tiktok)                | `Auto` |
 
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.6.61'
+final affise_version = '1.6.62'
 
 dependencies {
     // ...
@@ -285,6 +287,7 @@ dependencies {
     implementation "com.affise:module-rustore:$affise_version"
     implementation "com.affise:module-huawei:$affise_version"
     implementation "com.affise:module-appsflyer:$affise_version"
+    implementation "com.affise:module-tiktok:$affise_version"
 }
 ```
 
@@ -292,19 +295,20 @@ dependencies {
 
 All affise modules is updated automatically on build
 
-> **Warning**
+> [!CAUTION]
 >
-> **No manual editing is reqired**
+> **No manual editing is required**
 
 | Module         |                                       Version                                        | Start    |
 |----------------|:------------------------------------------------------------------------------------:|----------|
-| `AdService`    | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Advertising`  | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Manual` |
-| `AppsFlyer`    | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Link`         | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Persistent`   | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Status`       | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Subscription` | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `AdService`    | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `Advertising`  | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Manual` |
+| `AppsFlyer`    | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `Link`         | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `Persistent`   | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `Status`       | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `Subscription` | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `TikTok`       | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
 
 Dependencies located in XCode project folder `Podfile`
 
@@ -312,16 +316,17 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.53'
+  pod 'AffiseInternal', '1.6.54'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.6.53'
-  pod 'AffiseModule/Advertising', '1.6.53'
-  pod 'AffiseModule/AppsFlyer', '1.6.53'
-  pod 'AffiseModule/Link', '1.6.53'
-  pod 'AffiseModule/Persistent', '1.6.53'
-  pod 'AffiseModule/Status', '1.6.53'
-  pod 'AffiseModule/Subscription', '1.6.53'
+  pod 'AffiseModule/AdService', '1.6.54'
+  pod 'AffiseModule/Advertising', '1.6.54'
+  pod 'AffiseModule/AppsFlyer', '1.6.54'
+  pod 'AffiseModule/Link', '1.6.54'
+  pod 'AffiseModule/Persistent', '1.6.54'
+  pod 'AffiseModule/Status', '1.6.54'
+  pod 'AffiseModule/Subscription', '1.6.54'
+  pod 'AffiseModule/TikTok', '1.6.54'
 end
 
 target 'Unity-iPhone' do
@@ -342,7 +347,7 @@ Sends `attributionToken` from `AdServices` framework `AAAttribution.attributionT
 
 This module required to Use [`IDFA`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/advertisingidentifier) (Identifier for advertisers)
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -362,7 +367,7 @@ Or Manual open `info.plist` and add key `NSUserTrackingUsageDescription` with st
 
 #### Module Huawei
 
-> **Note**
+> [!NOTE] 
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -460,7 +465,7 @@ Affise
 
 #### Module Status
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -524,6 +529,53 @@ Is Module present:
 Affise.Module.Subscription.HasModule();
 ```
 
+#### Module TikTok
+
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> Module TikTok requires [TikTok Business Unity SDK](https://github.com/tiktok/tiktok-business-unity-sdk)
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+Send TikTok event data to Affise [TikTok Docs](https://business-api.tiktok.com/gateway/docs/index?identify_key=c0138ffadd90a955c1f0670a56fe348d1d40680b3c89461e09f78ed26785164b&language=ENGLISH&doc_id=1824036608950273#item-link-3.2.2%20Content%20parameters%20for%20standard%20events)
+
+```c#
+var tiktokEvent = new TikTokAddToCartEvent("eventID");
+tiktokEvent.SetDescription("Description of the product");
+tiktokEvent.SetCurrency(TTCurrency.TTCurrencyUSD);
+tiktokEvent.SetValue(4.99);
+tiktokEvent.SetContentType("Type of the product");
+tiktokEvent.SetContentId("ABC");
+
+var eventContent = new TikTokContentParams();
+eventContent.price = 4.99;
+eventContent.quantity = 1;
+eventContent.brand = "Brand of the product";
+eventContent.contentName = "Name of the product";
+TikTokContentParams[] contents = {eventContent};
+
+tiktokEvent.SetContents(contents);
+
+// Send TikTok event
+TikTokBusinessSDK.TrackTTEvent(cartEvent);
+
+// Prepare TikTok event data to Affise
+var eventName = tiktokEvent.EventParams["eventName"];
+var eventId = tiktokEvent.EventParams["eventId"];
+var jsonString = tiktokEvent.EventParams["properties"];
+var properties = Utils.JsonToDictionary(jsonString);
+// Send TikTok event data to Affise
+Affise.Module.TikTok.SendEvent(eventName, properties, eventId);
+```
+
+Is Module present:
+
+```c#
+Affise.Module.TikTok.HasModule();
+```
+
 ## Build
 
 ### iOS
@@ -536,7 +588,7 @@ SDK is using Cocoapods
 4. In Terminal open build folder and run commend `pod install`
 5. Open generated `*.worksapce` to build your unity project
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧
 >
@@ -554,10 +606,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.53'
+  pod 'AffiseInternal', '1.6.54'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.6.53`
+  # pod 'AffiseModule', `1.6.54`
 end
 
 target 'Unity-iPhone' do
@@ -997,7 +1049,7 @@ but if there is no network connection or device is disabled, events are kept loc
 
 ## Advertising Identifier (google) tracking
 
-> **Note**
+> [!NOTE] 
 >
 > `Android` only
 >
@@ -1007,7 +1059,7 @@ Advertising Identifier (google) tracking is supported automatically, no actions 
 
 ## Open Advertising Identifier (huawei) tracking
 
-> **Note**
+> [!NOTE] 
 >
 > `Android` only
 >
@@ -1094,9 +1146,9 @@ Open `Edit / Project Settings / Affise`
 
 On `Settings` tab add links
 
-![affise_deeplinks](https://github.com/affise/sdk-unity/blob/assets/affise_deeplinks.png?raw=true)
+![affise_deeplinks](https://github.com/affise/affise-mmp-sdk-unity/blob/assets/affise_deeplinks.png?raw=true)
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧
 >
@@ -1108,7 +1160,7 @@ On `Settings` tab add links
 
 ### Deeplinks manual
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -1171,7 +1223,7 @@ Example: `myapp://mydomain.com`
 
 ### Applinks manual
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -1273,7 +1325,7 @@ Example: `https://mydomain.com`
 
 ### Get deferred deeplink
 
-> **Note**
+> [!NOTE] 
 >
 > Requires [`Affise Status Module`](#modules)
 
@@ -1287,7 +1339,7 @@ Affise.GetDeferredDeeplink(deferredDeeplink => {
 
 ### Get deferred deeplink value
 
-> **Note**
+> [!NOTE] 
 >
 > Requires [`Affise Status Module`](#modules)
 
@@ -1362,7 +1414,7 @@ Affise.GetRandomUserId();
 
 ## Get random device Id
 
-> **Note**
+> [!NOTE] 
 >
 > To make `device id` more persistent on application reinstall
 >
@@ -1394,7 +1446,7 @@ Affise.IsFirstRun();
 
 ## Get referrer
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧
 >
@@ -1470,10 +1522,12 @@ In examples above `ReferrerKey.CLICK_ID` is used, but many others is available:
 
 ## Get module state
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
+> Required [Module Status](#module-status)
+> 
 > If `getStatus` return an error or working more than 2 minutes
 >
 > Please see section [validation credentials](#validate-credentials)
@@ -1542,7 +1596,7 @@ new AffiseAdRevenue(AffiseAdSource.ADMOB)
 
 ## Validate credentials
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -1594,7 +1648,7 @@ Affise.Debug.VersionNative();
 
 ## iOS
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -1610,7 +1664,7 @@ Open `info.plist` and add key `NSUserTrackingUsageDescription` with string value
 
 ## Android
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >

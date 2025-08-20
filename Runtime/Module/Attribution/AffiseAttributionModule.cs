@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using AffiseAttributionLib.Module.AppsFlyer;
 using AffiseAttributionLib.Module.Link;
 using AffiseAttributionLib.Module.Subscription;
+using AffiseAttributionLib.Module.TikTok;
 using AffiseAttributionLib.Modules;
 #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
 using AffiseAttributionLib.Native;
@@ -23,11 +24,14 @@ namespace AffiseAttributionLib.Module.Attribution
         public IAffiseModuleAppsFlyerApi AppsFlyer { get; }
         public IAffiseModuleSubscriptionApi Subscription { get; }
 
+        public IAffiseModuleTikTokApi TikTok { get; }
+
         public AffiseAttributionModule()
         {
             Link = new AffiseLink();
             AppsFlyer = new AffiseAppsFlyer();
             Subscription = new AffiseSubscription();
+            TikTok = new AffiseTikTok();
         }
 
         /**
