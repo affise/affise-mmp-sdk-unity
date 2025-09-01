@@ -4,7 +4,7 @@
 
 | Artifact      | Version               |
 |---------------|-----------------------|
-| `attribution` | [`1.6.44`](/releases/tag/1.6.44) |
+| `attribution` | [`1.6.45`](/releases/tag/1.6.45) |
 
 - [Affise Unity package](#affise-unity-package)
 - [Description](#description)
@@ -120,7 +120,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.6.44.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.44/attribution-1.6.44.unitypackage)
+Download latest Affise SDK [`attribution-1.6.45.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.45/attribution-1.6.45.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -271,7 +271,7 @@ All affise modules is updated automatically on build
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.6.62'
+final affise_version = '1.6.64'
 
 dependencies {
     // ...

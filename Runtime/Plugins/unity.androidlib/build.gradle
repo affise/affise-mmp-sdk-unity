@@ -14,7 +14,7 @@ android {
     }
 }
 
-final affise_version = "1.6.62"
+final affise_version = "1.6.64"
 
 dependencies {
     implementation "com.android.installreferrer:installreferrer:2.2"

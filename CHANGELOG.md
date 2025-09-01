@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.45] - 2025-09-01
+
+### Changed
+
+- Update native Android to [`1.6.64`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.64/CHANGELOG.md)
+
 ## [1.6.44] - 2025-08-20
 
 ### Added
@@ -363,6 +369,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.6.45]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.44...1.6.45
 [1.6.44]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.43...1.6.44
 [1.6.43]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.42...1.6.43
 [1.6.42]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.41...1.6.42
