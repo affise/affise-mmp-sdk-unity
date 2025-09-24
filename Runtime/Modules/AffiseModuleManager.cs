@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AffiseAttributionLib.AffiseParameters.Factory;
+using AffiseAttributionLib.Init;
 using AffiseAttributionLib.Logs;
 using AffiseAttributionLib.Module.Advertising;
 using AffiseAttributionLib.Module.Link;
@@ -20,10 +21,17 @@ namespace AffiseAttributionLib.Modules
 
         private readonly Dictionary<AffiseModules, AffiseModule> _modules = new();
 
-        public AffiseModuleManager(ILogsManager logsManager, PostBackModelFactory postBackModelFactory)
+        private readonly List<AffiseModules> _disabledModules;
+
+        public AffiseModuleManager(
+            ILogsManager logsManager, 
+            PostBackModelFactory postBackModelFactory,
+            AffiseInitProperties initProperties
+        )
         {
             _logsManager = logsManager;
             _postBackModelFactory = postBackModelFactory;
+            _disabledModules = initProperties.DisableModules;
         }
 
         public void Init(List<object> dependencies)
@@ -36,10 +44,7 @@ namespace AffiseAttributionLib.Modules
                     _postBackModelFactory.GetProviders()
                 );
 
-                if (module.IsManual == false)
-                {
-                    ModuleStart(module);
-                }
+                ModuleStart(module);
             });
         }
 
@@ -59,15 +64,6 @@ namespace AffiseAttributionLib.Modules
             }
         }
 
-        public bool ManualStart(AffiseModules module)
-        {
-            var affiseModule = GetModule(module);
-            if (affiseModule is null) return false;
-            if (affiseModule.IsManual == false) return false;
-            ModuleStart(affiseModule);
-            return true;
-        }
-
         public List<AffiseModules> GetModules()
         {
             return _modules.Keys.ToList();
@@ -77,6 +73,13 @@ namespace AffiseAttributionLib.Modules
         {
             module.Start();
             _postBackModelFactory.AddProviders(module.Providers());
+        }
+
+        public void UpdateProviders(AffiseModules module)
+        {
+            var providers = GetModule(module)?.GetRequestProviders();
+            if (providers is null) return;
+            _postBackModelFactory.AddProviders(providers);
         }
 
         public AffiseModule? GetModule(AffiseModules name)
@@ -102,9 +105,11 @@ namespace AffiseAttributionLib.Modules
                 { AffiseModules.TikTok, new TikTokModule() },
             };
 
-            foreach (var (name, module) in affiseModules)
+            foreach (var (moduleName, module) in affiseModules)
             {
-                _modules[name] = module;
+                if (_disabledModules.Contains(moduleName)) continue;
+                
+                _modules[moduleName] = module;
                 callback(module);
             }
         }

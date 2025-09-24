@@ -85,8 +85,6 @@ namespace AffiseAttributionLib.Native
         ////////////////////////////////////////
         void GetStatus(AffiseModules module, OnKeyValueCallback callback);
 
-        bool ModuleStart(AffiseModules module);
-
         List<AffiseModules> GetModules();
         
         // Module Link
@@ -106,6 +104,9 @@ namespace AffiseAttributionLib.Native
         
         // TikTok
         void TikTokSendEvent<T>(string? eventName, Dictionary<string, T>? properties, string? eventId);
+        
+        // Advertising
+        void AdvertisingStartModule();
         ////////////////////////////////////////
         // modules
         ////////////////////////////////////////

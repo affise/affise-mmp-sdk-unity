@@ -1,6 +1,7 @@
 ﻿#nullable enable
 using System;
 using System.Collections.Generic;
+using AffiseAttributionLib.Module.Advertising;
 using AffiseAttributionLib.Module.AppsFlyer;
 using AffiseAttributionLib.Module.Link;
 using AffiseAttributionLib.Module.Subscription;
@@ -13,6 +14,7 @@ namespace AffiseAttributionLib.Module.Attribution
     {
         internal const string NotSupported = "[Affise] platform not supported";
      
+        public IAffiseModuleAdvertisingApi Advertising { get; }
         public IAffiseModuleLinkApi Link { get; }
         public IAffiseModuleAppsFlyerApi AppsFlyer { get; }
         public IAffiseModuleSubscriptionApi Subscription { get; }
@@ -22,11 +24,6 @@ namespace AffiseAttributionLib.Module.Attribution
          * Get module status
          */
         public void GetStatus(AffiseModules module, OnKeyValueCallback onComplete);
-
-        /**
-         * Manual module start
-         */
-        public bool ModuleStart(AffiseModules module);
 
         /**
          * Get installed modules

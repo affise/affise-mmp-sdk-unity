@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using AffiseAttributionLib.Events;
 using AffiseAttributionLib.Extensions;
+using AffiseAttributionLib.Modules;
 using AffiseAttributionLib.Network;
 using AffiseAttributionLib.Settings;
 using SimpleJSON;
@@ -27,7 +28,10 @@ namespace AffiseAttributionLib.Init
         
         public OnInitErrorHandler? OnInitErrorHandler { get; }
         
-        public Dictionary<string, Object> ConfigValues { get; }
+        public Dictionary<AffiseConfig, Object> ConfigValues { get; }
+        
+        
+        public List<AffiseModules> DisableModules { get; }
         
         // public bool EnabledMetrics { get; }
 
@@ -67,7 +71,8 @@ namespace AffiseAttributionLib.Init
             string? domain = null,
             OnInitSuccessHandler? onInitSuccessHandler = null,
             OnInitErrorHandler? onInitErrorHandler = null,
-            Dictionary<string, Object>? configValues = null
+            Dictionary<AffiseConfig, Object>? configValues = null,
+            List<AffiseModules>? disableModules = null 
         )
         {
             AffiseAppId = affiseAppId;
@@ -100,7 +105,8 @@ namespace AffiseAttributionLib.Init
             OnInitSuccessHandler = onInitSuccessHandler;
             OnInitErrorHandler = onInitErrorHandler;
 
-            ConfigValues = configValues ?? new Dictionary<string, object>();
+            ConfigValues = configValues ?? new Dictionary<AffiseConfig, object>();
+            DisableModules = disableModules ?? new List<AffiseModules>();
 
             // AutoCatchingClickEvents = autoCatchingClickEvents ?? new List<AutoCatchingType>();
         }
@@ -117,6 +123,7 @@ namespace AffiseAttributionLib.Init
             // AutoCatchingClickEvents = props.AutoCatchingClickEvents;
             Domain = props.Domain;
             ConfigValues = props.ConfigValues;
+            DisableModules = props.DisableModules;
         }
 
         public AffiseInitProperties Copy() => new(this);
@@ -133,7 +140,8 @@ namespace AffiseAttributionLib.Init
                 // ["enabledMetrics"] = EnabledMetrics,
                 // ["autoCatchingClickEvents"] = AutoCatchingClickEvents.ToJsonArray(),
                 ["domain"] = Domain,
-                ["configStrings"] = ConfigValues.ToJsonObject(),
+                ["configStrings"] = ConfigValues.ToMapString().ToJsonObject(),
+                ["disableModules"] = DisableModules.ToListString().ToJsonArray(),
             };
     }
 }

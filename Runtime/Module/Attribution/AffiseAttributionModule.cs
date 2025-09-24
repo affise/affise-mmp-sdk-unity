@@ -1,6 +1,7 @@
 ﻿#nullable enable
 using System;
 using System.Collections.Generic;
+using AffiseAttributionLib.Module.Advertising;
 using AffiseAttributionLib.Module.AppsFlyer;
 using AffiseAttributionLib.Module.Link;
 using AffiseAttributionLib.Module.Subscription;
@@ -20,6 +21,7 @@ namespace AffiseAttributionLib.Module.Attribution
         private AffiseComponent? _api => Affise._api;
 #endif
 
+        public IAffiseModuleAdvertisingApi Advertising { get; }
         public IAffiseModuleLinkApi Link { get; }
         public IAffiseModuleAppsFlyerApi AppsFlyer { get; }
         public IAffiseModuleSubscriptionApi Subscription { get; }
@@ -28,6 +30,7 @@ namespace AffiseAttributionLib.Module.Attribution
 
         public AffiseAttributionModule()
         {
+            Advertising = new AffiseAdvertising();
             Link = new AffiseLink();
             AppsFlyer = new AffiseAppsFlyer();
             Subscription = new AffiseSubscription();
@@ -43,18 +46,6 @@ namespace AffiseAttributionLib.Module.Attribution
             _native?.GetStatus(module, onComplete);
 #else
             _api?.ModuleManager.Status(module, onComplete);
-#endif
-        }
-
-        /**
-         * Manual module start
-         */
-        public bool ModuleStart(AffiseModules module)
-        {
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-            return _native?.ModuleStart(module) ?? true;
-#else
-            return _api?.ModuleManager.ManualStart(module) ?? true;
 #endif
         }
 

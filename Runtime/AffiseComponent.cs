@@ -152,7 +152,8 @@ namespace AffiseAttributionLib
 
             ModuleManager = new AffiseModuleManager(
                 logsManager: _logsManager,
-                postBackModelFactory: PostBackModelFactory
+                postBackModelFactory: PostBackModelFactory,
+                initProperties: initProperties
             );
             ModuleManager.Init(
                 new List<object>

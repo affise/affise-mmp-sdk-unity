@@ -239,11 +239,6 @@ namespace AffiseAttributionLib.Native
             );
         }
 
-        public bool ModuleStart(AffiseModules module)
-        {
-            return Native<bool>(AffiseApiMethod.MODULE_START, module.Module());
-        }
-
         public List<AffiseModules> GetModules()
         {
             var result = new List<AffiseModules>();
@@ -320,6 +315,12 @@ namespace AffiseAttributionLib.Native
                 { DataName.EVENT_ID, eventId },
             };
             Native(AffiseApiMethod.MODULE_TIKTOK_EVENT, data);
+        }
+        
+        // Advertising
+        public void AdvertisingStartModule()
+        {
+            Native(AffiseApiMethod.MODULE_ADVERTISING_START);
         }
         ////////////////////////////////////////
         // modules

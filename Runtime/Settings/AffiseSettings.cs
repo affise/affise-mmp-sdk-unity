@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using AffiseAttributionLib.Init;
+using AffiseAttributionLib.Modules;
 
 namespace AffiseAttributionLib.Settings
 {
@@ -18,7 +19,8 @@ namespace AffiseAttributionLib.Settings
         // private List<AutoCatchingType> _autoCatchingClickEvents = new();
         private OnInitSuccessHandler? _onInitSuccessHandler;
         private OnInitErrorHandler? _onInitErrorHandler;
-        private Dictionary<string, Object> _configValues = new Dictionary<string, object>();
+        private Dictionary<AffiseConfig, Object> _configValues = new();
+        private List<AffiseModules> _disableModules = new();
 
         /**
          * Affise SDK settings
@@ -95,21 +97,16 @@ namespace AffiseAttributionLib.Settings
             _onInitErrorHandler = onInitErrorHandler;
             return this;
         }
+        
         /**
          * Set OnInitErrorHandler
          */
         public AffiseSettings SetConfigValue(AffiseConfig key, Object value)
         {
-            if (_configValues.ContainsKey(key.ToValue()))
-            {
-                _configValues[key.ToValue()] = value;
-            }
-            else
-            {
-                _configValues.Add(key.ToValue(), value);
-            }
+            _configValues[key] = value;
             return this;
         }
+        
         /**
          * Set OnInitErrorHandler
          */
@@ -122,7 +119,16 @@ namespace AffiseAttributionLib.Settings
 
             return this;
         }
-
+        
+        /**
+         * Set disableModules
+         */
+        public AffiseSettings SetDisableModules(List<AffiseModules> disableModules)
+        {
+            _disableModules = disableModules;
+            return this;
+        }
+        
         /**
          * Set list of AutoCatchingType
          */
@@ -155,7 +161,8 @@ namespace AffiseAttributionLib.Settings
                 domain: _domain,
                 onInitSuccessHandler: _onInitSuccessHandler,
                 onInitErrorHandler: _onInitErrorHandler,
-                configValues: _configValues
+                configValues: _configValues,
+                disableModules: _disableModules
             );
         }
 

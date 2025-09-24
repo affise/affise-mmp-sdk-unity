@@ -208,15 +208,6 @@ namespace AffiseAttributionLib
         }
         
         /**
-         * Manual module start
-         */
-        [Obsolete("use Affise.Module." + nameof(Affise.Module.ModuleStart) + " instead.")]
-        public static bool ModuleStart(AffiseModules module)
-        {
-            return Module.ModuleStart(module);
-        }
-        
-        /**
          * Get installed modules
          */
         [Obsolete("use Affise.Module." + nameof(Affise.Module.GetModulesInstalled) + " instead.")]

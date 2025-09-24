@@ -1,5 +1,6 @@
 ﻿#nullable enable
 using System;
+using System.Collections.Generic;
 
 namespace AffiseAttributionLib.Modules
 {
@@ -53,6 +54,16 @@ namespace AffiseAttributionLib.Modules
                 if (modules.Module() == value) return modules;
             }
             return null;
+        }
+
+        internal static List<string> ToListString(this List<AffiseModules> from)
+        {
+            var result = new List<string>();
+            foreach (var modules in from)
+            {
+                result.Add(modules.Module());
+            }
+            return result;
         }
     }
 }

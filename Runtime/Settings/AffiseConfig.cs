@@ -1,5 +1,6 @@
 ﻿#nullable enable
 using System;
+using System.Collections.Generic;
 
 namespace AffiseAttributionLib.Settings
 {
@@ -27,6 +28,16 @@ namespace AffiseAttributionLib.Settings
                 if (modules.ToValue() == value) return modules;
             }
             return null;
+        }
+
+        internal static Dictionary<string, Object> ToMapString(this Dictionary<AffiseConfig, Object> from)
+        {
+            var result = new Dictionary<string, object>();
+            foreach (var (key, value) in from)
+            {
+                result.Add(key.ToValue(), value);
+            }
+            return result;
         }
     }
 }

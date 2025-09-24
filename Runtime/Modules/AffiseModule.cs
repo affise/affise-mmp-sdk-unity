@@ -12,8 +12,6 @@ namespace AffiseAttributionLib.Modules
         private List<object> _dependencies = new();
         private List<Provider> _baseProviders = new();
 
-        public virtual bool IsManual => false;
-
         public void Dependencies(ILogsManager logsManager, List<object> dependencies, List<Provider> providers)
         {
             LogsManager = logsManager;

@@ -4,7 +4,7 @@
 
 | Artifact      | Version               |
 |---------------|-----------------------|
-| `attribution` | [`1.6.45`](/releases/tag/1.6.45) |
+| `attribution` | [`1.6.46`](/releases/tag/1.6.46) |
 
 - [Affise Unity package](#affise-unity-package)
 - [Description](#description)
@@ -24,6 +24,8 @@
     - [Modules](#modules)
       - [Android](#android)
       - [iOS](#ios-1)
+      - [Installed active modules](#installed-active-modules)
+      - [Manual exclude modules](#manual-exclude-modules)
       - [Module AdService](#module-adservice)
       - [Module Advertising](#module-advertising)
         - [iOS](#ios-2)
@@ -120,7 +122,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.6.45.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.45/attribution-1.6.45.unitypackage)
+Download latest Affise SDK [`attribution-1.6.46.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.46/attribution-1.6.46.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -233,18 +235,6 @@ On `Modules` tab select all required
 
 ![affise_modules](https://github.com/affise/affise-mmp-sdk-unity/blob/assets/affise_modules.png?raw=true)
 
-If module start `type` is `manual`, then call is code:
-
-```c#
-Affise.Module.ModuleStart(AffiseModules.Advertising);
-```
-
-Get list of installed modules:
-
-```c#
-Affise.Module.GetModulesInstalled()
-```
-
 #### Android
 
 All affise modules is updated automatically on build
@@ -253,25 +243,25 @@ All affise modules is updated automatically on build
 >
 > **No manual editing is required**
 
-| Module         | Version                                                                                                                                                                      | Start  |
-|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
-| `Advertising`  | [![module-advertising](https://img.shields.io/maven-central/v/com.affise/module-advertising?label=latest)](https://mvnrepository.com/artifact/com.affise/module-advertising) | `Auto` |
-| `AndroidId`    | [![module-androidid](https://img.shields.io/maven-central/v/com.affise/module-androidid?label=latest)](https://mvnrepository.com/artifact/com.affise/module-androidid)       | `Auto` |
-| `AppsFlyer`    | [![module-appsflyer](https://img.shields.io/maven-central/v/com.affise/module-appsflyer?label=latest)](https://mvnrepository.com/artifact/com.affise/module-appsflyer)       | `Auto` |
-| `Link`         | [![module-link](https://img.shields.io/maven-central/v/com.affise/module-link?label=latest)](https://mvnrepository.com/artifact/com.affise/module-link)                      | `Auto` |
-| `Network`      | [![module-network](https://img.shields.io/maven-central/v/com.affise/module-network?label=latest)](https://mvnrepository.com/artifact/com.affise/module-network)             | `Auto` |
-| `Phone`        | [![module-phone](https://img.shields.io/maven-central/v/com.affise/module-phone?label=latest)](https://mvnrepository.com/artifact/com.affise/module-phone)                   | `Auto` |
-| `Status`       | [![module-status](https://img.shields.io/maven-central/v/com.affise/module-status?label=latest)](https://mvnrepository.com/artifact/com.affise/module-status)                | `Auto` |
-| `Subscription` | [![module-status](https://img.shields.io/maven-central/v/com.affise/module-subscription?label=latest)](https://mvnrepository.com/artifact/com.affise/module-subscription)    | `Auto` |
-| `RuStore`      | [![module-rustore](https://img.shields.io/maven-central/v/com.affise/module-rustore?label=latest)](https://mvnrepository.com/artifact/com.affise/module-rustore)             | `Auto` |
-| `Huawei`       | [![module-huawei](https://img.shields.io/maven-central/v/com.affise/module-huawei?label=latest)](https://mvnrepository.com/artifact/com.affise/module-huawei)                | `Auto` |
-| `Meta`         | [![module-meta](https://img.shields.io/maven-central/v/com.affise/module-meta?label=latest)](https://mvnrepository.com/artifact/com.affise/module-meta)                      | `Auto` |
-| `TikTok`       | [![module-tiktok](https://img.shields.io/maven-central/v/com.affise/module-tiktok?label=latest)](https://mvnrepository.com/artifact/com.affise/module-tiktok)                | `Auto` |
+| Module         | Version                                                                                                                                                                      |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Advertising`  | [![module-advertising](https://img.shields.io/maven-central/v/com.affise/module-advertising?label=latest)](https://mvnrepository.com/artifact/com.affise/module-advertising) |
+| `AndroidId`    | [![module-androidid](https://img.shields.io/maven-central/v/com.affise/module-androidid?label=latest)](https://mvnrepository.com/artifact/com.affise/module-androidid)       |
+| `AppsFlyer`    | [![module-appsflyer](https://img.shields.io/maven-central/v/com.affise/module-appsflyer?label=latest)](https://mvnrepository.com/artifact/com.affise/module-appsflyer)       |
+| `Link`         | [![module-link](https://img.shields.io/maven-central/v/com.affise/module-link?label=latest)](https://mvnrepository.com/artifact/com.affise/module-link)                      |
+| `Network`      | [![module-network](https://img.shields.io/maven-central/v/com.affise/module-network?label=latest)](https://mvnrepository.com/artifact/com.affise/module-network)             |
+| `Phone`        | [![module-phone](https://img.shields.io/maven-central/v/com.affise/module-phone?label=latest)](https://mvnrepository.com/artifact/com.affise/module-phone)                   |
+| `Status`       | [![module-status](https://img.shields.io/maven-central/v/com.affise/module-status?label=latest)](https://mvnrepository.com/artifact/com.affise/module-status)                |
+| `Subscription` | [![module-status](https://img.shields.io/maven-central/v/com.affise/module-subscription?label=latest)](https://mvnrepository.com/artifact/com.affise/module-subscription)    |
+| `RuStore`      | [![module-rustore](https://img.shields.io/maven-central/v/com.affise/module-rustore?label=latest)](https://mvnrepository.com/artifact/com.affise/module-rustore)             |
+| `Huawei`       | [![module-huawei](https://img.shields.io/maven-central/v/com.affise/module-huawei?label=latest)](https://mvnrepository.com/artifact/com.affise/module-huawei)                |
+| `Meta`         | [![module-meta](https://img.shields.io/maven-central/v/com.affise/module-meta?label=latest)](https://mvnrepository.com/artifact/com.affise/module-meta)                      |
+| `TikTok`       | [![module-tiktok](https://img.shields.io/maven-central/v/com.affise/module-tiktok?label=latest)](https://mvnrepository.com/artifact/com.affise/module-tiktok)                |
 
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.6.64'
+final affise_version = '1.6.65'
 
 dependencies {
     // ...
@@ -299,16 +289,16 @@ All affise modules is updated automatically on build
 >
 > **No manual editing is required**
 
-| Module         |                                       Version                                        | Start    |
-|----------------|:------------------------------------------------------------------------------------:|----------|
-| `AdService`    | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Advertising`  | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Manual` |
-| `AppsFlyer`    | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Link`         | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Persistent`   | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Status`       | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `Subscription` | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `TikTok`       | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| Module         |                                       Version                                        |
+|----------------|:------------------------------------------------------------------------------------:|
+| `AdService`    | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Advertising`  | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AppsFlyer`    | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Link`         | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Persistent`   | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Status`       | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Subscription` | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `TikTok`       | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 
 Dependencies located in XCode project folder `Podfile`
 
@@ -316,23 +306,49 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.54'
+  pod 'AffiseInternal', '1.6.55'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.6.54'
-  pod 'AffiseModule/Advertising', '1.6.54'
-  pod 'AffiseModule/AppsFlyer', '1.6.54'
-  pod 'AffiseModule/Link', '1.6.54'
-  pod 'AffiseModule/Persistent', '1.6.54'
-  pod 'AffiseModule/Status', '1.6.54'
-  pod 'AffiseModule/Subscription', '1.6.54'
-  pod 'AffiseModule/TikTok', '1.6.54'
+  pod 'AffiseModule/AdService', '1.6.55'
+  pod 'AffiseModule/Advertising', '1.6.55'
+  pod 'AffiseModule/AppsFlyer', '1.6.55'
+  pod 'AffiseModule/Link', '1.6.55'
+  pod 'AffiseModule/Persistent', '1.6.55'
+  pod 'AffiseModule/Status', '1.6.55'
+  pod 'AffiseModule/Subscription', '1.6.55'
+  pod 'AffiseModule/TikTok', '1.6.55'
 end
 
 target 'Unity-iPhone' do
 end
 
 use_frameworks! :linkage => :static
+```
+
+#### Installed active modules
+
+Get list of installed modules:
+
+```c#
+Affise.Module.GetModulesInstalled()
+```
+
+#### Manual exclude modules
+
+To manually stop modules from starting use `Affise.Settings.SetDisableModules`:
+
+```c#
+Affise
+    .Settings(
+        affiseAppId: "Your appId", //Change to your app id
+        secretKey: "Your SDK secretKey", //Change to your SDK secretKey
+    )
+    .SetDisableModules(new List<AffiseModules> {
+        // Exclude modules from start
+        AffiseModules.Advertising,
+        AffiseModules.Subscription,
+    })
+    .Start(); // Start Affise SDK
 ```
 
 #### Module AdService
@@ -606,10 +622,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.54'
+  pod 'AffiseInternal', '1.6.55'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.6.54`
+  # pod 'AffiseModule', `1.6.55`
 end
 
 target 'Unity-iPhone' do
@@ -1288,7 +1304,7 @@ Example: `https://mydomain.com`
   5. Once Android Studio generates the file, click **Save file** to download it.
   6. Upload the `assetlinks.json` file to your site, with read access for everyone, at `https://yoursite/.well-known/assetlinks.json`.
 
-  > **Important**
+  > [!IMPORTANT]
   >
   > The system verifies the Digital Asset Links file via the encrypted HTTPS protocol. Make sure that the **assetlinks.json** file is accessible over an HTTPS connection, regardless of whether your app's intent filter includes **https**.
 

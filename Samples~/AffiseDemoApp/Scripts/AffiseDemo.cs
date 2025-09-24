@@ -6,6 +6,8 @@ using AffiseAttributionLib;
 using AffiseAttributionLib.Events.Subscription;
 using AffiseAttributionLib.Module.Subscription;
 using AffiseAttributionLib.Referrer;
+using AffiseAttributionLib.Modules;
+using AffiseAttributionLib.Settings;
 using UnityEngine;
 using UnityEngine.UIElements;
 

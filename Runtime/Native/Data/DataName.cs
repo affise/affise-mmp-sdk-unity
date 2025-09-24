@@ -53,7 +53,7 @@ namespace AffiseAttributionLib.Native.Data
         public const string EVENT_NAME = "eventName";
         public const string EVENT_VALUES = "eventValues";
         
-        public const string PUSH_TOKEN = "push_token";
-        public const string PUSH_TOKEN_SERVICE = "push_token_service";
+        public const string PUSH_TOKEN = "pushToken";
+        public const string PUSH_TOKEN_SERVICE = "pushTokenService";
     }
 }

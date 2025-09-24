@@ -46,7 +46,6 @@ namespace AffiseAttributionLib.Native
         ////////////////////////////////////////
         // modules
         ////////////////////////////////////////
-        MODULE_START,
         GET_MODULES_INSTALLED,
         GET_STATUS_CALLBACK,
         // AppsFlyer Module
@@ -58,6 +57,8 @@ namespace AffiseAttributionLib.Native
         MODULE_SUBS_PURCHASE_CALLBACK,
         // TikTok Module
         MODULE_TIKTOK_EVENT,
+        // Advertising Module
+        MODULE_ADVERTISING_START,
         ////////////////////////////////////////
         // modules
         ////////////////////////////////////////
@@ -120,7 +121,6 @@ namespace AffiseAttributionLib.Native
                 ////////////////////////////////////////
                 // modules
                 ////////////////////////////////////////
-                AffiseApiMethod.MODULE_START => "module_start",
                 AffiseApiMethod.GET_MODULES_INSTALLED => "get_modules_installed",
                 AffiseApiMethod.GET_STATUS_CALLBACK => "get_status_callback",
                 // AppsFlyer Module
@@ -132,6 +132,8 @@ namespace AffiseAttributionLib.Native
                 AffiseApiMethod.MODULE_SUBS_PURCHASE_CALLBACK => "module_subs_purchase_callback",
                 // TikTok Module
                 AffiseApiMethod.MODULE_TIKTOK_EVENT => "module_tiktok_event",
+                // Advertising Module
+                AffiseApiMethod.MODULE_ADVERTISING_START => "module_advertising_start",
                 ////////////////////////////////////////
                 // modules
                 ////////////////////////////////////////

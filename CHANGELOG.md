@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.6.46] - 2025-09-24
+
+### Added
+
+- Api `Affise.Settings.SetDisableModules`
+- Module Api `Affise.Module.Advertising.StartModule`
+
+### Removed
+
+- Api `Affise.Module.ModuleStart`
+
+### Changed
+
+- Update native iOS to [`1.6.55`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.55/CHANGELOG.md)
+- Update native Android to [`1.6.65`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.65/CHANGELOG.md)
+
 ## [1.6.45] - 2025-09-01
 
 ### Changed
@@ -369,6 +385,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.6.46]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.45...1.6.46
 [1.6.45]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.44...1.6.45
 [1.6.44]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.43...1.6.44
 [1.6.43]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.42...1.6.43
