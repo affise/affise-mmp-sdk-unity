@@ -361,6 +361,20 @@ Sends `attributionToken` from `AdServices` framework `AAAttribution.attributionT
 
 ##### iOS
 
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> `iOS` only
+> 
+> Advertising Module starting **Manually**
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+```c#
+Affise.Module.Advertising.StartModule();
+```
+
 This module required to Use [`IDFA`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/advertisingidentifier) (Identifier for advertisers)
 
 > [!CAUTION]
@@ -1661,6 +1675,18 @@ Affise.Debug.VersionNative();
 ```
 
 # Troubleshoots
+
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+> 
+> If Affise settings doesn't change or api is working incorrectly
+>
+> **First**: completely stop mobile application on device
+> 
+> **Second**: try **reset cache** for project
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 
 ## iOS
 
