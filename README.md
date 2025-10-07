@@ -4,7 +4,7 @@
 
 | Artifact      | Version               |
 |---------------|-----------------------|
-| `attribution` | [`1.6.46`](/releases/tag/1.6.46) |
+| `attribution` | [`1.6.47`](/releases/tag/1.6.47) |
 
 - [Affise Unity package](#affise-unity-package)
 - [Description](#description)
@@ -17,6 +17,7 @@
       - [Unity asset](#unity-asset)
         - [Domain](#domain)
       - [Manual](#manual)
+        - [Initialization callbacks](#initialization-callbacks)
         - [Domain](#domain-1)
       - [Before application is published](#before-application-is-published)
     - [Requirements](#requirements)
@@ -33,6 +34,7 @@
       - [Module AppsFlyer](#module-appsflyer)
       - [Module Link](#module-link)
       - [Module Meta](#module-meta)
+      - [Module Persistent](#module-persistent)
       - [Module Status](#module-status)
       - [Module Subscription](#module-subscription)
       - [Module TikTok](#module-tiktok)
@@ -122,7 +124,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.6.46.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.46/attribution-1.6.46.unitypackage)
+Download latest Affise SDK [`attribution-1.6.47.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.47/attribution-1.6.47.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -185,6 +187,26 @@ Affise
         affiseAppId: "Your appId", //Change to your app id
         secretKey: "Your SDK secretKey" //Change to your SDK secretKey
     )
+    .Start(); // Start Affise SDK
+```
+
+##### Initialization callbacks
+
+Check Affise library initialization
+
+```dart
+Affise
+    .Settings(
+        affiseAppId: "Your appId",
+        secretKey: "Your SDK secretKey"
+    )
+    .SetOnInitSuccess(() => {
+        Debug.Log("Affise: init success");
+    })
+    .SetOnInitError((error) =>
+    {
+        Debug.Log($"Affise: init error {error}");
+    })
     .Start(); // Start Affise SDK
 ```
 
@@ -261,7 +283,7 @@ All affise modules is updated automatically on build
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.6.65'
+final affise_version = '1.6.66'
 
 dependencies {
     // ...
@@ -291,14 +313,14 @@ All affise modules is updated automatically on build
 
 | Module         |                                       Version                                        |
 |----------------|:------------------------------------------------------------------------------------:|
-| `AdService`    | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Advertising`  | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `AppsFlyer`    | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Link`         | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Persistent`   | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Status`       | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Subscription` | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `TikTok`       | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AdService`    | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Advertising`  | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AppsFlyer`    | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Link`         | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Persistent`   | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Status`       | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Subscription` | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `TikTok`       | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 
 Dependencies located in XCode project folder `Podfile`
 
@@ -306,17 +328,17 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.55'
+  pod 'AffiseInternal', '1.6.56'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.6.55'
-  pod 'AffiseModule/Advertising', '1.6.55'
-  pod 'AffiseModule/AppsFlyer', '1.6.55'
-  pod 'AffiseModule/Link', '1.6.55'
-  pod 'AffiseModule/Persistent', '1.6.55'
-  pod 'AffiseModule/Status', '1.6.55'
-  pod 'AffiseModule/Subscription', '1.6.55'
-  pod 'AffiseModule/TikTok', '1.6.55'
+  pod 'AffiseModule/AdService', '1.6.56'
+  pod 'AffiseModule/Advertising', '1.6.56'
+  pod 'AffiseModule/AppsFlyer', '1.6.56'
+  pod 'AffiseModule/Link', '1.6.56'
+  pod 'AffiseModule/Persistent', '1.6.56'
+  pod 'AffiseModule/Status', '1.6.56'
+  pod 'AffiseModule/Subscription', '1.6.56'
+  pod 'AffiseModule/TikTok', '1.6.56'
 end
 
 target 'Unity-iPhone' do
@@ -346,6 +368,7 @@ Affise
     .SetDisableModules(new List<AffiseModules> {
         // Exclude modules from start
         AffiseModules.Advertising,
+        AffiseModules.Persistent,
         AffiseModules.Subscription,
     })
     .Start(); // Start Affise SDK
@@ -493,6 +516,18 @@ Affise
     .Start(); // Start Affise SDK
 ```
 
+#### Module Persistent
+
+`iOS Only`
+
+> [!NOTE]
+> 
+> Module requires user phone to be authenticated by Apple ID
+>
+> It uses Apple `Security` framework to store protected information in user account
+
+Persist `device id` value for [Get random device Id](#get-random-device-id) on application reinstall
+
 #### Module Status
 
 > [!CAUTION]
@@ -636,10 +671,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.55'
+  pod 'AffiseInternal', '1.6.56'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.6.55`
+  # pod 'AffiseModule', `1.6.56`
 end
 
 target 'Unity-iPhone' do
@@ -1448,7 +1483,7 @@ Affise.GetRandomUserId();
 >
 > To make `device id` more persistent on application reinstall
 >
-> use [Affise `Persistent` Module](#modules) for `iOS`
+> use [Affise `Persistent` Module](#module-persistent) for `iOS`
 >
 > use [Affise `AndroidId` Module](#modules) for `Android`
 

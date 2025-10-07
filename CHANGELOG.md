@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.47] - 2025-10-07
+
+### Added
+
+- Error `SDK is already initialized` to `Affise.settings.setOnInitError`
+
+### Changed
+
+- Update native iOS to [`1.6.56`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.56/CHANGELOG.md)
+- Update native Android to [`1.6.66`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.66/CHANGELOG.md)
+
 ## [1.6.46] - 2025-09-24
 
 ### Added
@@ -385,6 +396,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.6.47]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.46...1.6.47
 [1.6.46]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.45...1.6.46
 [1.6.45]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.44...1.6.45
 [1.6.44]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.43...1.6.44

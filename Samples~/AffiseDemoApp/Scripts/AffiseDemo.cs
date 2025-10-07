@@ -39,6 +39,19 @@ namespace AffiseDemo
             //     )
             //     .SetConfigValue(AffiseConfig.FB_APP_ID, "1111111111111111")
             //     .SetProduction(false) //To enable debug methods set Production to false
+            //     .SetOnInitSuccess(() => {
+            //         Debug.Log("Affise: init success");
+            //     })
+            //     .SetOnInitError((error) =>
+            //     {
+            //         Debug.Log($"Affise: init error {error}");
+            //     })
+            //     .SetDisableModules(new List<AffiseModules> {
+            //         // Exclude modules from start
+            //         AffiseModules.Advertising,
+            //         AffiseModules.Persistent,
+            //         AffiseModules.Subscription,
+            //     })
             //     .Start(); // Start Affise SDK
 
             // Debug: network request/response

@@ -6,6 +6,7 @@ using AffiseAttributionLib.AffiseParameters.Providers;
 using AffiseAttributionLib.Debugger;
 using AffiseAttributionLib.Deeplink;
 using AffiseAttributionLib.Events;
+using AffiseAttributionLib.Exceptions;
 using AffiseAttributionLib.Init;
 using AffiseAttributionLib.Module.Attribution;
 using AffiseAttributionLib.Modules;
@@ -46,10 +47,18 @@ namespace AffiseAttributionLib
         internal static void Start(AffiseInitProperties initProperties)
         {
 #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-            if (_native is not null) return;
+            if (_native is not null)
+            {
+                initProperties.OnInitErrorHandler?.Invoke(AffiseError.MESSAGE_ALREADY_INITIALIZED);
+                return;
+            }
             _native = new AffiseNative(initProperties);
 #else
-            if (_api is not null) return;
+            if (_api is not null)
+            {
+                initProperties.OnInitErrorHandler?.Invoke(AffiseError.MESSAGE_ALREADY_INITIALIZED);
+                return;
+            }
             try
             {
                 _api = new AffiseComponent(initProperties);
