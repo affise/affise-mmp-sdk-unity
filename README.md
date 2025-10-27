@@ -4,7 +4,7 @@
 
 | Artifact      | Version               |
 |---------------|-----------------------|
-| `attribution` | [`1.6.47`](/releases/tag/1.6.47) |
+| `attribution` | [`1.6.48`](/releases/tag/1.6.48) |
 
 - [Affise Unity package](#affise-unity-package)
 - [Description](#description)
@@ -124,7 +124,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.6.47.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.47/attribution-1.6.47.unitypackage)
+Download latest Affise SDK [`attribution-1.6.48.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.48/attribution-1.6.48.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -203,8 +203,7 @@ Affise
     .SetOnInitSuccess(() => {
         Debug.Log("Affise: init success");
     })
-    .SetOnInitError((error) =>
-    {
+    .SetOnInitError((error) => {
         Debug.Log($"Affise: init error {error}");
     })
     .Start(); // Start Affise SDK
@@ -313,14 +312,14 @@ All affise modules is updated automatically on build
 
 | Module         |                                       Version                                        |
 |----------------|:------------------------------------------------------------------------------------:|
-| `AdService`    | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Advertising`  | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `AppsFlyer`    | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Link`         | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Persistent`   | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Status`       | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Subscription` | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `TikTok`       | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AdService`    | [`1.6.57`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Advertising`  | [`1.6.57`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AppsFlyer`    | [`1.6.57`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Link`         | [`1.6.57`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Persistent`   | [`1.6.57`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Status`       | [`1.6.57`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Subscription` | [`1.6.57`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `TikTok`       | [`1.6.57`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 
 Dependencies located in XCode project folder `Podfile`
 
@@ -328,17 +327,17 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.56'
+  pod 'AffiseInternal', '1.6.57'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.6.56'
-  pod 'AffiseModule/Advertising', '1.6.56'
-  pod 'AffiseModule/AppsFlyer', '1.6.56'
-  pod 'AffiseModule/Link', '1.6.56'
-  pod 'AffiseModule/Persistent', '1.6.56'
-  pod 'AffiseModule/Status', '1.6.56'
-  pod 'AffiseModule/Subscription', '1.6.56'
-  pod 'AffiseModule/TikTok', '1.6.56'
+  pod 'AffiseModule/AdService', '1.6.57'
+  pod 'AffiseModule/Advertising', '1.6.57'
+  pod 'AffiseModule/AppsFlyer', '1.6.57'
+  pod 'AffiseModule/Link', '1.6.57'
+  pod 'AffiseModule/Persistent', '1.6.57'
+  pod 'AffiseModule/Status', '1.6.57'
+  pod 'AffiseModule/Subscription', '1.6.57'
+  pod 'AffiseModule/TikTok', '1.6.57'
 end
 
 target 'Unity-iPhone' do
@@ -671,10 +670,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.56'
+  pod 'AffiseInternal', '1.6.57'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.6.56`
+  # pod 'AffiseModule', `1.6.57`
 end
 
 target 'Unity-iPhone' do

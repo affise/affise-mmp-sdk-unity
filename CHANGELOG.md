@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.6.48] - 2025-10-27
+
+### Fixed
+
+- Fix iOS `Affise.GetDeferredDeeplinkValue`
+
+### Changed
+
+- Update native iOS to [`1.6.57`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.57/CHANGELOG.md)
+
 ## [1.6.47] - 2025-10-07
 
 ### Added
@@ -396,6 +406,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.6.48]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.47...1.6.48
 [1.6.47]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.46...1.6.47
 [1.6.46]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.45...1.6.46
 [1.6.45]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.44...1.6.45

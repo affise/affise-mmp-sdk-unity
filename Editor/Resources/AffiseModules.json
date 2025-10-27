@@ -5,7 +5,7 @@
     "ios": {
       "comment": "- ProviderType.AD_SERVICE_ATTRIBUTION",
       "module": "AffiseModule/AdService",
-      "version": "1.6.56",
+      "version": "1.6.57",
       "enabled": false
     }
   },
@@ -21,7 +21,7 @@
     "ios": {
       "comment": "- ProviderType.ADID",
       "module": "AffiseModule/Advertising",
-      "version": "1.6.56",
+      "version": "1.6.57",
       "enabled": true
     }
   },
@@ -47,7 +47,7 @@
     "ios": {
       "comment": "",
       "module": "AffiseModule/AppsFlyer",
-      "version": "1.6.56",
+      "version": "1.6.57",
       "enabled": false
     }
   },
@@ -63,7 +63,7 @@
     "ios": {
       "comment": "",
       "module": "AffiseModule/Link",
-      "version": "1.6.56",
+      "version": "1.6.57",
       "enabled": true
     }
   },
@@ -89,7 +89,7 @@
     "ios": {
       "comment": "",
       "module": "AffiseModule/Status",
-      "version": "1.6.56",
+      "version": "1.6.57",
       "enabled": true
     }
   },
@@ -105,7 +105,7 @@
     "ios": {
       "comment": "",
       "module": "AffiseModule/Subscription",
-      "version": "1.6.56",
+      "version": "1.6.57",
       "enabled": false
     }
   },
@@ -135,7 +135,7 @@
     "ios": {
       "comment": "",
       "module": "AffiseModule/Persistent",
-      "version": "1.6.56",
+      "version": "1.6.57",
       "enabled": false
     }
   },
@@ -171,7 +171,7 @@
     "ios": {
       "comment": "",
       "module": "AffiseModule/TikTok",
-      "version": "1.6.56",
+      "version": "1.6.57",
       "enabled": false
     }
   }
