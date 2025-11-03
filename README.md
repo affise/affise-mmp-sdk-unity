@@ -38,6 +38,8 @@
       - [Module Status](#module-status)
       - [Module Subscription](#module-subscription)
       - [Module TikTok](#module-tiktok)
+    - [Persistent data](#persistent-data)
+    - [Reinstall tracking](#reinstall-tracking)
   - [Build](#build)
     - [iOS](#ios-3)
 - [Features](#features)
@@ -79,13 +81,13 @@
   - [Disable tracking](#disable-tracking)
   - [Disable background tracking](#disable-background-tracking)
   - [Get random user Id](#get-random-user-id)
-  - [Get random device Id](#get-random-device-id)
+  - [Get Affice device Id](#get-affice-device-id)
   - [Get providers](#get-providers)
   - [Is first run](#is-first-run)
   - [Get referrer](#get-referrer)
   - [Get referrer value](#get-referrer-value)
   - [Referrer keys](#referrer-keys)
-  - [Get module state](#get-module-state)
+  - [Get module status](#get-module-status)
   - [Platform specific](#platform-specific)
     - [StoreKit Ad Network](#storekit-ad-network)
 - [SDK to SDK integrations](#sdk-to-sdk-integrations)
@@ -639,6 +641,59 @@ Is Module present:
 ```c#
 Affise.Module.TikTok.HasModule();
 ```
+
+### Persistent data
+
+Some methods require to return **same data** on application reinstall
+
+It is achieved by using [Affise Persistent Module](#module-persistent) for `iOS` and [Affise AndroidId Module](#modules) for `Android`
+
+Such SDK methods are:
+
+- [Get Affice device Id](#get-affice-device-id)
+
+To simulate multiple device install for testing purpose you can use one of two options:
+
+1. Disable module dependencies:
+
+- for `iOS` [Affise Persistent Module](#modules) 
+- for `Android` [Affise AndroidId Module](#modules) 
+
+2. Disable module programmatically:
+
+```c#
+Affise
+    .Settings(
+        affiseAppId: "Your appId",
+        secretKey: "Your SDK secretKey",
+    )
+    .SetDisableModules(new List<AffiseModules> {
+        AffiseModules.Persistent, // Disable module programmatically for iOS
+        AffiseModules.AndroidId, // Disable module programmatically for Android
+    })
+    .Start();
+```
+
+### Reinstall tracking
+
+> [!NOTE]
+>
+> Read more about [Persistent data](#persistent-data)
+
+There are two working mode for [Affice device Id](#get-affice-device-id):
+
+1. Return persistent value on each reinstall
+2. Return new value on each reinstall
+
+First mode require:
+
+- Enabling [Affise Persistent Module](#modules) for `iOS`
+- Enabling [Affise AndroidId Module](#modules) for `Android`
+
+Even after deleting application [Affice device Id](#get-affice-device-id) will be preserved and will restore on next installation
+
+Second mode is convenient for testing.
+By [disabling module in UI](#modules), [disabling module programmatically](#manual-exclude-modules) or removing dependency, a new [Affice device Id](#get-affice-device-id) will be generated for each **new** installation.
 
 ## Build
 
@@ -1476,7 +1531,7 @@ Affise.IsBackgroundTrackingEnabled() // returns true or false describing current
 Affise.GetRandomUserId();
 ```
 
-## Get random device Id
+## Get Affice device Id
 
 > [!NOTE] 
 >
@@ -1485,6 +1540,10 @@ Affise.GetRandomUserId();
 > use [Affise `Persistent` Module](#module-persistent) for `iOS`
 >
 > use [Affise `AndroidId` Module](#modules) for `Android`
+
+> [!NOTE]
+>
+> Read more about [Persistent data](#persistent-data) and [Reinstall tracking](#reinstall-tracking)
 
 ```c#
 Affise.GetRandomDeviceId();
@@ -1584,7 +1643,7 @@ In examples above `ReferrerKey.CLICK_ID` is used, but many others is available:
 - `SUB_4`
 - `SUB_5`
 
-## Get module state
+## Get module status
 
 > [!CAUTION]
 >
