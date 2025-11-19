@@ -1,0 +1,96 @@
+name: 🗃️ Unity Affise Issue
+description: File a Detailed Issue.
+title: "[Issue]: "
+labels: 
+  - bug
+projects:
+  - affise/affise-mmp-sdk-unity
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        `Thanks for taking the time to fill out this Issue`
+
+  - type: input
+    id: version-tag
+    attributes:
+      label: Version
+      description: Tell us Affise Unity library version
+      placeholder: Version
+    validations:
+      required: true
+
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity Version
+      description: Tell us Unity Editor version
+      placeholder: Version `6000.0.62f1`, `2022.3.62f3` etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: unity-device
+    attributes:
+      label: Device
+      description: On which device you running
+      multiple: true
+      options:
+        - Android
+        - iOS
+        - Neither
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-what-happened
+    attributes:
+      label: What happened?
+      description: |
+        - What did happen?
+        - What did you expect to happen?
+        - Give as much detail
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output.
+      placeholder: Logs
+      render: shell
+
+  - type: textarea
+    id: issue-code
+    attributes:
+      label: Code which cause a issue
+      description: Please copy and paste any relevant Code. This will be automatically formatted as code, so no need for backticks.
+      placeholder: C# code
+      render: c#
+
+  - type: checkboxes
+    id: issue-check
+    attributes:
+      label: I have
+      options:
+        - label: Read [documentation](https://github.com/affise/affise-mmp-sdk-unity/blob/main/README.md)
+          required: true
+        - label: Tried [Troubleshoots](https://github.com/affise/affise-mmp-sdk-unity/blob/main/README.md#Troubleshoots)
+          required: true
+    validations:
+      required: true
+    
+  - type: checkboxes
+    id: issue-check-restart
+    attributes:
+      label: Did full application restart?
+      description: |
+        - `completely stop application on device`
+      options:
+        - label: I have
+          required: true
+    validations:
+      required: true
