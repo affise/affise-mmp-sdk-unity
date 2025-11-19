@@ -76,9 +76,9 @@ body:
     attributes:
       label: I have
       options:
-        - label: Read [documentation](https://github.com/affise/affise-mmp-sdk-unity/blob/main/README.md)
+        - label: Read [Documentation](https://github.com/affise/affise-mmp-sdk-unity/blob/master/README.md)
           required: true
-        - label: Tried [Troubleshoots](https://github.com/affise/affise-mmp-sdk-unity/blob/main/README.md#Troubleshoots)
+        - label: Tried [Troubleshoots](https://github.com/affise/affise-mmp-sdk-unity/blob/master/README.md#Troubleshoots)
           required: true
     validations:
       required: true
