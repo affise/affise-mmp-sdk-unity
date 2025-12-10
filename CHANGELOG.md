@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.6.49] - 2025-12-10
+
+### Fixed
+
+- Fix `AffiseError` parsing
+- Fix `Affise.getReferrerUrl`
+- Fix `Affise.getReferrerUrlValue`
+
+### Changed
+
+- Update native iOS to [`1.6.58`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.58/CHANGELOG.md)
+- Update native Android to [`1.6.68`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.68/CHANGELOG.md)
+
 ## [1.6.48] - 2025-10-27
 
 ### Fixed
@@ -406,6 +419,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.6.48]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.48...1.6.49
 [1.6.48]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.47...1.6.48
 [1.6.47]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.46...1.6.47
 [1.6.46]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.45...1.6.46

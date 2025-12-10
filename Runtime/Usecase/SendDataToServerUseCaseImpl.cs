@@ -133,7 +133,7 @@ namespace AffiseAttributionLib.Usecase
                             url: url,
                             exception: new NetworkException(
                                 code: response.Code, 
-                                message: response.Body ?? ""
+                                message: null
                             ), 
                             attempts: _attemptSend[url], 
                             retry: true

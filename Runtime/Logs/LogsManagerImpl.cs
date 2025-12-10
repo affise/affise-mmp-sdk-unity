@@ -88,9 +88,10 @@ namespace AffiseAttributionLib.Logs
             var data = cloudException.Exception.Message;
             long? code = null;
 
-            if (cloudException.Exception.GetType() == typeof(NetworkException))
+            if (cloudException.Exception is NetworkException networkException)
             {
-                code = (cloudException.Exception as NetworkException)?.Code;
+                code = networkException.Code;
+                data = $"AffiseError.network(status={networkException.Code}, message={networkException.Message})";
             }
 
             return new JSONObject

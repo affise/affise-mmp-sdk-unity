@@ -7,7 +7,7 @@ namespace AffiseAttributionLib.Exceptions
     {
         public long Code { get; }
 
-        public NetworkException(long code, string message) : base(message)
+        public NetworkException(long code, string? message = null) : base(message)
         {
             Code = code;
         }
