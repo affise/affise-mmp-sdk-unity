@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.50] - 2025-12-18
+
+### Changed
+
+- Update native Android to [`1.6.72`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.72/CHANGELOG.md)
+
 ## [1.6.49] - 2025-12-10
 
 ### Fixed
