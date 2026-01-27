@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.6.51] - 2026-01-27
+
+### Added
+
+- Api `Affise.GetRandomUserId` added new algorithm for id generation
+- Api `Affise.GetRandomDeviceId` added new algorithm for id generation
+- Error value for `AffiseError.UUID_NO_VALID_METHOD` is `22222222-2222-2222-2222-222222222222`
+- Error value for `AffiseError.UUID_NOT_INITIALIZED` is `11111111-1111-1111-1111-111111111111`
+- Api `Affise.GetRandomUserId` return `AffiseError.UUID_NOT_INITIALIZED` if SDK not initialized
+- Api `Affise.GetRandomUserId` return `AffiseError.UUID_NO_VALID_METHOD` if no valid methods to retrieve id
+- Api `Affise.GetRandomDeviceId` return `AffiseError.UUID_NOT_INITIALIZED` if SDK not initialized
+- Api `Affise.GetRandomDeviceId` return `AffiseError.UUID_NO_VALID_METHOD` if no valid methods to retrieve id
+
+### Fixed
+
+- Fix `Android` `Affise.Module.Link.Resolve` redirect
+
+### Changed
+
+- Update native iOS to [`1.6.59`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.59/CHANGELOG.md)
+- Update native Android to [`1.6.73`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.73/CHANGELOG.md)
+
 ## [1.6.50] - 2025-12-18
 
 ### Changed
@@ -425,7 +447,9 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
-[1.6.48]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.48...1.6.49
+[1.6.51]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.50...1.6.51
+[1.6.50]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.49...1.6.50
+[1.6.49]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.48...1.6.49
 [1.6.48]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.47...1.6.48
 [1.6.47]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.46...1.6.47
 [1.6.46]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.45...1.6.46

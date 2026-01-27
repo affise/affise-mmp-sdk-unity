@@ -1,4 +1,6 @@
-﻿namespace AffiseAttributionLib.Ad
+﻿#nullable enable
+
+namespace AffiseAttributionLib.Ad
 {
     public enum AffiseAdSource
     {
@@ -20,7 +22,6 @@
                 AffiseAdSource.APPLOVIN_MAX => "applovin_max",
                 AffiseAdSource.HELIUM_CHARTBOOST => "helium_chartboost",
                 AffiseAdSource.IRONSOURCE => "ironsource",
-                _ => null
             };
         }
     }

@@ -1,9 +1,7 @@
 ﻿#nullable enable
 using System;
-using AffiseAttributionLib.AffiseParameters;
 using AffiseAttributionLib.Session;
 using AffiseAttributionLib.Utils;
-using UnityEngine;
 
 namespace AffiseAttributionLib.Usecase
 {
@@ -19,9 +17,7 @@ namespace AffiseAttributionLib.Usecase
         }
 
         private const string FIRST_OPENED = "FIRST_OPENED";
-        private const string FIRST_OPENED_DATE_KEY = "FIRST_OPENED_DATE_KEY";
-        private const string AFF_DEVICE_ID = "AFF_DEVICE_ID";
-        private const string AFF_ALT_DEVICE_ID = "AFF_ALT_DEVICE_ID";
+        internal const string FIRST_OPENED_DATE_KEY = "FIRST_OPENED_DATE_KEY";
 
         /**
          * Check preferences for have first opened date and generate properties if no data
@@ -32,8 +28,6 @@ namespace AffiseAttributionLib.Usecase
             {
                 OnAppFirstOpen();
             }
-
-            CheckSaveUUIDs();
             
             _firstRun = PrefUtils.GetBoolean(FIRST_OPENED, true);
 
@@ -48,23 +42,12 @@ namespace AffiseAttributionLib.Usecase
         {
             //Create first open date
             var firstOpenDate = Timestamp.New();
-
-            CheckSaveUUIDs();
             
             //Save properties
             PrefUtils.SaveLong(FIRST_OPENED_DATE_KEY, firstOpenDate);
             PrefUtils.SaveBoolean(FIRST_OPENED, true);
         }
-
-        private void CheckSaveUUIDs()
-        {
-            //Create affDevId
-            PrefUtils.CheckSaveString(AFF_DEVICE_ID, Uuid.Generate);
-            //Create affAltDevId
-            PrefUtils.CheckSaveString(AFF_ALT_DEVICE_ID, Uuid.Generate);
-            //Create randomUserId
-            PrefUtils.CheckSaveString(ProviderType.RANDOM_USER_ID.Provider(), Uuid.Generate);
-        }
+        
 
         /**
          * Get first open
@@ -100,24 +83,5 @@ namespace AffiseAttributionLib.Usecase
             
             return DateTimeOffset.FromUnixTimeMilliseconds(time).UtcDateTime;
         }
-        
-        /**
-         * Get devise id
-         * @return devise id
-         */
-        public string GetAffiseDeviseId() => PrefUtils.GetString(AFF_DEVICE_ID, "");
-        
-        /**
-         * Get alt devise id
-         * @return alt devise id
-         */
-        public string GetAffiseAltDeviseId() => PrefUtils.GetString(AFF_ALT_DEVICE_ID, "");
-
-
-        /**
-         * Get random user id
-         * @return random user id
-         */
-        public string GetRandomUserId() => PrefUtils.GetString(ProviderType.RANDOM_USER_ID.Provider(), "");
     }
 }

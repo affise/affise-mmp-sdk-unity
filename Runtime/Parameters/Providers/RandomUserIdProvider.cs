@@ -11,16 +11,16 @@ namespace AffiseAttributionLib.AffiseParameters.Providers
         public override float Order => 49.0f;
         public override ProviderType? Key => ProviderType.RANDOM_USER_ID;
         
-        private readonly FirstAppOpenUseCase _firstAppOpenUseCase;
+        private readonly IAppUUIDs _useCase;
 
-        public RandomUserIdProvider(FirstAppOpenUseCase firstAppOpenUseCase)
+        public RandomUserIdProvider(IAppUUIDs appUuids)
         {
-            _firstAppOpenUseCase = firstAppOpenUseCase;
+            _useCase = appUuids;
         }
 
         public override string Provide()
         {
-            return _firstAppOpenUseCase.GetRandomUserId();
+            return _useCase.GetRandomUserId();
         }
     }
 }

@@ -4,7 +4,7 @@
 
 | Artifact      | Version               |
 |---------------|-----------------------|
-| `attribution` | [`1.6.50`](/releases/tag/1.6.50) |
+| `attribution` | [`1.6.51`](/releases/tag/1.6.51) |
 
 - [Affise Unity package](#affise-unity-package)
 - [Description](#description)
@@ -126,7 +126,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.6.50.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.50/attribution-1.6.50.unitypackage)
+Download latest Affise SDK [`attribution-1.6.51.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.51/attribution-1.6.51.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -284,7 +284,7 @@ All affise modules is updated automatically on build
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.6.72'
+final affise_version = '1.6.73'
 
 dependencies {
     // ...
@@ -314,14 +314,14 @@ All affise modules is updated automatically on build
 
 | Module         |                                       Version                                        |
 |----------------|:------------------------------------------------------------------------------------:|
-| `AdService`    | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Advertising`  | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `AppsFlyer`    | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Link`         | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Persistent`   | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Status`       | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Subscription` | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `TikTok`       | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AdService`    | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Advertising`  | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AppsFlyer`    | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Link`         | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Persistent`   | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Status`       | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Subscription` | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `TikTok`       | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 
 Dependencies located in XCode project folder `Podfile`
 
@@ -329,17 +329,17 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.58'
+  pod 'AffiseInternal', '1.6.59'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.6.58'
-  pod 'AffiseModule/Advertising', '1.6.58'
-  pod 'AffiseModule/AppsFlyer', '1.6.58'
-  pod 'AffiseModule/Link', '1.6.58'
-  pod 'AffiseModule/Persistent', '1.6.58'
-  pod 'AffiseModule/Status', '1.6.58'
-  pod 'AffiseModule/Subscription', '1.6.58'
-  pod 'AffiseModule/TikTok', '1.6.58'
+  pod 'AffiseModule/AdService', '1.6.59'
+  pod 'AffiseModule/Advertising', '1.6.59'
+  pod 'AffiseModule/AppsFlyer', '1.6.59'
+  pod 'AffiseModule/Link', '1.6.59'
+  pod 'AffiseModule/Persistent', '1.6.59'
+  pod 'AffiseModule/Status', '1.6.59'
+  pod 'AffiseModule/Subscription', '1.6.59'
+  pod 'AffiseModule/TikTok', '1.6.59'
 end
 
 target 'Unity-iPhone' do
@@ -725,10 +725,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.6.58'
+  pod 'AffiseInternal', '1.6.59'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.6.58`
+  # pod 'AffiseModule', `1.6.59`
 end
 
 target 'Unity-iPhone' do
@@ -1531,6 +1531,20 @@ Affise.IsBackgroundTrackingEnabled() // returns true or false describing current
 Affise.GetRandomUserId();
 ```
 
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> Return `11111111-1111-1111-1111-111111111111` if **Affise SDK not initialized**
+> 
+> Return `22222222-2222-2222-2222-222222222222` if **no valid methods** to retrieve id **for current device**
+>
+> `AffiseError.UUID_NOT_INITIALIZED` == `11111111-1111-1111-1111-111111111111`
+>
+> `AffiseError.UUID_NO_VALID_METHOD` == `22222222-2222-2222-2222-222222222222`
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
 ## Get Affice device Id
 
 > [!NOTE] 
@@ -1549,6 +1563,20 @@ Affise.GetRandomUserId();
 Affise.GetRandomDeviceId();
 ```
 
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> Return `11111111-1111-1111-1111-111111111111` if **Affise SDK not initialized**
+> 
+> Return `22222222-2222-2222-2222-222222222222` if **no valid methods** to retrieve id **for current device**
+> 
+> `AffiseError.UUID_NOT_INITIALIZED` == `11111111-1111-1111-1111-111111111111`
+> 
+> `AffiseError.UUID_NO_VALID_METHOD` == `22222222-2222-2222-2222-222222222222`
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
 ## Get providers
 
 Returns providers map with [ProviderType](#providertype-identifiers-collection) as key
@@ -1560,6 +1588,14 @@ if (providers.ContainsKey(key)) {
     var value = providers[key];
 }
 ```
+
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> Return **Empty Map** if **Affise SDK not initialized**
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 
 ## Is first run
 

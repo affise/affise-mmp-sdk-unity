@@ -11,11 +11,11 @@ namespace AffiseAttributionLib.AffiseParameters.Providers
         public override float Order => 27.0f;
         public override ProviderType? Key => ProviderType.AFFISE_ALT_DEVICE_ID;
         
-        private readonly FirstAppOpenUseCase _useCase;
+        private readonly IAppUUIDs _useCase;
 
-        public AffiseAltDeviceIdProvider(FirstAppOpenUseCase firstAppOpenUseCase)
+        public AffiseAltDeviceIdProvider(IAppUUIDs appUuids)
         {
-            _useCase = firstAppOpenUseCase;
+            _useCase = appUuids;
         }
 
         public override string Provide() => _useCase.GetAffiseAltDeviseId();

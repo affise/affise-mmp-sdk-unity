@@ -93,6 +93,8 @@ namespace AffiseAttributionLib
         
         public AffiseComponent(AffiseInitProperties initProperties)
         {
+            var stringToMd5Converter = new StringToMD5Converter();
+                
             _converterToBase64 = new ConverterToBase64();
             _providersToJsonStringConverter = new ProvidersToJsonStringConverter();
 
@@ -112,6 +114,10 @@ namespace AffiseAttributionLib
             );
 
             FirstAppOpenUseCase = new FirstAppOpenUseCase(_activityCountProvider);
+            IAppUUIDs appUuids = new AppUUIDsImpl(
+                md5Converter: stringToMd5Converter
+            );
+
             InitPropertiesStorage = new InitPropertiesStorageImpl();
             SetPropertiesWhenInitUseCase = new SetPropertiesWhenAppInitializedUseCaseImpl(InitPropertiesStorage);
 
@@ -145,9 +151,10 @@ namespace AffiseAttributionLib
                 sessionManager: _sessionManager,
                 initPropertiesStorage: InitPropertiesStorage,
                 stringToSHA256Converter: new StringToSHA256Converter(),
-                stringToMd5Converter: new StringToMD5Converter(),
+                stringToMd5Converter: stringToMd5Converter,
                 deeplinkClickRepository: _isDeeplinkClickRepository,
-                pushTokenUseCase: PushTokenUseCase
+                pushTokenUseCase: PushTokenUseCase,
+                appUuids: appUuids
             ).Create();
 
             ModuleManager = new AffiseModuleManager(

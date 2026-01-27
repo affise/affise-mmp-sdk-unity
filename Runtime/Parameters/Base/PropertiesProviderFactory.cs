@@ -18,6 +18,7 @@ namespace AffiseAttributionLib.AffiseParameters.Base
         private readonly IConverter<string, string> _stringToMd5Converter;
         private readonly IDeeplinkClickRepository _deeplinkClickRepository;
         private readonly IPushTokenUseCase _pushTokenUseCase;
+        private readonly IAppUUIDs _appUuids;
 
         public PropertiesProviderFactory(
             FirstAppOpenUseCase firstAppOpenUseCase,
@@ -26,7 +27,8 @@ namespace AffiseAttributionLib.AffiseParameters.Base
             IConverter<string, string> stringToSHA256Converter,
             IConverter<string, string> stringToMd5Converter,
             IDeeplinkClickRepository deeplinkClickRepository, 
-            IPushTokenUseCase pushTokenUseCase
+            IPushTokenUseCase pushTokenUseCase,
+            IAppUUIDs appUuids
         )
         {
             _firstAppOpenUseCase = firstAppOpenUseCase;
@@ -36,6 +38,7 @@ namespace AffiseAttributionLib.AffiseParameters.Base
             _stringToMd5Converter = stringToMd5Converter;
             _deeplinkClickRepository = deeplinkClickRepository;
             _pushTokenUseCase = pushTokenUseCase;
+            _appUuids = appUuids;
         }
 
         public PostBackModelFactory Create()
@@ -82,8 +85,8 @@ namespace AffiseAttributionLib.AffiseParameters.Base
                     new DeviceManufacturerProvider(),
                     new DeeplinkClickPropertyProvider(_deeplinkClickRepository),
                     // new EmptyStringProvider(ProviderType.DEVICE_ATLAS_ID, 26.0f),
-                    new AffiseDeviceIdProvider(_firstAppOpenUseCase),
-                    new AffiseAltDeviceIdProvider(_firstAppOpenUseCase),
+                    new AffiseDeviceIdProvider(_appUuids),
+                    new AffiseAltDeviceIdProvider(_appUuids),
                     new AndroidIdProvider(),
                     new GoogleAdvertisingIdProvider(),
                     new GoogleAdvertisingIdMd5Provider(_stringToMd5Converter),
@@ -100,7 +103,7 @@ namespace AffiseAttributionLib.AffiseParameters.Base
                     new ApiLevelOSProvider(),
                     new AffSDKVersionProvider(),
                     new OSVersionProvider(),
-                    new RandomUserIdProvider(_firstAppOpenUseCase),
+                    new RandomUserIdProvider(_appUuids),
                     new IsProductionPropertyProvider(_initPropertiesStorage),
                     new TimezoneDeviceProvider(),
                     // new EmptyStringProvider(ProviderType.AFFISE_EVENT_TOKEN, 52.0f),
