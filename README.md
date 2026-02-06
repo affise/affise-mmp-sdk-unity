@@ -4,7 +4,7 @@
 
 | Artifact      | Version               |
 |---------------|-----------------------|
-| `attribution` | [`1.6.51`](/releases/tag/1.6.51) |
+| `attribution` | [`1.6.52`](/releases/tag/1.6.52) |
 
 - [Affise Unity package](#affise-unity-package)
 - [Description](#description)
@@ -98,6 +98,7 @@
 - [Troubleshoots](#troubleshoots)
   - [iOS](#ios-6)
   - [Android](#android-3)
+  - [Unity In-App Purchasing](#unity-in-app-purchasing)
 
 # Description
 
@@ -126,7 +127,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.6.51.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.51/attribution-1.6.51.unitypackage)
+Download latest Affise SDK [`attribution-1.6.52.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.6.52/attribution-1.6.52.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -284,7 +285,7 @@ All affise modules is updated automatically on build
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.6.73'
+final affise_version = '1.6.74'
 
 dependencies {
     // ...
@@ -786,6 +787,7 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `REFTOKEN`
 - `REFTOKENS`
 - `REFERRER`
+- `REFERRER_UPDATED`
 - `USER_AGENT`
 - `MCCODE`
 - `MNCODE`
@@ -1851,3 +1853,23 @@ Update `Unity` minimum version for  `2023.3.0a4`, `2022.3.14f1`, `2021.3.33f1`
 [Related Unity issue](https://issuetracker.unity3d.com/issues/android-targetapi-34-crash-on-launch)
 
 Earlier versions are not supported
+
+## Unity In-App Purchasing
+
+`iOS` only
+
+Then using package `Unity In-App Purchasing`.
+
+If build failed with unknown protocol `SKPaymentTransactionObserver` in `UnityFramework-Swift.h`,
+add `#import <StoreKit/StoreKit.h>` before `UnityFramework-Swift.h`
+
+```objective-c
+#import <StoreKit/StoreKit.h>
+#include "UnityFramework/UnityFramework-Swift.h"
+```
+
+> [!NOTE] 
+> 
+> `UnityFramework-Swift.h` is an auto-generated Xcode header that exposes Swift code to Objective-C
+>
+> `SKPaymentTransactionObserver` appearing only when unity package `Unity In-App Purchasing` is added

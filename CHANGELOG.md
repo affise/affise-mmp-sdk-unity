@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.6.52] - 2026-02-06
+
+### Added
+
+- Provider `REFERRER_UPDATED`
+
+### Fixed
+
+- Android InstallReferrer reconnect on service disconnected
+
+### Changed
+
+- Update native Android to [`1.6.74`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.74/CHANGELOG.md)
+
 ## [1.6.51] - 2026-01-27
 
 ### Added
@@ -447,6 +461,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.6.52]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.51...1.6.52
 [1.6.51]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.50...1.6.51
 [1.6.50]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.49...1.6.50
 [1.6.49]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.48...1.6.49
