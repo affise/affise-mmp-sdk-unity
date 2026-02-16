@@ -1,6 +1,5 @@
 ﻿#nullable enable
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using AffiseAttributionLib.Executors;
 using AffiseAttributionLib.Network;
@@ -12,7 +11,7 @@ namespace AffiseAttributionLib.Module.Link.UseCase
     internal class LinkResolveUseCaseImpl : ILinkResolveUseCase
     {
         private const long MAX_REDIRECT_COUNT = 10;
-        private const string HEADER_LOCATION = "Location";
+        private const string HEADER_LOCATION = "location";
 
         private readonly IHttpClient _httpClient;
         private readonly IExecutorServiceProvider _executorServiceProvider;
@@ -36,8 +35,9 @@ namespace AffiseAttributionLib.Module.Link.UseCase
                 //Has redirect status
                 if (response.IsRedirect() && maxRedirectCount > 0)
                 {
-                    var redirectUrl = response.Headers.GetValueOrDefault(HEADER_LOCATION)
-                        ?.FirstOrDefault(f => !string.IsNullOrWhiteSpace(f));
+                    var redirectUrl = response.Headers
+                        .FirstOrDefault(kvp => kvp.Key.ToLower() == HEADER_LOCATION).Value?
+                        .FirstOrDefault(f => !string.IsNullOrWhiteSpace(f));
 
                     if (redirectUrl is not null)
                     {
@@ -66,7 +66,8 @@ namespace AffiseAttributionLib.Module.Link.UseCase
                     data: null,
                     headers: CloudConfig.Headers,
                     onComplete: onComplete,
-                    redirect: false
+                    redirect: false,
+                    skipBody: true
                 )
             );
         }

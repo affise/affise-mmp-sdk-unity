@@ -19,7 +19,8 @@ namespace AffiseAttributionLib.Network
             string? data,
             Dictionary<string, string> headers,
             Action<HttpResponse>? onComplete = null,
-            bool redirect = true
+            bool redirect = true,
+            bool skipBody = false
         );
 
         void SetDebug(DebugOnNetworkCallback debugNetwork);

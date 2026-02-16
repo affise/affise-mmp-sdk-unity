@@ -23,7 +23,8 @@ namespace AffiseAttributionLib.Network
             string? data,
             Dictionary<string, string> headers,
             Action<HttpResponse>? onComplete = null,
-            bool redirect = true
+            bool redirect = true,
+            bool skipBody = false
         )
         {
             //Create connection
@@ -37,6 +38,15 @@ namespace AffiseAttributionLib.Network
             }
 
             request.downloadHandler = new DownloadHandlerBuffer();
+            request.disposeDownloadHandlerOnDispose = true;
+
+            if (skipBody)
+            {
+                // request only first byte
+                request.SetRequestHeader("Range", "bytes=0-0"); 
+                request.SetRequestHeader("Accept-Encoding", "identity");
+            }
+
             request.method = RequestMethod(method);
             if (redirect == false)
             {
@@ -49,8 +59,30 @@ namespace AffiseAttributionLib.Network
                 request.SetRequestHeader(key, value);
             }
             
-            //Send request
-            yield return request.SendWebRequest();
+            if (!skipBody)
+            {
+                //Send request
+                yield return request.SendWebRequest();
+            }
+            else
+            {
+                //Send request
+                request.SendWebRequest();
+                
+                while (!request.isDone)
+                {
+                    // If skipping download body and progress is greater then 0
+                    if (request.downloadProgress > 0.0f)
+                    {
+                        // Abort if something is downloading
+                        request.Abort();
+                        break;
+                    }
+            
+                    // Wait until the next frame before checking again
+                    yield return null;
+                }
+            }
 
             var responseCode = request.responseCode;
             var responseMessage = request.error ?? "";
