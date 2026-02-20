@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.54] - 2026-02-20
+
+### Changed
+
+- Provider `REFERRER_UPDATED` for modules `Huawei`, `RuStore`
+- Update native Android to [`1.6.76`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.76/CHANGELOG.md)
+
 ## [1.6.53] - 2026-02-16
 
 ### Fixed
@@ -472,6 +479,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.6.54]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.53...1.6.54
 [1.6.53]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.52...1.6.53
 [1.6.52]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.51...1.6.52
 [1.6.51]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.50...1.6.51

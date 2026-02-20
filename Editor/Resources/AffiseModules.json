@@ -15,7 +15,7 @@
     "android": {
       "comment": "- ProviderType.GAID_ADID_MD5\n- ProviderType.GAID_ADID\n- ProviderType.AD_PERSONALIZATION",
       "module": "com.affise:module-advertising",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": true
     },
     "ios": {
@@ -31,7 +31,7 @@
     "android": {
       "comment": "- ProviderType.ANDROID_ID\n- ProviderType.ANDROID_ID_MD5\n\nANDROID_ID - 64-bit unique identifier generated when the user first sets up the device",
       "module": "com.affise:module-androidid",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": true
     }
   },
@@ -41,7 +41,7 @@
     "android": {
       "comment": "",
       "module": "com.affise:module-appsflyer",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": false
     },
     "ios": {
@@ -57,7 +57,7 @@
     "android": {
       "comment": "",
       "module": "com.affise:module-link",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": true
     },
     "ios": {
@@ -73,7 +73,7 @@
     "android": {
       "comment": "- ProviderType.META",
       "module": "com.affise:module-meta",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": false
     }
   },
@@ -83,7 +83,7 @@
     "android": {
       "comment": "",
       "module": "com.affise:module-status",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": true
     },
     "ios": {
@@ -99,7 +99,7 @@
     "android": {
       "comment": "",
       "module": "com.affise:module-subscription",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": false
     },
     "ios": {
@@ -115,7 +115,7 @@
     "android": {
       "comment": "- ProviderType.CONNECTION_TYPE\n- ProviderType.MAC_MD5\n- ProviderType.MAC_SHA1\n- ProviderType.PROXY_IP_ADDRESS",
       "module": "com.affise:module-network",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": true
     }
   },
@@ -125,7 +125,7 @@
     "android": {
       "comment": "- ProviderType.ISP\n- ProviderType.NETWORK_TYPE",
       "module": "com.affise:module-phone",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": true
     }
   },
@@ -145,7 +145,7 @@
     "android": {
       "comment": "- install referrer",
       "module": "com.affise:module-rustore",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": false
     }
   },
@@ -155,7 +155,7 @@
     "android": {
       "comment": "- install referrer\n- ProviderType.OAID_MD5\n- ProviderType.OAID",
       "module": "com.affise:module-huawei",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": false
     }
   },
@@ -165,7 +165,7 @@
     "android": {
       "comment": "",
       "module": "com.affise:module-tiktok",
-      "version": "1.6.75",
+      "version": "1.6.76",
       "enabled": false
     },
     "ios": {
