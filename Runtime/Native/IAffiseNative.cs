@@ -19,8 +19,6 @@ namespace AffiseAttributionLib.Native
     {
         void Init(AffiseInitProperties initProperties);
 
-        bool IsInitialized();
-
         void SendEvent(AffiseEvent affiseEvent);
 
         void SendEventNow(AffiseEvent affiseEvent, OnSendSuccessCallback success, OnSendFailedCallback failed);

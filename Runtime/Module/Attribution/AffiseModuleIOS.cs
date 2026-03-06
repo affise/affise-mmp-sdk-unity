@@ -1,6 +1,4 @@
 ﻿#nullable enable
-using System;
-using AffiseAttributionLib.Referrer;
 using AffiseAttributionLib.SKAd;
 #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
 using AffiseAttributionLib.Native;
@@ -36,24 +34,6 @@ namespace AffiseAttributionLib.Module.Attribution
 #else
             completionHandler.Invoke(IAffiseAttributionModuleApi.NotSupported);
 #endif
-        }
-            
-        /**
-         * Get referrer url
-         */
-        [Obsolete("use Affise." + nameof(Affise.GetDeferredDeeplink) + " instead.")]
-        public void GetReferrerOnServer(OnReferrerCallback callback)
-        {
-            Affise.GetDeferredDeeplink(callback);
-        }
-
-        /**
-             * Get referrer value by key
-             */
-        [Obsolete("use Affise." + nameof(Affise.GetDeferredDeeplinkValue) + " instead.")]
-        public void GetReferrerOnServerValue(ReferrerKey key, OnReferrerCallback callback)
-        {
-            Affise.GetDeferredDeeplinkValue(key, callback);
         }
     }
 }

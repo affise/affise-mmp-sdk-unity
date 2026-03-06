@@ -89,8 +89,6 @@ namespace AffiseAttributionLib
         
         private readonly IIndexUseCase _indexUseCase;
 
-        private readonly bool _isReady = false;
-        
         public AffiseComponent(AffiseInitProperties initProperties)
         {
             var stringToMd5Converter = new StringToMD5Converter();
@@ -227,13 +225,6 @@ namespace AffiseAttributionLib
                 eventsManager: EventsManager,
                 isFirstForUserUseCase: _isFirstForUserUseCase
             );
-
-            _isReady = true;
-        }
-
-        public bool IsInitialized()
-        {
-            return _isReady;
         }
     }
 }

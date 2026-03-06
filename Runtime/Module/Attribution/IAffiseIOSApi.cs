@@ -1,6 +1,4 @@
 ﻿#nullable enable
-using System;
-using AffiseAttributionLib.Referrer;
 using AffiseAttributionLib.SKAd;
 
 namespace AffiseAttributionLib.Module.Attribution
@@ -20,17 +18,5 @@ namespace AffiseAttributionLib.Module.Attribution
             CoarseValue coarseValue,
             ErrorCallback completionHandler
         );
-
-        /**
-         * Get referrer url
-         */
-        [Obsolete("use Affise." + nameof(Affise.GetDeferredDeeplink) + " instead.")]
-        public void GetReferrerOnServer(OnReferrerCallback callback);
-
-        /**
-         * Get referrer value by key
-         */
-        [Obsolete("use Affise." + nameof(Affise.GetDeferredDeeplinkValue) + " instead.")]
-        public void GetReferrerOnServerValue(ReferrerKey key, OnReferrerCallback callback);
     }
 }

@@ -139,14 +139,14 @@ namespace AffiseAttributionLib.Events
          * Store and send this events
          */
         public void Send() {
-            Affise.SendEvent(this);
+            AffiseInternal.SendEvent(this);
         }
         
         /**
          * Send this event now
          */
         public void SendNow(OnSendSuccessCallback success, OnSendFailedCallback failed) {
-            Affise.SendEventNow(this, success, failed);
+            AffiseInternal.SendEventNow(this, success, failed);
         }
 
         /**

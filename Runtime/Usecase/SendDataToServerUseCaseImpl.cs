@@ -15,7 +15,7 @@ namespace AffiseAttributionLib.Usecase
 {
     internal class SendDataToServerUseCaseImpl : ISendDataToServerUseCase
     {
-        private const long TIME_DELAY_SENDING = 15 * 1000;
+        private const long TIME_DELAY_SENDING = 3 * 1000;
 
         private readonly IExecutorServiceProvider _executorServiceProvider;
         private readonly PostBackModelFactory _postBackModelFactory;

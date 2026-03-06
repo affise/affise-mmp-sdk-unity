@@ -108,8 +108,6 @@ namespace AffiseDemo
                     // Send event
                     affiseEvent.Send();
                     // or
-                    // Affise.SendEvent(affiseEvent);
-                    // or
                     // affiseEvent.SendNow(() =>
                     // {
                     //     Output($"Send {affiseEvent.GetName()} success");

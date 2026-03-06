@@ -24,7 +24,5 @@ namespace AffiseAttributionLib
         public IDebugNetworkUseCase DebugNetworkUseCase { get; }
         public IDebugValidateUseCase DebugValidateUseCase { get; }
         public IPushTokenUseCase PushTokenUseCase { get; }
-
-        public bool IsInitialized();
     }
 }

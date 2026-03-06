@@ -1,5 +1,4 @@
 ﻿#nullable enable
-using System;
 using System.Collections.Generic;
 using AffiseAttributionLib.Module.Advertising;
 using AffiseAttributionLib.Module.AppsFlyer;
@@ -59,37 +58,6 @@ namespace AffiseAttributionLib.Module.Attribution
 #else
             return _api?.ModuleManager.GetModules() ?? new List<AffiseModules>();
 #endif
-        }
-
-        /**
-         * Module Link url Resolve
-         */
-        [Obsolete("use Affise.Module.Link." + nameof(Affise.Module.Link.Resolve) + " instead.")]
-        public void LinkResolve(string uri, AffiseLinkCallback callback)
-        {
-            Link.Resolve(uri, callback);
-        }
-
-        /**
-         * Module Subscription fetch products
-         */
-        [Obsolete("use Affise.Module.Subscription." + nameof(Affise.Module.Subscription.FetchProducts) + " instead.")]
-        public void FetchProducts(List<string> ids, AffiseResultCallback<AffiseProductsResult> callback)
-        {
-            Subscription.FetchProducts(ids, callback);
-        }
-
-        /**
-         * Module Subscription purchase
-         */
-        [Obsolete("use Affise.Module.Subscription." + nameof(Affise.Module.Subscription.Purchase) + " instead.")]
-        public void Purchase(
-            AffiseProduct product,
-            AffiseProductType type,
-            AffiseResultCallback<AffisePurchasedInfo> callback
-        )
-        {
-            Subscription.Purchase(product, type, callback);
         }
     }
 }

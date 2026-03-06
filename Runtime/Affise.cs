@@ -9,7 +9,6 @@ using AffiseAttributionLib.Events;
 using AffiseAttributionLib.Exceptions;
 using AffiseAttributionLib.Init;
 using AffiseAttributionLib.Module.Attribution;
-using AffiseAttributionLib.Modules;
 using AffiseAttributionLib.Referrer;
 using AffiseAttributionLib.Settings;
 using AffiseAttributionLib.Utils;
@@ -68,40 +67,6 @@ namespace AffiseAttributionLib
             {
                 initProperties.OnInitErrorHandler?.Invoke(e.StackTrace);
             }
-#endif
-        }
-
-        [Obsolete("use Affise.Settings().SetOnInitSuccess() instead.")]
-        public static bool IsInitialized()
-        {
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-            return _native?.IsInitialized() ?? false;
-#else
-            return _api?.IsInitialized() ?? false;
-#endif
-        }
-
-        /**
-         * Store and send [affiseEvent]
-         */
-        public static void SendEvent(AffiseEvent affiseEvent)
-        {
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-            _native?.SendEvent(affiseEvent);
-#else
-            _api?.StoreEventUseCase.StoreEvent(affiseEvent);
-#endif
-        }
-
-        /**
-         * Send [affiseEvent] now
-         */
-        public static void SendEventNow(AffiseEvent affiseEvent, OnSendSuccessCallback success, OnSendFailedCallback failed)
-        {
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-            _native?.SendEventNow(affiseEvent, success, failed);
-#else
-            _api?.ImmediateSendToServerUseCase.SendNow(affiseEvent, success, failed);
 #endif
         }
         
@@ -206,24 +171,6 @@ namespace AffiseAttributionLib
             return null;
 #endif
         }
-
-        /**
-         * Get module status
-         */
-        [Obsolete("use Affise.Module." + nameof(Affise.Module.GetStatus) + " instead.")]
-        public static void GetStatus(AffiseModules module, OnKeyValueCallback onComplete)
-        {
-            Module.GetStatus(module, onComplete);
-        }
-        
-        /**
-         * Get installed modules
-         */
-        [Obsolete("use Affise.Module." + nameof(Affise.Module.GetModulesInstalled) + " instead.")]
-        public static List<AffiseModules> GetModulesInstalled()
-        {
-            return Module.GetModulesInstalled();
-        }
         
         public static string? GetRandomUserId()
         {
@@ -260,24 +207,6 @@ namespace AffiseAttributionLib
             return _api?.FirstAppOpenUseCase.IsFirstRun() ?? true;
 #endif
         }
-        
-        /**
-         * Get referrer
-         */
-        [Obsolete("use Affise." + nameof(Affise.GetReferrerUrl) + " instead.")]
-        public static void GetReferrer(OnReferrerCallback callback)
-        {
-            GetReferrerUrl(callback);
-        }
-
-        /**
-         * Get referrer value by key
-         */
-        [Obsolete("use Affise." + nameof(Affise.GetReferrerUrlValue) + " instead.")]
-        public static void GetReferrerValue(ReferrerKey key, OnReferrerCallback callback)
-        {
-            GetReferrerUrlValue(key, callback);
-        }
 
         /**
          * Get referrer url
@@ -301,24 +230,6 @@ namespace AffiseAttributionLib
 #else
             callback.Invoke(NotSupported);
 #endif
-        }
-        
-        /**
-         * Get referrer url
-         */
-        [Obsolete("use Affise." + nameof(Affise.GetDeferredDeeplink) + " instead.")]
-        public static void GetReferrerOnServer(OnReferrerCallback callback)
-        {
-            GetDeferredDeeplink(callback);
-        }
-
-        /**
-         * Get referrer value by key
-         */
-        [Obsolete("use Affise." + nameof(Affise.GetDeferredDeeplinkValue) + " instead.")]
-        public static void GetReferrerOnServerValue(ReferrerKey key, OnReferrerCallback callback)
-        {
-            GetDeferredDeeplinkValue(key, callback);
         }
 
         /**

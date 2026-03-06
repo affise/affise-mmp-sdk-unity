@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.7.1] - 2026-03-06
+
+### Removed
+
+- Api `Affise.SendEvent`
+- Api `Affise.SendEventNow`
+- Deprecated Api `Affise.IsInitialized`
+- Deprecated Api `Affise.GetStatus`
+- Deprecated Api `Affise.GetModulesInstalled`
+- Deprecated Api `Affise.GetReferrer`
+- Deprecated Api `Affise.GetReferrerValue`
+- Deprecated Api `Affise.GetReferrerOnServer`
+- Deprecated Api `Affise.GetReferrerOnServerValue`
+- Deprecated Api `Affise.IOS.GetReferrerOnServer`
+- Deprecated Api `Affise.IOS.GetReferrerOnServerValue`
+- Deprecated Api `Affise.Module.LinkResolve`
+- Deprecated Api `Affise.Module.FetchProducts`
+- Deprecated Api `Affise.Module.Purchase`
+
+### Changed
+
+- Update native iOS to [`1.7.1`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.1/CHANGELOG.md)
+- Update native Android to [`1.7.1`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.1/CHANGELOG.md)
+
 ## [1.6.54] - 2026-02-20
 
 ### Changed
@@ -479,6 +503,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.7.1]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.54...1.7.1
 [1.6.54]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.53...1.6.54
 [1.6.53]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.52...1.6.53
 [1.6.52]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.51...1.6.52

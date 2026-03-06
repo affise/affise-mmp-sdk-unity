@@ -6,7 +6,6 @@ namespace AffiseAttributionLib.Native
     internal enum AffiseApiMethod
     {
         INIT,
-        IS_INITIALIZED,
         SEND_EVENT,
         SEND_EVENT_NOW,
         ADD_PUSH_TOKEN,
@@ -82,7 +81,6 @@ namespace AffiseAttributionLib.Native
             return method switch
             {
                 AffiseApiMethod.INIT => "init",
-                AffiseApiMethod.IS_INITIALIZED => "is_initialized",
                 AffiseApiMethod.SEND_EVENT => "send_event",
                 AffiseApiMethod.SEND_EVENT_NOW => "send_event_now",
                 AffiseApiMethod.ADD_PUSH_TOKEN => "add_push_token",

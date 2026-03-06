@@ -51,11 +51,6 @@ namespace AffiseAttributionLib.Native
             Native(AffiseApiMethod.INIT, initProperties.ToJson);
         }
 
-        public bool IsInitialized()
-        {
-            return Native<bool>(AffiseApiMethod.IS_INITIALIZED);
-        }
-
         public void SendEvent(AffiseEvent affiseEvent)
         {
             var data = _converter.Convert(affiseEvent).Data;
