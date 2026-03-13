@@ -1,10 +1,16 @@
 # Affise Unity package
 
-[Change Log](CHANGELOG.md)
+[![telegram](https://badges.ws/badge/Affise%20channel-08c?icon=telegram)](https://t.me/AffiseChangelog)
+[![latest release](https://badges.ws/github/release/affise/affise-mmp-sdk-unity)]((https://github.com/affise/affise-mmp-sdk-unity/releases/latest))
+![license](https://badges.ws/github/l/affise/affise-mmp-sdk-unity)
+![repo size](https://badges.ws/github/repo-size/affise/affise-mmp-sdk-unity)
+![last commit](https://badges.ws/github/last-commit/affise/affise-mmp-sdk-unity)
+
+[![Change Log](https://badges.ws/badge/Change%20Log?icon=unity)](CHANGELOG.md)
 
 | Artifact      | Version               |
 |---------------|-----------------------|
-| `attribution` | [`1.7.1`](/releases/tag/1.7.1) |
+| `attribution` | [![latest release](https://badges.ws/github/release/affise/affise-mmp-sdk-unity)]((https://github.com/affise/affise-mmp-sdk-unity/releases/latest)) |
 
 - [Affise Unity package](#affise-unity-package)
 - [Description](#description)
@@ -66,7 +72,7 @@
   - [Advertising Identifier (google) tracking](#advertising-identifier-google-tracking)
   - [Open Advertising Identifier (huawei) tracking](#open-advertising-identifier-huawei-tracking)
   - [Push token tracking](#push-token-tracking)
-    - [Firebase Flutter Plugin](#firebase-flutter-plugin)
+    - [Firebase Plugin](#firebase-plugin)
   - [Links](#links)
     - [Config](#config)
     - [Deeplinks manual](#deeplinks-manual)
@@ -315,14 +321,14 @@ All affise modules is updated automatically on build
 
 | Module         |                                       Version                                        |
 |----------------|:------------------------------------------------------------------------------------:|
-| `AdService`    | [`1.7.1`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Advertising`  | [`1.7.1`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `AppsFlyer`    | [`1.7.1`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Link`         | [`1.7.1`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Persistent`   | [`1.7.1`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Status`       | [`1.7.1`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `Subscription` | [`1.7.1`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `TikTok`       | [`1.7.1`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AdService`    | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Advertising`  | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `AppsFlyer`    | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Link`         | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Persistent`   | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Status`       | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Subscription` | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `TikTok`       | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 
 Dependencies located in XCode project folder `Podfile`
 
@@ -1201,7 +1207,7 @@ Supported service providers:
 - `APPLE` - **iOS only**
 - `FIREBASE`
 
-### Firebase Flutter Plugin
+### Firebase Plugin
 
 [Add Firebase to your Unity project](https://firebase.google.com/docs/unity/setup)
 
@@ -1791,7 +1797,7 @@ Affise.Debug.Validate(status =>
 
 ## Version
 
-Get Affise flutter library version
+Get Affise library version
 
 ```c#
 Affise.Debug.Version()

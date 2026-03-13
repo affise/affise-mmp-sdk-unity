@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           path: Assets/Packages/AffiseAttribution
 
@@ -54,3 +54,31 @@ jobs:
           asset_path: output/affise.unitypackage
           asset_name: attribution-${{ steps.version_tag.outputs.VERSION }}.unitypackage
           asset_content_type: application/x-gzip
+
+      - name: Tg Release failed
+        id: tg_failed
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            🔴 Unity ${{ steps.version_tag.outputs.VERSION }} release failed
+
+            [Github Action](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+      - name: Tg Release
+        id: tg_success
+        if: ${{ success() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            🟢 Unity ${{ steps.version_tag.outputs.VERSION }} release
+
+            [Changelog](https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/CHANGELOG.md)
