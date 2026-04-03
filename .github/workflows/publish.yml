@@ -17,16 +17,16 @@ jobs:
         with:
           path: Assets/Packages/AffiseAttribution
 
-      - name: Unitypackage Meta List
-        run: |
-          find Assets/Packages/AffiseAttribution/ -name \*.meta > metaList
-          mkdir output
-
       - name: Version Tag
         id: version_tag
         run: |
           echo Version: ${GITHUB_REF_NAME}
           echo "VERSION=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Unitypackage Meta List
+        run: |
+          find Assets/Packages/AffiseAttribution/ -name \*.meta > metaList
+          mkdir output
 
       - uses: pCYSl5EDgo/create-unitypackage@master
         with:
@@ -56,6 +56,7 @@ jobs:
           asset_content_type: application/x-gzip
 
       - name: Tg Release failed
+        continue-on-error: true
         id: tg_failed
         if: ${{ failure() }}
         uses: appleboy/telegram-action@master
@@ -65,11 +66,12 @@ jobs:
           format: markdown
           disable_web_page_preview: true
           message: |
-            🔴 Unity ${{ steps.version_tag.outputs.VERSION }} release failed
+            🔴 Unity `${{ steps.version_tag.outputs.VERSION }}` release failed
 
             [Github Action](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
       - name: Tg Release
+        continue-on-error: true
         id: tg_success
         if: ${{ success() }}
         uses: appleboy/telegram-action@master
@@ -79,6 +81,6 @@ jobs:
           format: markdown
           disable_web_page_preview: true
           message: |
-            🟢 Unity ${{ steps.version_tag.outputs.VERSION }} release
+            🟢 Unity `${{ steps.version_tag.outputs.VERSION }}` release
 
             [Changelog](https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/CHANGELOG.md)
