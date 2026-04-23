@@ -19,7 +19,7 @@ namespace AffiseAttributionLib.Native
 {
     internal abstract class NativeBase
     {
-        internal struct CallbackData
+        internal readonly struct CallbackData
         {
             public object Callback { get; }
             public SynchronizationContext Context { get; }
@@ -222,17 +222,18 @@ namespace AffiseAttributionLib.Native
         {
             if (api is null)  return;
             
-            if (callbackData.IsManagedThread)
-            {
-                HandleCallback((AffiseApiMethod)api, callbackData.Callback, json, tag);
-            }
-            else
-            {
+            // if (callbackData.IsManagedThread)
+            // {
+            //     // Don't use this. Closure capture cause as bug, native methods return null.
+            //     HandleCallback((AffiseApiMethod)api, callbackData.Callback, json, tag);
+            // }
+            // else
+            // {
                 callbackData.Context.Post(_ =>
                 {
                     HandleCallback((AffiseApiMethod)api, callbackData.Callback, json, tag);
                 }, null);
-            }
+            // }
         }
 
         private Tuple<string?, string?, JSONNode?> GetCallbackValue(string data, AffiseApiMethod? api)

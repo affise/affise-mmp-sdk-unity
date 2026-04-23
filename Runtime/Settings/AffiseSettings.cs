@@ -171,7 +171,7 @@ namespace AffiseAttributionLib.Settings
          */
         public void Start()
         {
-            Affise.Start(GetInitProperties());
+            AffiseInternal.Start(GetInitProperties());
         }
     }
 }

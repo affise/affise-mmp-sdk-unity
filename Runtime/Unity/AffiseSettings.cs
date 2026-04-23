@@ -90,7 +90,7 @@ namespace AffiseAttributionLib.Unity
                 domain: domain
             );
 
-            Affise.Start(props);
+            AffiseInternal.Start(props);
         }
 
         #endregion Init Affise

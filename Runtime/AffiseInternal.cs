@@ -1,4 +1,7 @@
-﻿using AffiseAttributionLib.Events;
+﻿using System;
+using AffiseAttributionLib.Events;
+using AffiseAttributionLib.Exceptions;
+using AffiseAttributionLib.Init;
 #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
 using AffiseAttributionLib.Native;
 #endif
@@ -7,6 +10,30 @@ namespace AffiseAttributionLib
 {
     internal static class AffiseInternal
     {
+        internal static void Start(AffiseInitProperties initProperties)
+        {
+            if (Affise.IsInit)
+            {
+                initProperties.OnInitErrorHandler?.Invoke(AffiseError.MESSAGE_ALREADY_INITIALIZED);
+                return;
+            }
+            
+            try
+            {
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+                Affise._native = new AffiseNative(initProperties);
+                // OnInitSuccessHandler is called from native
+#else
+                Affise._api = new AffiseComponent(initProperties);
+                initProperties.OnInitSuccessHandler?.Invoke();
+#endif
+            }
+            catch (Exception e)
+            {
+                initProperties.OnInitErrorHandler?.Invoke(e.StackTrace);
+            }
+        }
+        
         /**
          * Store and send [affiseEvent]
          */

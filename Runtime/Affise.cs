@@ -1,17 +1,12 @@
 ﻿#nullable enable
-using System;
 using System.Collections.Generic;
 using AffiseAttributionLib.AffiseParameters;
 using AffiseAttributionLib.AffiseParameters.Providers;
 using AffiseAttributionLib.Debugger;
 using AffiseAttributionLib.Deeplink;
-using AffiseAttributionLib.Events;
-using AffiseAttributionLib.Exceptions;
-using AffiseAttributionLib.Init;
 using AffiseAttributionLib.Module.Attribution;
 using AffiseAttributionLib.Referrer;
 using AffiseAttributionLib.Settings;
-using AffiseAttributionLib.Utils;
 #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
 using AffiseAttributionLib.Native;
 #endif
@@ -21,9 +16,9 @@ namespace AffiseAttributionLib
     public static class Affise
     {
 #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-        internal static IAffiseNative? _native { get; private set; }
+        internal static IAffiseNative? _native { get; set; }
 #else
-        internal static AffiseComponent? _api { get; private set; }
+        internal static AffiseComponent? _api { get; set; }
 #endif
 
         internal static bool IsInit
@@ -37,37 +32,13 @@ namespace AffiseAttributionLib
 #endif
             }
         }
-
+        
+        /**
+          * Setup Affise [affiseAppId] [secretKey]
+          */
         public static AffiseSettings Settings(string affiseAppId, string secretKey)
         {
             return new AffiseSettings(affiseAppId, secretKey);
-        }
-
-        internal static void Start(AffiseInitProperties initProperties)
-        {
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-            if (_native is not null)
-            {
-                initProperties.OnInitErrorHandler?.Invoke(AffiseError.MESSAGE_ALREADY_INITIALIZED);
-                return;
-            }
-            _native = new AffiseNative(initProperties);
-#else
-            if (_api is not null)
-            {
-                initProperties.OnInitErrorHandler?.Invoke(AffiseError.MESSAGE_ALREADY_INITIALIZED);
-                return;
-            }
-            try
-            {
-                _api = new AffiseComponent(initProperties);
-                initProperties.OnInitSuccessHandler?.Invoke();
-            }
-            catch (Exception e)
-            {
-                initProperties.OnInitErrorHandler?.Invoke(e.StackTrace);
-            }
-#endif
         }
         
         /**

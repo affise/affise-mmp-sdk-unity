@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.7.4] - 2026-04-23
+
+### Added
+
+- Android BroadcastReceiver data send
+
+### Fixed
+
+- Fix `Affise.Settings.SetOnInitSuccess`
+- Fix `Affise.Settings.SetOnInitError`
+
+### Changed
+
+- Update native iOS to [`1.7.4`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.4/CHANGELOG.md)
+- Update native Android to [`1.7.4`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.4/CHANGELOG.md)
+
 ## [1.7.3] - 2026-04-03
 
 ### Fixed
@@ -517,6 +533,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.7.4]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.3...1.7.4
 [1.7.3]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.1...1.7.3
 [1.7.1]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.54...1.7.1
 [1.6.54]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.6.53...1.6.54

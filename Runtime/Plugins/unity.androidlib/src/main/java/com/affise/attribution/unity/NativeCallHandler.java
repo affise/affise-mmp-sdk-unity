@@ -43,14 +43,17 @@ public abstract class NativeCallHandler {
         return value ? 1 : 0;
     }
     
+    @SuppressWarnings({"unchecked", "rawtypes"})
     private <T> T asNativeData(ApiResult result) {
         Object data = result.getResult();
 
         if (data instanceof Map) {
             JSONObject json = new JSONObject((Map)data);
+            // return as JSON string to parse in C# on Unity side
             return (T) json.toString();
         } else if (data instanceof List) {
             JSONArray json = new JSONArray((List)data);
+            // return as JSON string to parse in C# on Unity side
             return (T) json.toString();
         }
 
