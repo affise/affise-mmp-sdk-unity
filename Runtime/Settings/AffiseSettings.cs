@@ -129,18 +129,18 @@ namespace AffiseAttributionLib.Settings
             return this;
         }
         
-        /**
-         * Set list of AutoCatchingType
-         */
+        // /**
+        //  * Set list of AutoCatchingType
+        //  */
         // public AffiseSettings SetAutoCatchingClickEvents(List<AutoCatchingType> autoCatchingClickEvents)
         // {
         //     _autoCatchingClickEvents = autoCatchingClickEvents;
         //     return this;
         // }
         
-        /**
-         * Set Metrics [enable]
-         */
+        // /**
+        //  * Set Metrics [enable]
+        //  */
         // public AffiseSettings SetEnabledMetrics(bool enable)
         // {
         //     _enabledMetrics = enable;
