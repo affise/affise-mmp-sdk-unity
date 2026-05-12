@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.6] - 2026-05-12
+
+### Changed
+
+- Sync versions
+- Update native iOS to [`1.7.6`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.6/CHANGELOG.md)
+- Update native Android to [`1.7.6`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.6/CHANGELOG.md)
+
 ## [1.7.5] - 2026-04-24
 
 ### Removed
@@ -545,6 +553,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.7.6]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.5...1.7.6
 [1.7.5]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.4...1.7.5
 [1.7.4]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.3...1.7.4
 [1.7.3]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.1...1.7.3
