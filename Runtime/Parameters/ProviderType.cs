@@ -88,6 +88,7 @@ namespace AffiseAttributionLib.AffiseParameters
         AFFISE_INTERNAL_EVENTS_COUNT,
         IS_ROOTED,
         IS_EMULATOR,
+        IDFV,
 
         // remarketing
         OS_AND_VERSION,
@@ -207,6 +208,7 @@ namespace AffiseAttributionLib.AffiseParameters
                 ProviderType.AFFISE_INTERNAL_EVENTS_COUNT => "affise_internal_events_count",
                 ProviderType.IS_ROOTED => "is_rooted",
                 ProviderType.IS_EMULATOR => "is_emulator",
+                ProviderType.IDFV => "idfv",
 
                 // remarketing
                 ProviderType.OS_AND_VERSION => "os_and_version",

@@ -133,7 +133,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.7.6.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.7.6/attribution-1.7.6.unitypackage)
+Download latest Affise SDK [`attribution-1.7.7.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.7.7/attribution-1.7.7.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -291,7 +291,7 @@ All affise modules is updated automatically on build
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.7.6'
+final affise_version = '1.7.7'
 
 dependencies {
     // ...
@@ -336,17 +336,17 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.7.6'
+  pod 'AffiseInternal', '1.7.7'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.7.6'
-  pod 'AffiseModule/Advertising', '1.7.6'
-  pod 'AffiseModule/AppsFlyer', '1.7.6'
-  pod 'AffiseModule/Link', '1.7.6'
-  pod 'AffiseModule/Persistent', '1.7.6'
-  pod 'AffiseModule/Status', '1.7.6'
-  pod 'AffiseModule/Subscription', '1.7.6'
-  pod 'AffiseModule/TikTok', '1.7.6'
+  pod 'AffiseModule/AdService', '1.7.7'
+  pod 'AffiseModule/Advertising', '1.7.7'
+  pod 'AffiseModule/AppsFlyer', '1.7.7'
+  pod 'AffiseModule/Link', '1.7.7'
+  pod 'AffiseModule/Persistent', '1.7.7'
+  pod 'AffiseModule/Status', '1.7.7'
+  pod 'AffiseModule/Subscription', '1.7.7'
+  pod 'AffiseModule/TikTok', '1.7.7'
 end
 
 target 'Unity-iPhone' do
@@ -732,10 +732,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.7.6'
+  pod 'AffiseInternal', '1.7.7'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.7.6`
+  # pod 'AffiseModule', `1.7.7`
 end
 
 target 'Unity-iPhone' do
@@ -833,6 +833,7 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `AFFISE_INTERNAL_EVENTS_COUNT`
 - `IS_ROOTED`
 - `IS_EMULATOR`
+- `IDFV`
 
 ### AdService
 
