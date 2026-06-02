@@ -188,7 +188,7 @@ Set SDK server domain:
 
 #### Manual
 
-> Demo app [AffiseDemo.cs](Samples~/AffiseDemoApp/Scripts/AffiseDemo.cs)
+> Demo app [AffiseDemo.cs](Samples~/AffiseDemo/Scripts/AffiseService.cs)
 
 ```c#
 Affise

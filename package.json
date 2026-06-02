@@ -23,9 +23,9 @@
   },
   "samples": [
     {
-      "displayName": "Affise Simple Demo",
-      "description": "Affise simple app",
-      "path": "Samples~/AffiseDemoApp"
+      "displayName": "Affise Demo App",
+      "description": "Affise demo app",
+      "path": "Samples~/AffiseDemo"
     }
   ]
 }

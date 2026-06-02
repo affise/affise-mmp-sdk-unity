@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Samples/AffiseDemo/UI/AffiseDemoStyle.uss?fileID=7433441132597879392&amp;guid=4a91f2d7c8b04ce1b6a35d9e0f1278ab&amp;type=3#AffiseDemoStyle" />
+    <ui:Button name="Tab" class="tab">
+        <ui:VisualElement name="TabIcon" class="tab-icon" />
+        <ui:Label name="TabText" text="Tab" class="tab-text" />
+    </ui:Button>
+</ui:UXML>

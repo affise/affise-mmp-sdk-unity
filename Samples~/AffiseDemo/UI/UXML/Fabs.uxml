@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <engine:VisualElement name="FabLayer" class="fab-layer">
+        <engine:Button name="EventsFab" class="fab-button events-fab">
+            <engine:VisualElement name="EventsFabIcon" class="fab-icon events-fab-icon" />
+        </engine:Button>
+        <engine:Button name="SettingsFab" class="fab-button settings-fab">
+            <engine:VisualElement name="SettingsFabIcon" class="fab-icon settings-fab-icon" />
+        </engine:Button>
+    </engine:VisualElement>
+</engine:UXML>

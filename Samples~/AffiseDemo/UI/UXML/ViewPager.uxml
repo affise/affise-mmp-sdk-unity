@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="ViewPager" class="view-pager">
+        <ui:VisualElement name="ApiView" class="view-page api-view" />
+        <ui:VisualElement name="EventsView" class="view-page events-view" />
+        <ui:VisualElement name="StoreView" class="view-page" />
+    </ui:VisualElement>
+</ui:UXML>

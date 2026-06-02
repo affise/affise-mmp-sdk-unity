@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" demo="AffiseAppDemo" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="PredefinedView" class="fullscreen-view predefined-view">
+        <ui:VisualElement name="PredefinedTopPanel" class="predefined-top-panel">
+            <ui:Toggle name="UseCustomPredefinedToggle" text="Use custom Predefined" class="settings-toggle predefined-toggle" />
+        </ui:VisualElement>
+        <ui:VisualElement class="predefined-editor">
+            <AffiseAppDemo.NewPredefined name="NewPredefined" />
+        </ui:VisualElement>
+        <ui:VisualElement class="predefined-list-layer">
+            <ui:ScrollView name="PredefinedList" mode="Vertical" class="predefined-list" />
+            <ui:VisualElement name="ViewPagerShadow" class="view-pager-shadow" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

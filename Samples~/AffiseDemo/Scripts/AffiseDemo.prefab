@@ -1,0 +1,241 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3886188109402233742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7126833152518282096}
+  - component: {fileID: 6692594063981766382}
+  - component: {fileID: 9222028743970353436}
+  - component: {fileID: 1911507237969309212}
+  - component: {fileID: 3940912704959032162}
+  - component: {fileID: 1080967002176277872}
+  - component: {fileID: 6006182572449967368}
+  - component: {fileID: 3631600488687573782}
+  - component: {fileID: 4970530365661075314}
+  - component: {fileID: 6064732365747647308}
+  - component: {fileID: 6675292449644053820}
+  - component: {fileID: 2756859612173593378}
+  - component: {fileID: 3487581990352505346}
+  m_Layer: 5
+  m_Name: AffiseDemo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7126833152518282096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6692594063981766382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: bfabf8612a143024b93d41b2377985a0, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 9313182d3b189e348b63c2e2cd4592c0, type: 3}
+  m_SortingOrder: 0
+--- !u!114 &9222028743970353436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911faafbec1e15b418dbd141234f8008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1911507237969309212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e6d5c4b3a49788695a4b3c2d1e0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  safeZoneName: SafeZone
+--- !u!114 &3940912704959032162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b6a7d3e2c94a1aa2b3c4d5e6f70819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabIcons:
+  - Label: API
+    Icon: {fileID: 21300000, guid: 4555974d08d1d7747b8287513e125241, type: 3}
+  - Label: Events
+    Icon: {fileID: 21300000, guid: 58c1f15482d85f843b70f9f5f483fec4, type: 3}
+  - Label: Store
+    Icon: {fileID: 21300000, guid: d6b1863b319df2140955937c37784fb3, type: 3}
+  tabTemplate: {fileID: 9197481963319205126, guid: 2f8c6b7a9d1044f3a1b5e8c9d0a7f642, type: 3}
+  minTabWidthForText: 120
+  defaultTab: 1
+  tabChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6006182572449967368}
+        m_TargetAssemblyTypeName: AffiseAppDemo.ViewPager, Assembly-CSharp
+        m_MethodName: ShowTab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1080967002176277872}
+        m_TargetAssemblyTypeName: AffiseAppDemo.Fabs, Assembly-CSharp
+        m_MethodName: OnTabChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1080967002176277872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8d7e6f5a44b3c9d2e1f0a98765432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewName: FabLayer
+--- !u!114 &6006182572449967368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d3f2c1b4e54d7aa6b9c0d1e2f34567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewPagerName: ViewPager
+--- !u!114 &3631600488687573782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f56789a1b24c3d9e0f1a2b3c4d5e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerName: SettingsLayer
+  viewName: SettingsView
+--- !u!114 &4970530365661075314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6789a1b2c3d4e5f8a9b0c1d2e3f4567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerName: PredefinedLayer
+  viewName: PredefinedView
+--- !u!114 &6064732365747647308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a82b73c64d4c5a9b0e1f2a3d4c5b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiViewName: ApiView
+--- !u!114 &6675292449644053820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c3b2a1908f47e6b5a4938271605f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventsViewName: EventsView
+--- !u!114 &2756859612173593378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f244532a7d4e559d6fb1ca4edbfa6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeViewName: StoreView
+--- !u!114 &3487581990352505346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886188109402233742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b9a23d8675451286583e213736a90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewName: AlertLayer

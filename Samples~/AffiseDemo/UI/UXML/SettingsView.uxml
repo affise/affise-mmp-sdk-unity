@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" demo="AffiseAppDemo" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="SettingsView" class="fullscreen-view settings-view">
+        <ui:VisualElement name="VisualElement" class="top-panel">
+            <ui:Label text="Settings" class="fullscreen-view-title settings-view-title" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:ScrollView name="SettingsContent" mode="Vertical" class="settings-content">
+                <AffiseAppDemo.AffiseTextField name="DomainField" label="Domain" input-enabled="true" multiline="false" clear-button="true" />
+                <ui:Toggle name="ProductionModeToggle" text="Production mode" class="settings-toggle" />
+                <ui:Toggle name="OfflineModeToggle" text="Offline Mode" class="settings-toggle" />
+                <ui:Toggle name="BackgroundTrackingToggle" text="Background Tracking" class="settings-toggle" />
+                <ui:Toggle name="TrackingToggle" text="Tracking" class="settings-toggle" />
+                <ui:Toggle name="DebugRequestToggle" text="Debug Request" class="settings-toggle" />
+                <ui:Toggle name="DebugResponseToggle" text="Debug Response" class="settings-toggle" />
+                <AffiseAppDemo.AffiseTextField name="AppIdField" label="AppId" input-enabled="true" multiline="false" clear-button="true" />
+                <AffiseAppDemo.AffiseTextField name="SecretKeyField" label="SecretKey" input-enabled="true" multiline="false" clear-button="true" />
+                <ui:Label name="VersionLabel" class="settings-version" />
+            </ui:ScrollView>
+            <ui:VisualElement name="ViewPagerShadow" class="view-pager-shadow" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
