@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using AffiseAttributionLib.Module.Advertising;
 using AffiseAttributionLib.Module.AppsFlyer;
+using AffiseAttributionLib.Module.Google;
 using AffiseAttributionLib.Module.Link;
 using AffiseAttributionLib.Module.Subscription;
 using AffiseAttributionLib.Module.TikTok;
@@ -23,6 +24,7 @@ namespace AffiseAttributionLib.Module.Attribution
         public IAffiseModuleAdvertisingApi Advertising { get; }
         public IAffiseModuleLinkApi Link { get; }
         public IAffiseModuleAppsFlyerApi AppsFlyer { get; }
+        public IAffiseModuleGoogleApi Google { get; }
         public IAffiseModuleSubscriptionApi Subscription { get; }
 
         public IAffiseModuleTikTokApi TikTok { get; }
@@ -32,6 +34,7 @@ namespace AffiseAttributionLib.Module.Attribution
             Advertising = new AffiseAdvertising();
             Link = new AffiseLink();
             AppsFlyer = new AffiseAppsFlyer();
+            Google = new AffiseGoogle();
             Subscription = new AffiseSubscription();
             TikTok = new AffiseTikTok();
         }

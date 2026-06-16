@@ -108,6 +108,9 @@ namespace AffiseAttributionLib.AffiseParameters
         // meta
         META,
 
+        // google
+        ODM_INFO,
+
         // network
         MAC_SHA1,
         MAC_MD5,
@@ -227,6 +230,9 @@ namespace AffiseAttributionLib.AffiseParameters
 
                 // meta
                 ProviderType.META => "meta",
+
+                // google
+                ProviderType.ODM_INFO => "odm_info",
 
                 // network
                 ProviderType.MAC_SHA1 => "mac_sha1",

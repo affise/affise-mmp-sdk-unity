@@ -6,6 +6,7 @@ using AffiseAttributionLib.AffiseParameters.Factory;
 using AffiseAttributionLib.Init;
 using AffiseAttributionLib.Logs;
 using AffiseAttributionLib.Module.Advertising;
+using AffiseAttributionLib.Module.Google;
 using AffiseAttributionLib.Module.Link;
 using AffiseAttributionLib.Module.Network;
 using AffiseAttributionLib.Module.Phone;
@@ -96,13 +97,14 @@ namespace AffiseAttributionLib.Modules
         {
             var affiseModules = new Dictionary<AffiseModules, AffiseModule>
             {
-                { AffiseModules.Advertising, new AdvertisingModule() },
-                { AffiseModules.AppsFlyer, new AppsFlyerModule() },
+                // { AffiseModules.Advertising, new AdvertisingModule() },
+                // { AffiseModules.AppsFlyer, new AppsFlyerModule() },
+                // { AffiseModules.Google, new GoogleModule() },
                 { AffiseModules.Link, new LinkModule() },
                 { AffiseModules.Network, new NetworkModule() },
-                { AffiseModules.Phone, new PhoneModule() },
+                // { AffiseModules.Phone, new PhoneModule() },
                 { AffiseModules.Status, new StatusModule() },
-                { AffiseModules.TikTok, new TikTokModule() },
+                // { AffiseModules.TikTok, new TikTokModule() },
             };
 
             foreach (var (moduleName, module) in affiseModules)

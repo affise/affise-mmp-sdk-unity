@@ -15,7 +15,7 @@ namespace AffiseAttributionLib.Utils
             {
                 return JSONNode.Parse(json).ToDictionary();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
