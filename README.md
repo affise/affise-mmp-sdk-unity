@@ -134,7 +134,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.7.8.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.7.8/attribution-1.7.8.unitypackage)
+Download latest Affise SDK [`attribution-1.7.9.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.7.9/attribution-1.7.9.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -292,7 +292,7 @@ All affise modules is updated automatically on build
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.7.8'
+final affise_version = '1.7.9'
 
 dependencies {
     // ...
@@ -338,18 +338,18 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.7.8'
+  pod 'AffiseInternal', '1.7.9'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.7.8'
-  pod 'AffiseModule/Advertising', '1.7.8'
-  pod 'AffiseModule/AppsFlyer', '1.7.8'
-  pod 'AffiseModule/Google', '1.7.8'
-  pod 'AffiseModule/Link', '1.7.8'
-  pod 'AffiseModule/Persistent', '1.7.8'
-  pod 'AffiseModule/Status', '1.7.8'
-  pod 'AffiseModule/Subscription', '1.7.8'
-  pod 'AffiseModule/TikTok', '1.7.8'
+  pod 'AffiseModule/AdService', '1.7.9'
+  pod 'AffiseModule/Advertising', '1.7.9'
+  pod 'AffiseModule/AppsFlyer', '1.7.9'
+  pod 'AffiseModule/Google', '1.7.9'
+  pod 'AffiseModule/Link', '1.7.9'
+  pod 'AffiseModule/Persistent', '1.7.9'
+  pod 'AffiseModule/Status', '1.7.9'
+  pod 'AffiseModule/Subscription', '1.7.9'
+  pod 'AffiseModule/TikTok', '1.7.9'
 end
 
 target 'Unity-iPhone' do
@@ -735,10 +735,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.7.8'
+  pod 'AffiseInternal', '1.7.9'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.7.8`
+  # pod 'AffiseModule', `1.7.9`
 end
 
 target 'Unity-iPhone' do
@@ -800,11 +800,18 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `USER_AGENT`
 - `MCCODE`
 - `MNCODE`
+- `CARRIER`
 - `REGION`
 - `COUNTRY`
 - `LANGUAGE`
 - `DEVICE_NAME`
 - `DEVICE_TYPE`
+- `SCREEN_WIDTH`
+- `SCREEN_HEIGHT`
+- `DENSITY`
+- `CPU_CORES`
+- `TOTAL_DISK`
+- `FREE_DISK`
 - `OS_NAME`
 - `PLATFORM`
 - `SDK_PLATFORM`
@@ -850,6 +857,9 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `ALTSTR_ADID`
 - `FIREOS_ADID`
 - `COLOROS_ADID`
+- `AD_PERSONALIZATION`
+- `ADVERTISER_TRACKING_ENABLED`
+- `APPLICATION_TRACKING_ENABLED`
 
 ### AndroidId
 
