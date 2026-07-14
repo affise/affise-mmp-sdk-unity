@@ -1,4 +1,6 @@
 using AffiseAttributionLib.AffiseParameters;
+using AffiseAttributionLib.Executors;
+using AffiseAttributionLib.Internal.Predefined;
 using AffiseAttributionLib.Utils;
 
 namespace AffiseAttributionLib.Session
@@ -33,10 +35,12 @@ namespace AffiseAttributionLib.Session
         private bool _isOpenApp = false;
 
         private readonly ICurrentActiveActivityCountProvider _activityCountProvider;
+        private readonly IExecutorServiceProvider _executorServiceProvider;
 
         public SessionManagerImpl(ICurrentActiveActivityCountProvider activityCountProvider)
         {
             _activityCountProvider = activityCountProvider;
+            _executorServiceProvider = new ExecutorServiceProviderImpl();
         }
 
         /**
@@ -94,12 +98,14 @@ namespace AffiseAttributionLib.Session
                 _openAppTime = GetTimeMillis();
             }
 
-            // Send InternalEvent
-            // Delay.Run(TIME_TO_START_SESSION, () =>
-            // {
-            //     if (SessionTime() == 0L) return;
-            //     //Send sdk events
-            // });
+            _executorServiceProvider.ExecuteWithDelay(TIME_TO_START_SESSION, () =>
+            {
+                if (SessionTime() == 0L) return;
+                new SessionStartInternalEvent(
+                    affiseSessionCount: GetSessionCount(),
+                    lifetimeSessionCount: GetLifetimeSessionTime()
+                ).Send();
+            });
         }
 
         /**

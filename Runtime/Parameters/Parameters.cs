@@ -14,6 +14,7 @@
    
         public const string AFFISE_EVENTS_COUNT = "affise_events_count";
         public const string AFFISE_SDK_EVENTS_COUNT = "affise_sdk_events_count";
+        public const string AFFISE_INTERNAL_EVENTS_COUNT = "affise_internal_events_count";
         public const string UUID_INDEX_KEY = "uuid_index";
     }
 }

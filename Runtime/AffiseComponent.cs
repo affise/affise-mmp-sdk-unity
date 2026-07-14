@@ -4,6 +4,7 @@ using AffiseAttributionLib.Converter;
 using AffiseAttributionLib.Events;
 using AffiseAttributionLib.Executors;
 using AffiseAttributionLib.Init;
+using AffiseAttributionLib.Internal;
 using AffiseAttributionLib.Logs;
 using AffiseAttributionLib.Network;
 using AffiseAttributionLib.AffiseParameters.Base;
@@ -30,6 +31,8 @@ namespace AffiseAttributionLib
         public EventsManager EventsManager { get; }
 
         public IStoreEventUseCase StoreEventUseCase { get; }
+
+        public IStoreInternalEventUseCase StoreInternalEventUseCase { get; }
 
         public IInitPropertiesStorage InitPropertiesStorage { get; }
 
@@ -62,6 +65,10 @@ namespace AffiseAttributionLib
         private readonly IEventsStorage _eventsStorage;
 
         private readonly IEventsRepository _eventsRepository;
+
+        private readonly IEventsStorage _internalEventsStorage;
+
+        private readonly IInternalEventsRepository _internalEventsRepository;
 
         private readonly ICloudRepository _cloudRepository;
 
@@ -141,6 +148,13 @@ namespace AffiseAttributionLib
                 eventToSerializedEventConverter: _eventToSerializedEventConverter,
                 eventsStorage: _eventsStorage
             );
+
+            _internalEventsStorage = new InternalEventsStorageImpl(_logsManager);
+            _internalEventsRepository = new InternalEventsRepositoryImpl(
+                converterToBase64: _converterToBase64,
+                internalEventToSerializedEventConverter: new InternalEventToSerializedEventConverter(),
+                eventsStorage: _internalEventsStorage
+            );
             
             PushTokenUseCase = new PushTokenUseCase();
 
@@ -197,6 +211,7 @@ namespace AffiseAttributionLib
                 postBackModelFactory: PostBackModelFactory,
                 cloudRepository: _cloudRepository,
                 eventsRepository: _eventsRepository,
+                internalEventsRepository: _internalEventsRepository,
                 logsRepository: _logsRepository,
                 logsManager: _logsManager,
                 firstAppOpenUseCase: FirstAppOpenUseCase
@@ -224,6 +239,11 @@ namespace AffiseAttributionLib
                 eventsRepository: _eventsRepository,
                 eventsManager: EventsManager,
                 isFirstForUserUseCase: _isFirstForUserUseCase
+            );
+
+            StoreInternalEventUseCase = new StoreInternalEventUseCaseImpl(
+                executorServiceProvider: new ExecutorServiceProviderImpl(),
+                repository: _internalEventsRepository
             );
         }
     }

@@ -19,6 +19,7 @@ namespace AffiseAttributionLib.Converter
 
         private const string EVENTS_KEY = "events";
         private const string SDK_EVENTS_KEY = "sdk_events";
+        private const string INTERNAL_EVENTS_KEY = "internal_events";
 
         public string Convert(List<PostBackModel> from)
         {
@@ -50,6 +51,13 @@ namespace AffiseAttributionLib.Converter
                 logsArray.Add(log.Data);
             }
 
+            //Internal events
+            var internalEventsArray = new JSONArray();
+            foreach (var internalEvent in obj.InternalEvents)
+            {
+                internalEventsArray.Add(internalEvent.Data);
+            }
+
             foreach (var parameter in obj.Parameters)
             {
                 result.AddAny(parameter.Key.Provider(), parameter.Value);
@@ -61,6 +69,8 @@ namespace AffiseAttributionLib.Converter
             result[EVENTS_KEY] = eventsArray;
             result[Parameters.AFFISE_SDK_EVENTS_COUNT] = logsArray.Count;
             result[SDK_EVENTS_KEY] = logsArray;
+            result[Parameters.AFFISE_INTERNAL_EVENTS_COUNT] = internalEventsArray.Count;
+            result[INTERNAL_EVENTS_KEY] = internalEventsArray;
 
             return result;
         }

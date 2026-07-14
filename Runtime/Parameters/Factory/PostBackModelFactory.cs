@@ -19,12 +19,17 @@ namespace AffiseAttributionLib.AffiseParameters.Factory
             _providers = providers;
         }
 
-        public PostBackModel Create(List<SerializedEvent> events, List<SerializedLog> logs)
+        public PostBackModel Create(
+            List<SerializedEvent> events,
+            List<SerializedLog> logs,
+            List<SerializedEvent>? internalEvents = null
+        )
         {
             return new PostBackModel(
                 parameters: GetProvidersMap(),
                 events: events,
-                logs: logs
+                logs: logs,
+                internalEvents: internalEvents
             );
         }
 

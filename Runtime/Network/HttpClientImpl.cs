@@ -89,7 +89,8 @@ namespace AffiseAttributionLib.Network
             var responseBody = request.downloadHandler.text;
             var responseHeaders = new Dictionary<string, List<string>>();
             
-            foreach (var (key, value) in request.GetResponseHeaders())
+            var requestResponseHeaders = request.GetResponseHeaders() ?? new Dictionary<string, string>();
+            foreach (var (key, value) in requestResponseHeaders)
             {
                 if (key is null) continue;
                 responseHeaders[key] = new List<string>((value ?? "").Split(';'));;

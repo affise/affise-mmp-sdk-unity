@@ -6,6 +6,7 @@ using AffiseAttributionLib.AffiseParameters.Factory;
 using AffiseAttributionLib.Events;
 using AffiseAttributionLib.Exceptions;
 using AffiseAttributionLib.Executors;
+using AffiseAttributionLib.Internal;
 using AffiseAttributionLib.Logs;
 using AffiseAttributionLib.Network;
 using AffiseAttributionLib.Network.Entity;
@@ -21,6 +22,7 @@ namespace AffiseAttributionLib.Usecase
         private readonly PostBackModelFactory _postBackModelFactory;
         private readonly ICloudRepository _cloudRepository;
         private readonly IEventsRepository _eventsRepository;
+        private readonly IInternalEventsRepository _internalEventsRepository;
         private readonly ILogsRepository _logsRepository;
         private readonly ILogsManager _logsManager;
         private readonly FirstAppOpenUseCase _firstAppOpenUseCase;
@@ -40,6 +42,7 @@ namespace AffiseAttributionLib.Usecase
             PostBackModelFactory postBackModelFactory,
             ICloudRepository cloudRepository,
             IEventsRepository eventsRepository,
+            IInternalEventsRepository internalEventsRepository,
             ILogsRepository logsRepository,
             ILogsManager logsManager,
             FirstAppOpenUseCase firstAppOpenUseCase
@@ -49,6 +52,7 @@ namespace AffiseAttributionLib.Usecase
             _postBackModelFactory = postBackModelFactory;
             _cloudRepository = cloudRepository;
             _eventsRepository = eventsRepository;
+            _internalEventsRepository = internalEventsRepository;
             _logsRepository = logsRepository;
             _logsManager = logsManager;
             _firstAppOpenUseCase = firstAppOpenUseCase;
@@ -83,7 +87,9 @@ namespace AffiseAttributionLib.Usecase
 
         private bool IsToSendWithDelay(string url)
         {
-            return _eventsRepository.HasEvents(url) || _logsRepository.HasLogs(url);
+            return _eventsRepository.HasEvents(url)
+                || _internalEventsRepository.HasEvents(url)
+                || _logsRepository.HasLogs(url);
         }
 
         private void Send(string url, bool sendEmpty, Action onComplete)
@@ -94,7 +100,10 @@ namespace AffiseAttributionLib.Usecase
             //Get logs
             var logs = _logsRepository.GetLogs(url);
 
-            if (!sendEmpty && !(events.Count != 0 || logs.Count != 0))
+            //Get internal events
+            var internalEvents = _internalEventsRepository.GetEvents(url);
+
+            if (!sendEmpty && !(events.Count != 0 || internalEvents.Count != 0 || logs.Count != 0))
             {
                 // if flag sendEmpty is false and all array is empty
                 // don't send empty postback
@@ -104,13 +113,14 @@ namespace AffiseAttributionLib.Usecase
 
             // Send data for single url
             _cloudRepository.Send(
-                PostBackModelsData(events, logs),
+                PostBackModelsData(events, logs, internalEvents),
                 url,
                 response =>
                 {
                     if (response.IsValid())
                     {
                         DeleteEvent(events, url);
+                        DeleteInternalEvent(internalEvents, url);
                         DeleteLog(logs, url);
 
                         if (IsToSendWithDelay(url))
@@ -153,9 +163,13 @@ namespace AffiseAttributionLib.Usecase
             });
         }
 
-        private List<PostBackModel> PostBackModelsData(List<SerializedEvent> events, List<SerializedLog> logs)
+        private List<PostBackModel> PostBackModelsData(
+            List<SerializedEvent> events,
+            List<SerializedLog> logs,
+            List<SerializedEvent> internalEvents
+        )
         {
-            var data = _postBackModelFactory.Create(events, logs);
+            var data = _postBackModelFactory.Create(events, logs, internalEvents);
             // If first run
             if (_firstAppOpenUseCase.IsFirstOpen())
             {
@@ -173,6 +187,13 @@ namespace AffiseAttributionLib.Usecase
             var ids = events.Select(s => s.Id);
             // Remove all sent events
             _eventsRepository.DeleteEvent(ids, url);
+        }
+
+        private void DeleteInternalEvent(List<SerializedEvent> events, string url)
+        {
+            var ids = events.Select(s => s.Id);
+            // Remove all sent internal events
+            _internalEventsRepository.DeleteEvent(ids, url);
         }
 
         private void DeleteLog(List<SerializedLog> logs, string url)

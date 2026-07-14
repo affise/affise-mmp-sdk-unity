@@ -4,6 +4,7 @@ using AffiseAttributionLib.Debugger.Validate;
 using AffiseAttributionLib.Deeplink;
 using AffiseAttributionLib.Events;
 using AffiseAttributionLib.Init;
+using AffiseAttributionLib.Internal;
 using AffiseAttributionLib.Modules;
 using AffiseAttributionLib.Referrer;
 using AffiseAttributionLib.Usecase;
@@ -16,6 +17,7 @@ namespace AffiseAttributionLib
         public ISetPropertiesWhenAppInitializedUseCase SetPropertiesWhenInitUseCase { get; }
         public EventsManager EventsManager { get; }
         public IStoreEventUseCase StoreEventUseCase { get; }
+        public IStoreInternalEventUseCase StoreInternalEventUseCase { get; }
         public IInitPropertiesStorage InitPropertiesStorage { get; }
         public IDeeplinkManager DeeplinkManager { get; }
         public PostBackModelFactory PostBackModelFactory { get; }

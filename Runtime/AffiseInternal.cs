@@ -2,6 +2,7 @@
 using AffiseAttributionLib.Events;
 using AffiseAttributionLib.Exceptions;
 using AffiseAttributionLib.Init;
+using AffiseAttributionLib.Internal;
 #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
 using AffiseAttributionLib.Native;
 #endif
@@ -43,6 +44,15 @@ namespace AffiseAttributionLib
             Affise._native?.SendEvent(affiseEvent);
 #else
             Affise._api?.StoreEventUseCase.StoreEvent(affiseEvent);
+#endif
+        }
+
+        internal static void SendInternalEvent(InternalEvent internalEvent)
+        {
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+            // Native SDKs own internal events on device builds.
+#else
+            Affise._api?.StoreInternalEventUseCase.StoreInternalEvent(internalEvent);
 #endif
         }
 

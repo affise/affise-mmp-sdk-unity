@@ -11,16 +11,19 @@ namespace AffiseAttributionLib.Network.Entity
         public readonly Dictionary<ProviderType, object?> Parameters;
         public readonly List<SerializedEvent> Events;
         public readonly List<SerializedLog> Logs;
+        public readonly List<SerializedEvent> InternalEvents;
 
         public PostBackModel(
             Dictionary<ProviderType, object?> parameters,
             List<SerializedEvent> events,
-            List<SerializedLog> logs
+            List<SerializedLog> logs,
+            List<SerializedEvent>? internalEvents = null
         )
         {
             Parameters = parameters;
             Events = events;
             Logs = logs;
+            InternalEvents = internalEvents ?? new List<SerializedEvent>();
         }
     }
 
@@ -33,7 +36,8 @@ namespace AffiseAttributionLib.Network.Entity
             return new PostBackModel(
                 parameters: parameters,
                 events: model.Events,
-                logs: model.Logs
+                logs: model.Logs,
+                internalEvents: model.InternalEvents
             );
         }
     }
