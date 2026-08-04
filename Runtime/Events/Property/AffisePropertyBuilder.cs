@@ -1,6 +1,6 @@
 ﻿using AffiseAttributionLib.Extensions;
 using AffiseAttributionLib.Utils;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Events.Property
 {

@@ -5,7 +5,7 @@ using System.Threading;
 using AffiseAttributionLib.Extensions;
 using AffiseAttributionLib.Native.Base;
 using AffiseAttributionLib.Utils;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 using UnityEngine;
 #if UNITY_ANDROID && !UNITY_EDITOR
 using AffiseAttributionLib.Native.Android;

@@ -4,7 +4,7 @@ using AffiseAttributionLib.AffiseParameters;
 using AffiseAttributionLib.Extensions;
 using AffiseAttributionLib.Network.Entity;
 using AffiseAttributionLib.Usecase;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Converter
 {

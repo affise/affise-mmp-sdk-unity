@@ -1,4 +1,4 @@
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Logs
 {

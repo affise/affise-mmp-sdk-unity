@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using AffiseAttributionLib.Events;
 using AffiseAttributionLib.Logs;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 using UnityEngine;
 
 namespace AffiseAttributionLib.Storages

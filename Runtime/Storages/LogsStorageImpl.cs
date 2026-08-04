@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using AffiseAttributionLib.Logs;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 using UnityEngine;
 
 namespace AffiseAttributionLib.Storages

@@ -1,7 +1,7 @@
 ﻿#nullable enable
 using System;
 using System.Linq;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 using UnityEditor;
 using UnityEngine;
 

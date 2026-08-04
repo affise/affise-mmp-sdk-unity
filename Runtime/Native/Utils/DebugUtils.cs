@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using AffiseAttributionLib.Debugger.Validate;
 using AffiseAttributionLib.Extensions;
 using AffiseAttributionLib.Network;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Native.Utils
 {

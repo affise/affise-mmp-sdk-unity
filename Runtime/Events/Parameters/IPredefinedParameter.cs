@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Events.Parameters
 {

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AffiseAttributionLib.Editor.Modules;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 using UnityEditor;
 using UnityEngine;
 

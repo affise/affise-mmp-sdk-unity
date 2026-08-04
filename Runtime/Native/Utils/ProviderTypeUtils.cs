@@ -1,7 +1,7 @@
 ﻿#nullable enable
 using System.Collections.Generic;
 using AffiseAttributionLib.AffiseParameters;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Native.Utils
 {

@@ -6,7 +6,7 @@ using AffiseAttributionLib.Extensions;
 using AffiseAttributionLib.Modules;
 using AffiseAttributionLib.Network;
 using AffiseAttributionLib.Settings;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Init
 {

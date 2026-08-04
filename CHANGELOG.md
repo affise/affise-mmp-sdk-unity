@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.7.11] - 2026-08-04
+
+### Fixed
+
+- Unity 6 SimpleJSON build error
+- Unity 6 android build error
+
+### Changed
+
+- Update native iOS to [`1.7.11`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.11/CHANGELOG.md)
+- Update native Android to [`1.7.11`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.11/CHANGELOG.md)
+
 ## [1.7.10] - 2026-07-14
 
 ### Added
@@ -606,6 +618,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.7.11]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.10...1.7.11
 [1.7.10]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.9...1.7.10
 [1.7.9]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.8...1.7.9
 [1.7.8]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.7...1.7.8

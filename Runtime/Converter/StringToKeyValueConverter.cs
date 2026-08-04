@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using AffiseAttributionLib.Modules;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Converter
 {

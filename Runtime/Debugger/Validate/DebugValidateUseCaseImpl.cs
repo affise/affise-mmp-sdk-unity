@@ -8,7 +8,7 @@ using AffiseAttributionLib.Executors;
 using AffiseAttributionLib.Init;
 using AffiseAttributionLib.Logs;
 using AffiseAttributionLib.Network;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 using UnityEngine;
 
 namespace AffiseAttributionLib.Debugger.Validate

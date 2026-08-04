@@ -1,6 +1,6 @@
 ﻿#nullable enable
 using AffiseAttributionLib.Events.Property;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Events.Subscription
 {

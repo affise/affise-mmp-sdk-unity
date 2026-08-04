@@ -1,7 +1,7 @@
 ﻿#nullable enable
 using System.Collections.Generic;
 using System.Globalization;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Extensions
 {

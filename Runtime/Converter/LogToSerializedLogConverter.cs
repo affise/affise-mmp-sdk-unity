@@ -2,7 +2,7 @@ using System;
 using AffiseAttributionLib.Logs;
 using AffiseAttributionLib.AffiseParameters.Logs;
 using AffiseAttributionLib.Utils;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Converter
 {

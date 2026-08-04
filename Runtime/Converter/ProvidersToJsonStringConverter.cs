@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using AffiseAttributionLib.AffiseParameters;
 using AffiseAttributionLib.AffiseParameters.Base;
 using AffiseAttributionLib.Extensions;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Converter
 {

@@ -17,7 +17,7 @@ using AffiseAttributionLib.Referrer;
 using AffiseAttributionLib.Settings;
 using AffiseAttributionLib.SKAd;
 using AffiseAttributionLib.Usecase;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAttributionLib.Native
 {

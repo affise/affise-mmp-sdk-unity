@@ -5,7 +5,7 @@ using AffiseAttributionLib.Extensions;
 using AffiseAttributionLib.Module;
 using AffiseAttributionLib.Module.Subscription;
 using AffiseAttributionLib.Modules;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 using UnityEngine;
 
 namespace AffiseAttributionLib.Native.Data
