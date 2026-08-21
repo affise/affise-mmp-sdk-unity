@@ -134,7 +134,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.7.12.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.7.12/attribution-1.7.12.unitypackage)
+Download latest Affise SDK [`attribution-1.7.13.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.7.13/attribution-1.7.13.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -292,7 +292,7 @@ All affise modules is updated automatically on build
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.7.12'
+final affise_version = '1.7.13'
 
 dependencies {
     // ...
@@ -338,18 +338,18 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.7.12'
+  pod 'AffiseInternal', '1.7.13'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.7.12'
-  pod 'AffiseModule/Advertising', '1.7.12'
-  pod 'AffiseModule/AppsFlyer', '1.7.12'
-  pod 'AffiseModule/Google', '1.7.12'
-  pod 'AffiseModule/Link', '1.7.12'
-  pod 'AffiseModule/Persistent', '1.7.12'
-  pod 'AffiseModule/Status', '1.7.12'
-  pod 'AffiseModule/Subscription', '1.7.12'
-  pod 'AffiseModule/TikTok', '1.7.12'
+  pod 'AffiseModule/AdService', '1.7.13'
+  pod 'AffiseModule/Advertising', '1.7.13'
+  pod 'AffiseModule/AppsFlyer', '1.7.13'
+  pod 'AffiseModule/Google', '1.7.13'
+  pod 'AffiseModule/Link', '1.7.13'
+  pod 'AffiseModule/Persistent', '1.7.13'
+  pod 'AffiseModule/Status', '1.7.13'
+  pod 'AffiseModule/Subscription', '1.7.13'
+  pod 'AffiseModule/TikTok', '1.7.13'
 end
 
 target 'Unity-iPhone' do
@@ -735,10 +735,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.7.12'
+  pod 'AffiseInternal', '1.7.13'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.7.12`
+  # pod 'AffiseModule', `1.7.13`
 end
 
 target 'Unity-iPhone' do
