@@ -5,11 +5,18 @@ using UnityEngine.UIElements;
 
 namespace AffiseAppDemo
 {
+#if UNITY_6000_0_OR_NEWER
+    [UxmlElement]
+    public sealed partial class PredefinedCard : VisualElement
+#else
     public sealed class PredefinedCard : VisualElement
+#endif
     {
+#if !UNITY_6000_0_OR_NEWER
         public new class UxmlFactory : UxmlFactory<PredefinedCard, UxmlTraits>
         {
         }
+#endif
 
         public event Action<PredefinedCard, PredefinedData>? OnDeleteRequested;
         public event Action<PredefinedData>? OnSelected;

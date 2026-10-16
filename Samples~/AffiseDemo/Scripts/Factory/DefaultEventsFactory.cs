@@ -8,7 +8,7 @@ using AffiseAttributionLib.Events.Parameters;
 using AffiseAttributionLib.Events.Predefined;
 using AffiseAttributionLib.Events.Subscription;
 using AffiseAttributionLib.Utils;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 using TouchType = AffiseAttributionLib.Events.Predefined.TouchType;
 
 namespace AffiseAppDemo

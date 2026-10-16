@@ -8,11 +8,18 @@ using UnityEngine.UIElements;
 
 namespace AffiseAppDemo
 {
+#if UNITY_6000_0_OR_NEWER
+    [UxmlElement]
+    public sealed partial class NewPredefined : VisualElement
+#else
     public sealed class NewPredefined : VisualElement
+#endif
     {
+#if !UNITY_6000_0_OR_NEWER
         public new class UxmlFactory : UxmlFactory<NewPredefined, UxmlTraits>
         {
         }
+#endif
 
         public event Action<PredefinedData>? OnPredefinedAdded;
 

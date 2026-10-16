@@ -4,8 +4,14 @@ using UnityEngine.UIElements;
 
 namespace AffiseAppDemo
 {
+#if UNITY_6000_0_OR_NEWER
+    [UxmlElement]
+    public partial class AffiseTextField : VisualElement
+#else
     public class AffiseTextField : VisualElement
+#endif
     {
+#if !UNITY_6000_0_OR_NEWER
         public new class UxmlFactory : UxmlFactory<AffiseTextField, UxmlTraits>
         {
         }
@@ -44,6 +50,7 @@ namespace AffiseAppDemo
                 output.ShowClearButton = _clearButton.GetValueFromBag(attributes, context);
             }
         }
+#endif
 
         private readonly Label _labelElement;
         private readonly TextField _textField;
@@ -86,6 +93,9 @@ namespace AffiseAppDemo
             Label = string.Empty;
         }
 
+#if UNITY_6000_0_OR_NEWER
+        [UxmlAttribute("input-enabled")]
+#endif
         public bool InputEnabled
         {
             get => !_textField.isReadOnly;
@@ -98,6 +108,9 @@ namespace AffiseAppDemo
             set => _textField.value = value ?? string.Empty;
         }
 
+#if UNITY_6000_0_OR_NEWER
+        [UxmlAttribute("label")]
+#endif
         public string Label
         {
             get => _labelElement.text;
@@ -110,6 +123,9 @@ namespace AffiseAppDemo
             }
         }
 
+#if UNITY_6000_0_OR_NEWER
+        [UxmlAttribute("multiline")]
+#endif
         public bool Multiline
         {
             get => _textField.multiline;
@@ -120,6 +136,9 @@ namespace AffiseAppDemo
             }
         }
 
+#if UNITY_6000_0_OR_NEWER
+        [UxmlAttribute("clear-button")]
+#endif
         public bool ShowClearButton
         {
             get => _clearButton.resolvedStyle.display != DisplayStyle.None;

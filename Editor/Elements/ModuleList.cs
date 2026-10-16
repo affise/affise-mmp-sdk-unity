@@ -7,10 +7,16 @@ using UnityEngine.UIElements;
 
 namespace AffiseAttributionLib.Editor.Elements
 {
+#if UNITY_6000_0_OR_NEWER
+    [UxmlElement]
+    internal partial class ModuleList : VisualElement, INotifyValueChanged<IEnumerable<Modules.Module>>
+#else
     internal class ModuleList : VisualElement, INotifyValueChanged<IEnumerable<Modules.Module>>
+#endif
     {
         #region UXML
 
+#if !UNITY_6000_0_OR_NEWER
         public new class UxmlFactory : UxmlFactory<ModuleList, UxmlTraits>
         {
         }
@@ -27,6 +33,7 @@ namespace AffiseAttributionLib.Editor.Elements
                 base.Init(ve, bag, cc);
             }
         }
+#endif
 
         #endregion UXML
 

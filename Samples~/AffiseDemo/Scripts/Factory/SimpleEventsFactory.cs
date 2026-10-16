@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using AffiseAttributionLib.Events;
 using AffiseAttributionLib.Events.Predefined;
 using AffiseAttributionLib.Events.Subscription;
-using SimpleJSON;
+using AffiseAttributionLib.SimpleJSON;
 
 namespace AffiseAppDemo
 {

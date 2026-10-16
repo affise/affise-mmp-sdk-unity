@@ -49,5 +49,14 @@ namespace AffiseAppDemo
                 .Select(value => value.ToString())
                 .ToList();
         }
+        
+        public static string EscapeRichText(this string input)
+        {
+            if (string.IsNullOrEmpty(input)) return input;
+    
+            return input.Replace("&", "&amp;")
+                .Replace("<", "&lt;")
+                .Replace(">", "&gt;");
+        }
     }
 }
