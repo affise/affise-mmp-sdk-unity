@@ -55,6 +55,7 @@ namespace AffiseAttributionLib.Utils
             RANDOM,
             INSTALL_TIME,
             PERSISTENT,
+            NO_PREF,
         }
 
         private static string? Suffix(this SignType type)
@@ -64,6 +65,7 @@ namespace AffiseAttributionLib.Utils
                 SignType.RANDOM => "00",
                 SignType.INSTALL_TIME => "01",
                 SignType.PERSISTENT => "02",
+                SignType.NO_PREF => "99",
                 _ => null
             };
         }

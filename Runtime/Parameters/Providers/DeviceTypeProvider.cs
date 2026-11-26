@@ -1,6 +1,5 @@
 ﻿using AffiseAttributionLib.AffiseParameters.Base;
-using AffiseAttributionLib.Extensions;
-using UnityEngine.Device;
+using AffiseAttributionLib.Module.Hardware.UseCase;
 
 namespace AffiseAttributionLib.AffiseParameters.Providers
 {
@@ -9,8 +8,13 @@ namespace AffiseAttributionLib.AffiseParameters.Providers
      */
     internal class DeviceTypeProvider : StringPropertyProvider
     {
+        private readonly HardwareInfoUseCase _hardwareInfo;
+
+        public DeviceTypeProvider(HardwareInfoUseCase hardwareInfo) => _hardwareInfo = hardwareInfo;
+
         public override float Order => 42.0f;
         public override ProviderType? Key => ProviderType.DEVICE_TYPE;
-        public override string Provide() => SystemInfo.deviceType.ToCustom();
+
+        public override string Provide() => _hardwareInfo.DeviceType;
     }
 }

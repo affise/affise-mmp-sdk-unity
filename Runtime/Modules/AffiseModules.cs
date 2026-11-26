@@ -21,6 +21,7 @@ namespace AffiseAttributionLib.Modules
         RuStore,
         Huawei,
         TikTok,
+        Hardware,
     }
     
     internal static class AffiseModulesExt
@@ -44,6 +45,7 @@ namespace AffiseAttributionLib.Modules
                 AffiseModules.RuStore => "RuStore",
                 AffiseModules.Huawei => "Huawei",
                 AffiseModules.TikTok => "TikTok",
+                AffiseModules.Hardware => "Hardware",
                 _ => ""
             };
         }

@@ -1,6 +1,7 @@
 ﻿using AffiseAttributionLib.AffiseParameters.Base;
+using AffiseAttributionLib.AffiseParameters;
 
-namespace AffiseAttributionLib.AffiseParameters.Providers
+namespace AffiseAttributionLib.Module.Network.Providers
 {
     /**
      * Provider for parameter [ProviderType.CONNECTION_TYPE]

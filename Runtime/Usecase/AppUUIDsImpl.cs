@@ -54,9 +54,11 @@ namespace AffiseAttributionLib.Usecase
             var affUserId = _md5Converter.Convert(PrefUtils.GetLong(FirstAppOpenUseCase.FIRST_OPENED_DATE_KEY).ToString())
                 .ToFakeUuid()
                 .Sign(Uuid.SignType.INSTALL_TIME);
+            
             if (!string.IsNullOrWhiteSpace(affUserId))
             {
-                return affUserId;
+                PrefUtils.SaveString(IAppUUIDs.RANDOM_USER_ID, affUserId);
+                return PrefUtils.GetString(IAppUUIDs.RANDOM_USER_ID, affUserId.Sign(Uuid.SignType.NO_PREF));
             }
 
             var genUuid = Uuid.Generate().Sign(Uuid.SignType.RANDOM);

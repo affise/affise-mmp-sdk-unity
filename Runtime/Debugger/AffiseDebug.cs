@@ -48,7 +48,7 @@ namespace AffiseAttributionLib.Debugger
          */
         public string Version()
         {
-            return "1.7.17";
+            return "1.7.18";
         }
             
         /**

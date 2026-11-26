@@ -78,10 +78,6 @@ namespace AffiseAttributionLib.AffiseParameters.Base
                         }
                         return firstOpenTimeProvider.ProvideWithDefault() ?? 0L;
                     }),
-                    new ConnectionTypeProvider(),
-                    new CpuTypeProvider(),
-                    new HardwareNameProvider(),
-                    new NetworkTypeProvider(),
                     new DeviceManufacturerProvider(),
                     new DeeplinkClickPropertyProvider(_deeplinkClickRepository),
                     // new EmptyStringProvider(ProviderType.DEVICE_ATLAS_ID, 26.0f),
@@ -92,20 +88,13 @@ namespace AffiseAttributionLib.AffiseParameters.Base
                     new GoogleAdvertisingIdMd5Provider(_stringToMd5Converter),
                     new RefTokenProvider(),
                     new InstallReferrerProvider(),
-                    new UserAgentProvider(),
-                    new IspNameProvider(),
-                    new LanguageProvider(),
-                    new DeviceNameProvider(),
-                    new DeviceTypeProvider(),
                     new OsNameProvider(),
                     new PlatformNameProvider(),
                     new SdkPlatformNameProvider(),
                     new ApiLevelOSProvider(),
                     new AffSDKVersionProvider(),
-                    new OSVersionProvider(),
                     new RandomUserIdProvider(_appUuids),
                     new IsProductionPropertyProvider(_initPropertiesStorage),
-                    new TimezoneDeviceProvider(),
                     // new EmptyStringProvider(ProviderType.AFFISE_EVENT_TOKEN, 52.0f),
                     // new EmptyStringProvider(ProviderType.AFFISE_EVENT_NAME, 53.0f),
                     lastSessionTimeProvider,
@@ -121,9 +110,6 @@ namespace AffiseAttributionLib.AffiseParameters.Base
                     // new AffSDKSecretIdProvider(_initPropertiesStorage),
                     new PushTokenProvider(_pushTokenUseCase),
                     new PushTokenServiceProvider(_pushTokenUseCase),
-                    // new EmptyStringProvider(ProviderType.OS_AND_VERSION, 68.0f),
-                    // new EmptyStringProvider(ProviderType.DEVICE, 69.0f),
-                    // new EmptyStringProvider(ProviderType.BUILD, 70.0f),
                 }
             );
         }

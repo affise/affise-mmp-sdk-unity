@@ -46,6 +46,7 @@ namespace AffiseAttributionLib.AffiseParameters.Base
                 StringPropertyProvider stringProvider => stringProvider.ProvideWithDefault(),
                 BooleanPropertyProvider booleanProvider => booleanProvider.ProvideWithDefault(),
                 LongPropertyProvider longProvider => longProvider.ProvideWithDefault(),
+                FloatPropertyProvider floatProvider => floatProvider.ProvideWithDefault(),
                 AffAppTokenPropertyProvider affAppTokenProvider => affAppTokenProvider
                     .ProvideWithParamAndDefault(createdTime?.ToString() ?? ""),
                 _ => null

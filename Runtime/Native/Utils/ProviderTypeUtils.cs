@@ -1,4 +1,5 @@
 ﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using AffiseAttributionLib.AffiseParameters;
 using AffiseAttributionLib.SimpleJSON;
@@ -34,6 +35,8 @@ namespace AffiseAttributionLib.Native.Utils
 
             if (json.IsNumber)
             {
+                var number = json.AsDouble;
+                if (number != Math.Truncate(number)) return number;
                 return json.AsLong;
             }
 

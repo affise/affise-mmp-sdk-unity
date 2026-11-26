@@ -57,7 +57,6 @@ namespace AffiseAttributionLib.Network
         {
             return new Dictionary<string, string>
             {
-                { "User-Agent", _userAgentProvider?.ProvideWithDefault() ?? "" },
                 { "Content-Type", "application/json; charset=utf-8" }
             };
         }

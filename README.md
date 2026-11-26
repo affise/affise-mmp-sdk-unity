@@ -56,6 +56,7 @@
     - [AndroidId](#androidid)
     - [Huawei](#huawei)
     - [Google](#google)
+    - [Hardware](#hardware)
     - [Meta](#meta)
     - [Network](#network)
     - [Phone](#phone)
@@ -134,7 +135,7 @@ Add package from git url `https://github.com/affise/affise-mmp-sdk-unity.git`
 
 ### Integrate unitypackage file
 
-Download latest Affise SDK [`attribution-1.7.17.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.7.17/attribution-1.7.17.unitypackage)
+Download latest Affise SDK [`attribution-1.7.18.unitypackage`](https://github.com/affise/affise-mmp-sdk-unity/releases/download/1.7.18/attribution-1.7.18.unitypackage)
 from [releases page](https://github.com/affise/affise-mmp-sdk-unity/releases) and drop this file to unity editor
 
 ### Initialize
@@ -279,6 +280,7 @@ All affise modules is updated automatically on build
 | `Advertising`  | [![module-advertising](https://img.shields.io/maven-central/v/com.affise/module-advertising?label=latest)](https://mvnrepository.com/artifact/com.affise/module-advertising) |
 | `AndroidId`    | [![module-androidid](https://img.shields.io/maven-central/v/com.affise/module-androidid?label=latest)](https://mvnrepository.com/artifact/com.affise/module-androidid)       |
 | `AppsFlyer`    | [![module-appsflyer](https://img.shields.io/maven-central/v/com.affise/module-appsflyer?label=latest)](https://mvnrepository.com/artifact/com.affise/module-appsflyer)       |
+| `Hardware`     | [![module-hardware](https://img.shields.io/maven-central/v/com.affise/module-hardware?label=latest)](https://central.sonatype.com/artifact/com.affise/module-hardware) |
 | `Link`         | [![module-link](https://img.shields.io/maven-central/v/com.affise/module-link?label=latest)](https://mvnrepository.com/artifact/com.affise/module-link)                      |
 | `Network`      | [![module-network](https://img.shields.io/maven-central/v/com.affise/module-network?label=latest)](https://mvnrepository.com/artifact/com.affise/module-network)             |
 | `Phone`        | [![module-phone](https://img.shields.io/maven-central/v/com.affise/module-phone?label=latest)](https://mvnrepository.com/artifact/com.affise/module-phone)                   |
@@ -292,13 +294,14 @@ All affise modules is updated automatically on build
 Dependencies located in Android project gradle file `build.gradle`
 
 ```gradle
-final affise_version = '1.7.17'
+final affise_version = '1.7.18'
 
 dependencies {
     // ...
     // Affise modules
     implementation "com.affise:module-advertising:$affise_version"
     implementation "com.affise:module-androidid:$affise_version"
+    implementation "com.affise:module-hardware:$affise_version"
     implementation "com.affise:module-link:$affise_version"
     implementation "com.affise:module-network:$affise_version"
     implementation "com.affise:module-phone:$affise_version"
@@ -326,6 +329,7 @@ All affise modules is updated automatically on build
 | `Advertising`  | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `AppsFlyer`    | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `Google`       | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `Hardware`     | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `Link`         | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `Persistent`   | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `Status`       | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
@@ -338,18 +342,19 @@ Dependencies located in XCode project folder `Podfile`
 platform :ios, '12.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.7.17'
+  pod 'AffiseInternal', '1.7.18'
 
   # Affise Modules
-  pod 'AffiseModule/AdService', '1.7.17'
-  pod 'AffiseModule/Advertising', '1.7.17'
-  pod 'AffiseModule/AppsFlyer', '1.7.17'
-  pod 'AffiseModule/Google', '1.7.17'
-  pod 'AffiseModule/Link', '1.7.17'
-  pod 'AffiseModule/Persistent', '1.7.17'
-  pod 'AffiseModule/Status', '1.7.17'
-  pod 'AffiseModule/Subscription', '1.7.17'
-  pod 'AffiseModule/TikTok', '1.7.17'
+  pod 'AffiseModule/AdService', '1.7.18'
+  pod 'AffiseModule/Advertising', '1.7.18'
+  pod 'AffiseModule/AppsFlyer', '1.7.18'
+  pod 'AffiseModule/Google', '1.7.18'
+  pod 'AffiseModule/Hardware', '1.7.18'
+  pod 'AffiseModule/Link', '1.7.18'
+  pod 'AffiseModule/Persistent', '1.7.18'
+  pod 'AffiseModule/Status', '1.7.18'
+  pod 'AffiseModule/Subscription', '1.7.18'
+  pod 'AffiseModule/TikTok', '1.7.18'
 end
 
 target 'Unity-iPhone' do
@@ -735,10 +740,10 @@ Podfile:
 platform :ios, '11.0'
 
 target 'UnityFramework' do
-  pod 'AffiseInternal', '1.7.17'
+  pod 'AffiseInternal', '1.7.18'
 
   # Affise Modules
-  # pod 'AffiseModule', `1.7.17`
+  # pod 'AffiseModule', `1.7.18`
 end
 
 target 'Unity-iPhone' do
@@ -786,8 +791,6 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `UNINSTALL_TIME`
 - `REINSTALL_TIME`
 - `LAST_SESSION_TIME`
-- `CPU_TYPE`
-- `HARDWARE_NAME`
 - `DEVICE_MANUFACTURER`
 - `DEEPLINK_CLICK`
 - `DEVICE_ATLAS_ID`
@@ -797,18 +800,6 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `REFTOKENS`
 - `REFERRER`
 - `REFERRER_UPDATED`
-- `USER_AGENT`
-- `MCCODE`
-- `MNCODE`
-- `REGION`
-- `COUNTRY`
-- `LANGUAGE`
-- `DEVICE_NAME`
-- `DEVICE_TYPE`
-- `SCREEN_WIDTH`
-- `SCREEN_HEIGHT`
-- `DENSITY`
-- `CPU_CORES`
 - `TOTAL_DISK`
 - `FREE_DISK`
 - `OS_NAME`
@@ -816,10 +807,8 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `SDK_PLATFORM`
 - `API_LEVEL_OS`
 - `AFFISE_SDK_VERSION`
-- `OS_VERSION`
 - `RANDOM_USER_ID`
 - `AFFISE_SDK_POS`
-- `TIMEZONE_DEV`
 - `AFFISE_EVENT_NAME`
 - `AFFISE_EVENT_TOKEN`
 - `LAST_TIME_SESSION`
@@ -873,6 +862,28 @@ To match users with events and data library is sending, these `ProviderType` ide
 ### Google
 
 - `ODM_INFO`
+
+### Hardware
+
+- `USER_AGENT`
+- `CPU_TYPE`
+- `CPU_CORES`
+- `DEVICE`
+- `BUILD`
+- `DEVICE_NAME`
+- `SCREEN_WIDTH`
+- `SCREEN_HEIGHT`
+- `DENSITY`
+- `HARDWARE_NAME`
+- `DEVICE_TYPE`
+- `OS_VERSION`
+- `OS_AND_VERSION`
+- `MCCODE`
+- `MNCODE`
+- `TIMEZONE_DEV`
+- `LANGUAGE`
+- `COUNTRY`
+- `REGION`
 
 ### Meta
 

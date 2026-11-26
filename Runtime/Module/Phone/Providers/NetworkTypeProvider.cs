@@ -1,6 +1,7 @@
 ﻿using AffiseAttributionLib.AffiseParameters.Base;
+using AffiseAttributionLib.AffiseParameters;
 
-namespace AffiseAttributionLib.AffiseParameters.Providers
+namespace AffiseAttributionLib.Module.Phone.Providers
 {
     /**
      * Provider for parameter [ProviderType.NETWORK_TYPE]

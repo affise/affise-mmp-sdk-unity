@@ -1,5 +1,39 @@
 # Changelog
 
+## [1.7.18] - 2026-11-26
+
+### Added
+
+- New module `Hardware`
+
+### Fixed
+
+- Fix `RANDOM_USER_ID`
+
+### Changed
+
+- Provider `USER_AGENT` moved to module `Hardware`
+- Provider `CPU_TYPE` moved to module `Hardware`
+- Provider `CPU_CORES` moved to module `Hardware`
+- Provider `DEVICE` moved to module `Hardware`
+- Provider `BUILD` moved to module `Hardware`
+- Provider `DEVICE_NAME` moved to module `Hardware`
+- Provider `SCREEN_WIDTH` moved to module `Hardware`
+- Provider `SCREEN_HEIGHT` moved to module `Hardware`
+- Provider `DENSITY` moved to module `Hardware`
+- Provider `HARDWARE_NAME` moved to module `Hardware`
+- Provider `DEVICE_TYPE` moved to module `Hardware`
+- Provider `OS_VERSION` moved to module `Hardware`
+- Provider `OS_AND_VERSION` moved to module `Hardware`
+- Provider `MCCODE` moved to module `Hardware`
+- Provider `MNCODE` moved to module `Hardware`
+- Provider `TIMEZONE_DEV` moved to module `Hardware`
+- Provider `LANGUAGE` moved to module `Hardware`
+- Provider `COUNTRY` moved to module `Hardware`
+- Provider `REGION` moved to module `Hardware`
+- Update native iOS to [`1.7.18`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.18/CHANGELOG.md)
+- Update native Android to [`1.7.18`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.18/CHANGELOG.md)
+
 ## [1.7.17] - 2026-10-16
 
 ### Fixed
@@ -670,6 +704,7 @@
 - Update native iOS to `1.6.20`
 - Update native Android to `1.6.22`
 
+[1.7.18]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.17...1.7.18
 [1.7.17]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.16...1.7.17
 [1.7.16]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.15...1.7.16
 [1.7.15]: https://github.com/affise/affise-mmp-sdk-unity/compare/1.7.14...1.7.15

@@ -27,6 +27,11 @@
         protected override long? DefaultValue => 0L;
     }
 
+    public abstract class FloatPropertyProvider : PropertyProvider<float?>
+    {
+        protected override float? DefaultValue => null;
+    }
+
     public abstract class StringWithParamPropertyProvider : Provider
     {
         private string DefaultValue = "";
